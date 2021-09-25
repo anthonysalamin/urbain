@@ -1,7 +1,7 @@
 /*
  * 🟠 URBAIN | image management V.5
- * build: 25.09.2021 00:19 | anthonysalamin.ch
  * dependencies: gsap@3.7.1
+ * build: 25.09.2021 00:19 | anthonysalamin.ch
  * TO DO:
  * 1) dynamic lightbox json script + dynamic items into the jason
  */

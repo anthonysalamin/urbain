@@ -1,11 +1,12 @@
 /*
- * 🟠 URBAIN | image management V.5
+ * 🟢 URBAIN | image management V.5
  * dependencies: gsap@3.7.1
- * build: 25.09.2021 00:19 | anthonysalamin.ch
- * TO DO:
- * 1) dynamic lightbox json script + dynamic items into the jason
+ * build: 28.09.2021 14:44 | anthonysalamin.ch
+ * 🔥 TO DO:
+ * 1) dynamic lightbox + dynamic items into the json script
+ * 2) à vendre status handling
+ * 3) fade in image on desktop change
  */
-console.log("image managemen V.5 loadedt");
 document.addEventListener("DOMContentLoaded", () => {
   imageManagement();
 }); // end DOM loaded
@@ -26,7 +27,7 @@ function imageManagement() {
   };
   const thumbnails = document.querySelectorAll(".link-thumb"),
     wrapSticky = document.querySelector(".wrap-sticky"),
-    crossClose = document.querySelector(".wrap-ctn-close"),
+    closeButton = document.querySelector(".wrap-ctn-close"),
     overlayMobile = document.querySelector(".overlay-mobile"),
     wrapperImage = document.querySelector(".wrap-img-big");
   let stickyNumber = document.getElementById("infonumber"),
@@ -62,17 +63,17 @@ function imageManagement() {
       // listen on click
       thumbnail.addEventListener("click", () => {
         // get thumbnail image info
-        const thumbImage = thumbnail
+        const thumbDynamicImage = thumbnail
             .querySelector(".img")
             .src.split("/")[4]
             .split(".")[0],
-          thumbNumber = thumbnail.querySelector(".number").textContent,
+          // thumbNumber = thumbnail.querySelector(".number").textContent,
           thumbWidth = thumbnail.querySelector(".width").textContent,
           thumbHeight = thumbnail.querySelector(".height").textContent;
 
         // inject thumbnail image info into sticky wrapper section
-        stickyImage.src = `https://${ROOT_URL}/${SITE_ID}/${thumbImage}.${FORMAT}`;
-        stickyNumber.textContent = thumbNumber;
+        stickyImage.src = `https://${ROOT_URL}/${SITE_ID}/${thumbDynamicImage}.${FORMAT}`;
+        // stickyNumber.textContent = thumbNumber;
         stickyWidth.textContent = thumbWidth;
         stickyHeight.textContent = thumbHeight;
       }); // end click listener
@@ -89,20 +90,20 @@ function imageManagement() {
     Array.from(thumbnails).forEach((thumb) => {
       thumb.addEventListener("click", () => {
         
-        // 🍇 animate cross rotation on open
-        TweenMax.to(crossClose, duration / 2, {
+        // 🍇 GSAP animate cross rotation on open
+        TweenMax.to(closeButton, duration / 2, {
           ease: easing,
           transform: "rotateZ(0deg)"
         });
 
-        // 🍇 animate overlay on open
+        // 🍇 GSAP animate overlay on open
         TweenMax.to(overlayMobile, duration, {
           ease: easing,
           display: "block",
           opacity: "1"
         });
 
-        // 🍇 animate sticky wrapper on open
+        // 🍇 GSAP animate sticky wrapper on open
         TweenMax.to(wrapSticky, duration, {
           ease: easing,
           transform: "translateY(0%)",
@@ -112,23 +113,23 @@ function imageManagement() {
     }); // end for each thumbnails
 
     // ⚙️close sticky panel on cross click
-    crossClose.addEventListener("click", () => {
+    closeButton.addEventListener("click", () => {
       log("closed");
 
-      // 🍈 animate cross rotation on close
-      TweenMax.to(crossClose, duration / 2, {
+      // 🍈 GSAP animate cross rotation on close
+      TweenMax.to(closeButton, duration / 2, {
         ease: easing,
         transform: "rotateZ(45deg)"
       });
 
-      // 🍈 animate sticky wrapper on close
+      // 🍈 GSAP animate sticky wrapper on close
       TweenMax.to(wrapSticky, duration, {
         ease: easing,
         transform: "translateY(110%)",
         opacity: "0"
       });
 
-      // 🍈 animate overlay on close
+      // 🍈 GSAP animate overlay on close
       TweenMax.to(overlayMobile, duration, {
         ease: easing,
         opacity: "0",
@@ -173,7 +174,7 @@ function imageManagement() {
 
   // 🥥 run breakpointChoice() on loaded and on resize events
   breakpointChoice();
-  window.addEventListener("resize", debounce(breakpointChoice, 150));
+  window.addEventListener("resize", debounce(breakpointChoice, 200));
 } // end imageManagement()
 
 // go get a 🍹

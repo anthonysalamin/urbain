@@ -1,13 +1,13 @@
-/*
- * 🟢 URBAIN | image management V.5
+/**
+ * 🟠 URBAIN | image management V.6
  * dependencies: gsap@3.7.1
  * build: 28.09.2021 14:44 | anthonysalamin.ch
  * 🔥 TO DO:
  * 1) dynamic lightbox + dynamic items into the json script
  * 2) à vendre status handling
- * 3) fade in image on desktop change
+ * 3) fading image preload issue
  */
-document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
   imageManagement();
 }); // end DOM loaded
 
@@ -19,21 +19,28 @@ function imageManagement() {
     SITE_ID = "6141f41868c3e33a265cbfe7", // 👈🏻 replace by production site_id
     START_IMAGE = "61422529bd2258423c3f26ad_042", // 👈🏻 replace by the start image
     FORMAT = "jpg";
+  // GSAP animation
+  const duration = 0.45, // 👈🏻 in seconds
+    easing = Expo.easeOut;
+  // breakpoints
   const BREAKPOINTS = {
     mobilePortrait: { min: 240, max: 479 },
     mobileLandscape: { min: 480, max: 767 },
     tablet: { min: 768, max: 991 },
     desktop: { min: 992, max: 4000 }
   };
+  // layout constants
   const thumbnails = document.querySelectorAll(".link-thumb"),
     wrapSticky = document.querySelector(".wrap-sticky"),
     closeButton = document.querySelector(".wrap-ctn-close"),
     overlayMobile = document.querySelector(".overlay-mobile"),
     wrapperImage = document.querySelector(".wrap-img-big");
+  // sticky variables
   let stickyNumber = document.getElementById("infonumber"),
     stickyWidth = document.getElementById("infowidth"),
     stickyHeight = document.getElementById("infoheight"),
-    imageInfo = document.getElementById("infoimage");
+    imageInfo = document.getElementById("infoimage"),
+    stickyPath;
 
   // 🥝 dynamic image definition
   function createImage(id, className, src, alt) {
@@ -70,8 +77,8 @@ function imageManagement() {
           // thumbNumber = thumbnail.querySelector(".number").textContent,
           thumbWidth = thumbnail.querySelector(".width").textContent,
           thumbHeight = thumbnail.querySelector(".height").textContent;
-
-        // inject thumbnail image info into sticky wrapper section
+        
+        // injecting new values
         stickyImage.src = `https://${ROOT_URL}/${SITE_ID}/${thumbDynamicImage}.${FORMAT}`;
         // stickyNumber.textContent = thumbNumber;
         stickyWidth.textContent = thumbWidth;
@@ -80,57 +87,52 @@ function imageManagement() {
     }); // end for each thumbnails
   } // end dynamicInfoInjection()
 
-  // 🥬 mobileHandling() definition
+  // 🥬 mobile animation handling definition
   function mobileHandling() {
-    // globals
-    const duration = 0.45, // 👈🏻 in seconds
-      easing = Expo.easeOut;
-
     // ⚙️ open sticky on thumb click
     Array.from(thumbnails).forEach((thumb) => {
       thumb.addEventListener("click", () => {
-        
         // 🍇 GSAP animate cross rotation on open
-        TweenMax.to(closeButton, duration / 2, {
+        gsap.to(closeButton, duration / 2, {
           ease: easing,
           transform: "rotateZ(0deg)"
         });
 
         // 🍇 GSAP animate overlay on open
-        TweenMax.to(overlayMobile, duration, {
+        gsap.to(overlayMobile, duration, {
           ease: easing,
           display: "block",
           opacity: "1"
         });
 
         // 🍇 GSAP animate sticky wrapper on open
-        TweenMax.to(wrapSticky, duration, {
-          ease: easing,
-          transform: "translateY(0%)",
-          opacity: "1"
-        }).delay(0.2);
+        gsap
+          .to(wrapSticky, duration, {
+            ease: easing,
+            transform: "translateY(0%)",
+            opacity: "1"
+          })
+          .delay(0.2);
       }); // end click listener
     }); // end for each thumbnails
 
     // ⚙️close sticky panel on cross click
     closeButton.addEventListener("click", () => {
-      log("closed");
-
       // 🍈 GSAP animate cross rotation on close
-      TweenMax.to(closeButton, duration / 2, {
+      gsap.to(closeButton, duration / 2, {
         ease: easing,
         transform: "rotateZ(45deg)"
       });
 
       // 🍈 GSAP animate sticky wrapper on close
-      TweenMax.to(wrapSticky, duration, {
+      gsap.to(wrapSticky, duration, {
         ease: easing,
         transform: "translateY(110%)",
         opacity: "0"
       });
 
       // 🍈 GSAP animate overlay on close
-      TweenMax.to(overlayMobile, duration, {
+      gsap.to(overlayMobile, duration, {
         ease: easing,
         opacity: "0",
         display: "none"
@@ -151,12 +153,8 @@ function imageManagement() {
   function debounce(func, wait) {
     let timeout;
     return () => {
-      let context = this; // arguments "func" and "wait"
-      let later = () => {
-        func.apply(context);
-      };
       clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
+      timeout = setTimeout(func, wait);
     }; // end return
   } // end debounce()
 
@@ -177,4 +175,4 @@ function imageManagement() {
   window.addEventListener("resize", debounce(breakpointChoice, 200));
 } // end imageManagement()
 
-// go get a 🍹
+// go get a 🍸

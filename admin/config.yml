@@ -1,0 +1,1197 @@
+backend:
+  name: git-gateway
+  branch: main
+  accept_roles:
+    - admin
+    - editor
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: archive
+    label: Archives
+    folder: cms/archive
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: if sold, activate the switch
+        name: f_status
+        label: status
+        widget: boolean
+        required: false
+      - hint: si oui, activer le switch
+        name: f_afficher-la-racine
+        label: afficher la racine ?
+        widget: boolean
+        required: false
+      - hint: ''
+        name: f_category
+        label: category
+        widget: select
+        required: false
+        options:
+          - label: XS
+            value: XS
+          - label: S
+            value: S
+          - label: M
+            value: M
+          - label: L
+            value: L
+          - label: '?'
+            value: '?'
+      - hint: ''
+        name: f_thumbnail
+        label: Thumbnail
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: 'in meters (format: x.xx)'
+        name: f_height
+        label: height
+        widget: number
+        required: false
+      - hint: 'in meters (format: x.xx)'
+        name: f_width
+        label: width
+        widget: number
+        required: false
+      - hint: ''
+        name: f_titre
+        label: titre
+        widget: string
+        required: false
+      - hint: ''
+        name: f_prix
+        label: prix
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: archive
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[archive].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: legale
+    label: Légales
+    folder: cms/legale
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Imprint
+        name: body
+        widget: markdown
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: legale
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[legale].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: sculptures
+    label: Sculptures
+    folder: cms/sculptures
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_titre
+        label: titre
+        widget: string
+        required: false
+      - hint: ''
+        name: f_image
+        label: image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: la racine est-elle intéressante à montrer ?
+        name: f_display
+        label: display
+        widget: boolean
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: sculptures
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[sculptures].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: racines
+    label: Racines
+    folder: cms/racines
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: >-
+          La racine est-elle en showcase sur la homepage ? Si oui, activer le
+          switch.
+        name: f_showcased
+        label: showcased
+        widget: boolean
+        required: false
+      - hint: si la racine a un titre
+        name: f_titre-optionel
+        label: titre (optionel)
+        widget: string
+        required: false
+      - hint: en centimètre
+        name: f_length-cm
+        label: hauteur (cm)
+        widget: number
+        required: true
+      - hint: en centimètre
+        name: f_height-cm
+        label: largeur (cm)
+        widget: number
+        required: true
+      - hint: prix de la racine
+        name: f_prix
+        label: prix
+        widget: number
+        required: false
+      - hint: enclencher le switch si la racine est vendue
+        name: f_vendu
+        label: vendu
+        widget: boolean
+        required: false
+      - hint: >-
+          La racine a-t-elle était éditée (détourage + fond noir) ? Si oui,
+          activer le switch.
+        name: f_edited
+        label: edited
+        widget: boolean
+        required: false
+      - hint: ''
+        name: f_image-thumbnail
+        label: image thumbnail
+        widget: object
+        required: true
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: true
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_image-high-res
+        label: image high res
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: racines
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[racines].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: home, key: 30f4df'
+            label: Text
+            name: 30f4df
+            widget: string
+          - hint: 'Original text: sculptures, key: -5bc86c4a'
+            label: Text
+            name: '-5bc86c4a'
+            widget: string
+          - hint: 'Original text: artiste, key: -2ba6f602'
+            label: Text
+            name: '-2ba6f602'
+            widget: string
+          - hint: 'Original text: contact, key: 38b72420'
+            label: Text
+            name: 38b72420
+            widget: string
+          - hint: 'Original text: accueil, key: -4629f84c'
+            label: Text
+            name: '-4629f84c'
+            widget: string
+          - hint: 'Original text: archives, key: -664cc80f'
+            label: Text
+            name: '-664cc80f'
+            widget: string
+          - hint: 'Original text: Urbain, key: -687f961f'
+            label: Text
+            name: '-687f961f'
+            widget: string
+          - hint: 'Original text: Salamin, key: -2db50cf1'
+            label: Text
+            name: '-2db50cf1'
+            widget: string
+          - hint: >-
+              Original text: Sculpteur valaisan, Urbain Salamin vous présente
+              ses œuvres d'art nées de son travail au cœur de vieilles souches
+              d'Arolle., key: -3f909d40
+            label: Text
+            name: '-3f909d40'
+            widget: text
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: 'Original text: No., key: 1326d'
+            label: Text
+            name: 1326d
+            widget: string
+          - hint: 'Original text: 042, key: baae'
+            label: Text
+            name: baae
+            widget: string
+          - hint: 'Original text: à vendre, key: 50ed50d8'
+            label: Text
+            name: 50ed50d8
+            widget: string
+          - hint: 'Original text: Prix, key: 2616d1'
+            label: Text
+            name: 2616d1
+            widget: string
+          - hint: 'Original text: 40, key: 67c'
+            label: Text
+            name: 67c
+            widget: string
+          - hint: 'Original text: cm, key: c6a'
+            label: Text
+            name: c6a
+            widget: string
+          - hint: 'Original text: 60, key: 6ba'
+            label: Text
+            name: 6ba
+            widget: string
+          - hint: 'Original text: Toutes les racines, key: -7dc964d7'
+            label: Text
+            name: '-7dc964d7'
+            widget: string
+          - hint: 'Original text: Symphonie, key: 76b1de9a'
+            label: Text
+            name: 76b1de9a
+            widget: string
+          - hint: 'Original text: Arollesque, key: 26f341d5'
+            label: Text
+            name: 26f341d5
+            widget: string
+          - hint: >-
+              Original text: L'Arolle, arbre majestueux vivant jusqu'à 600 ans,
+              peuple les terres arides et venteuses des Alpes valaisannes., key:
+              783f19bb
+            label: Text
+            name: 783f19bb
+            widget: text
+          - hint: 'Original text: 1985, key: 172325'
+            label: Text
+            name: '172325'
+            widget: string
+          - hint: >-
+              Original text: Exposition Office national suisse du Tourisme à
+              Paris, key: -717b6ec0
+            label: Text
+            name: '-717b6ec0'
+            widget: string
+          - hint: 'Original text: 2007, key: 1774c5'
+            label: Text
+            name: 1774c5
+            widget: string
+          - hint: >-
+              Original text: 75 années dont 35 ans d'amour de l'arolle, key:
+              10f7b14d
+            label: Text
+            name: 10f7b14d
+            widget: string
+          - hint: 'Original text: 2011, key: 1774de'
+            label: Text
+            name: 1774de
+            widget: string
+          - hint: >-
+              Original text: Expo L'association Valaisanne des Entrepreneurs,
+              key: 3c2a6b62
+            label: Text
+            name: 3c2a6b62
+            widget: string
+          - hint: 'Original text: 2014, key: 1774e1'
+            label: Text
+            name: '1774e1'
+            widget: string
+          - hint: >-
+              Original text: Exposition Gallerie Duo — Arolle Fantaisies, key:
+              -76ee1aa1
+            label: Text
+            name: '-76ee1aa1'
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: 'Original text: légale, key: -3ab0ecb0'
+            label: Text
+            name: '-3ab0ecb0'
+            widget: string
+          - hint: 'Original text: images © 2021 Urbain Salamin, key: 5e9e2bb4'
+            label: Text
+            name: 5e9e2bb4
+            widget: string
+          - hint: 'Original text: design ❤️ © anthonysalamin.ch, key: -495edbcd'
+            label: Text
+            name: '-495edbcd'
+            widget: string
+          - hint: >-
+              Original text: Originaire du val d’Anniviers, toujours féru de
+              cueillette de champignons, Urbain Salamin passa bien des
+              après-midis à parcourir les forêts du val d’Anniviers. C’est au
+              détour d’un chemin, impressionné par le nombre de souches
+              mourantes d’arolle et de mélèze qu’il décide de leur redonner une
+              seconde vie., key: 4560051e
+            label: Text
+            name: 4560051e
+            widget: text
+          - hint: >-
+              Original text: Il devient petit à petit sculpteur autodidacte. Au
+              travers de ses mains, elles deviennent « naturellement » des
+              œuvres d’art… Urbain découvre ces merveilles qu’il façonne en
+              mettant en évidence leur beauté complexe, les magnifie. Enfin des
+              œuvres que l’on peut voir, sentir et caresser ! A ce jour, Urbain
+              a « sculpté » plus de 300 pièces qui varient entre 25 et 250 cm.,
+              key: 5ad4d28a
+            label: Text
+            name: 5ad4d28a
+            widget: text
+          - hint: "Original text: En 1985, Urbain expose pour la première fois, à l’office national Suisse du tourisme à Paris.\_Taquiné par un metteur en scène, André Schmidt, il accepte de présenter ses œuvres en exposition dans l’espace Berclaz & Métrailler à Sierre 1994. A la retraite, Urbain continue avec passion la création de multiples œuvres qu’il présentera\_ , key: -610b82c0"
+            label: Text
+            name: '-610b82c0'
+            widget: text
+          - hint: "Original text: à deux reprises aux Floralies Sierroises 2001 et 2003\_, key: 58a9ea57"
+            label: Text
+            name: 58a9ea57
+            widget: string
+          - hint: "Original text: une exposition à Swisscom à Sion en 2003\_, key: 7b14d5ff"
+            label: Text
+            name: 7b14d5ff
+            widget: string
+          - hint: "Original text: une exposition de trois semaines en compagnie du peintre Olivier Menge, dans l’espace de l’hôtel des vignes à St-Léonard en 2007\_, key: -566ca4a9"
+            label: Text
+            name: '-566ca4a9'
+            widget: text
+          - hint: "Original text: une exposition à la Galerie Duo à Sion en 2014\_, key: 14a15851"
+            label: Text
+            name: 14a15851
+            widget: string
+          - hint: 'Original text: Mentions légales, key: -68d80214'
+            label: Text
+            name: '-68d80214'
+            widget: string
+          - hint: >-
+              Original text: En consultant des informations, indications ou
+              documents figurant sur le site Internet urbainsalamin.ch, vous
+              déclarez adhérer aux conditions ci-après. urbainsalamin.ch se
+              réserve le droit de modifier, compléter ou supprimer tout ou
+              partie du contenu du site Internet et des présentes conditions, et
+              ce, à tout moment et selon sa libre appréciation. Il en va de même
+              en cas d'améliorations et/ou de modifications apportées aux
+              informations., key: 239a210d
+            label: Text
+            name: 239a210d
+            widget: text
+          - hint: 'Original text: Droits d''auteur, key: 121afd7e'
+            label: Text
+            name: 121afd7e
+            widget: string
+          - hint: >-
+              Original text: L'ensemble du contenu (textes, graphiques, photos,
+              etc.) du site Internet est protégé par un droit d'auteur et, sauf
+              disposition contraire, est la propriété exclusive et totale
+              d’Urbain Salamin. L'utilisateur doit également respecter les
+              indications relatives à des droits de protection et d'utilisation
+              de tiers susceptibles de figurer sur ce site Internet., key:
+              7580f57
+            label: Text
+            name: 7580f57
+            widget: text
+          - hint: >-
+              Original text: urbainsalamin.ch fournit les informations contenues
+              sur le site Internet à des fins exclusives d'usage privé et
+              d'information., key: 2a96c0b3
+            label: Text
+            name: 2a96c0b3
+            widget: text
+          - hint: >-
+              Original text: Il est permis de télécharger, d'enregistrer,
+              d'imprimer ou de reproduire de quelque autre manière certaines
+              pages et/ou parties du site Internet, à condition de ne supprimer
+              ni des mentions de copyright, ni d'autres désignations légalement
+              protégées. urbainsalamin.ch conserve tous les droits de propriété
+              et d'utilisation et peut à tout moment révoquer cette
+              autorisation., key: -7ec14327
+            label: Text
+            name: '-7ec14327'
+            widget: text
+          - hint: >-
+              Original text: La reproduction (partielle ou totale), la diffusion
+              (électronique ou par d'autres moyens), la modification, la
+              création de liens ou l'utilisation à des fins publiques ou
+              commerciales des informations, quelles qu'elles soient, contenues
+              sur le site Internet requièrent l'autorisation écrite préalable
+              d’Urbain Salamin ou de ses représentants légaux., key: -7af2a8b0
+            label: Text
+            name: '-7af2a8b0'
+            widget: text
+          - hint: 'Original text: Exclusion de garantie, key: -6fe09548'
+            label: Text
+            name: '-6fe09548'
+            widget: string
+          - hint: >-
+              Original text: Bien qu’urbainsalamin.ch s'emploie en toute bonne
+              foi à garantir la fiabilité des informations contenues dans le
+              site au moment de leur publication, urbainsalamin.ch ne peut
+              certifier ou attester formellement de manière explicite ou
+              implicite (également vis à vis de tiers) l'exactitude, la
+              fiabilité et l'exhaustivité des informations contenues dans le
+              site www.urbainsalamin.ch, key: -76102458
+            label: Text
+            name: '-76102458'
+            widget: text
+          - hint: >-
+              Original text: Les opinions émises ou autres informations
+              contenues dans le site internet www.urbainsalamin.ch peuvent être
+              modifiées en tout temps sans avertissement préalable. Urbain
+              Salamin et ses représentants légaux se dégage de toute
+              responsabilité et ne garantit nullement que les fonctions
+              disponibles sur le site www.urbainsalamin.ch ne soient jamais
+              interrompues ni l'absence de virus ou autres éléments dommageables
+              dans le navigateur concerné., key: e014814
+            label: Text
+            name: e014814
+            widget: text
+          - hint: 'Original text: Restriction de la responsabilité, key: 623f4096'
+            label: Text
+            name: 623f4096
+            widget: string
+          - hint: >-
+              Original text: Urbain Salamin et ses représentants légaux se
+              dégage de toute responsabilité (également en cas de faute) pour
+              les dommages directs, indirects ou consécutifs pouvant résulter de
+              l'accès aux éléments du site internet www.urbainsalamin.ch ou de
+              leur utilisation, respectivement de l'impossibilité d'y accéder ou
+              de les utiliser ou encore résultant de la connexion à d'autres
+              sites internet., key: -5c9b5554
+            label: Text
+            name: '-5c9b5554'
+            widget: text
+          - hint: 'Original text: Liens vers d''autres sites internet, key: 69fab2d5'
+            label: Text
+            name: 69fab2d5
+            widget: string
+          - hint: "Original text: Le site internet www.urbainsalamin.ch contient des liens vers des sites de tiers qui peuvent vous intéresser. En activant ces liens, vous quittez éventuellement le site www.urbainsalamin.ch ou des fenêtres de sites tiers apparaissent dans l'environnement du site www.urbainsalamin.ch. Urbain Salamin et ses représentants légaux\_ n'on aucun contrôle sur les sites internet de tiers liés au site www.urbainsalamin.ch et ne peut être en aucun cas tenu pour responsable du contenu et du fonctionnement de ces sites internet. Ceci vaut indépendamment du fait que vous quittiez l'environnement du site internet www.urbainsalamin.ch en activant un lien ou que la présentation d'un site tiers apparaisse dans l'environnement du site www.urbainsalamin.ch, même lorsque dans ce cas le fournisseur des informations contenues dans ce site tiers n'apparaît pas clairement. Le risque ou le danger pouvant découler de la connexion avec des sites tiers ou de leur consultation est exclusivement affaire de l'utilisateur., key: -79fb292c"
+            label: Text
+            name: '-79fb292c'
+            widget: text
+          - hint: 'Original text: Protection des données, key: 7198737'
+            label: Text
+            name: '7198737'
+            widget: string
+          - hint: >-
+              Original text: Nous attachons une grande importance à la
+              protection des données. En tant que visiteur du site internet
+              www.urbainsalamin.ch, vous décidez quelles sont les données
+              personnelles que vous acceptez de nous révéler. Mais nous attirons
+              votre attention sur le fait que, par votre visite sur notre site
+              internet et la lecture de notre Newsletter, nous sommes
+              automatiquement en possession d'informations qui nous permettent
+              de déterminer comment nos visiteurs utilisent notre site internet
+              ainsi que la Newsletter et quelles informations les intéressent
+              particulièrement., key: 5072df37
+            label: Text
+            name: 5072df37
+            widget: text
+          - hint: >-
+              Original text: Si vous vous enregistrez personnellement, demandez
+              de la documentation ou autres prestations, nous avons besoin de
+              vos informations personnelles, par ex. votre nom et votre adresse.
+              Dans la mesure où de telles prestations sont réalisées par des
+              tiers, nous transmettons vos données aux prestataires de service
+              concernés, transmission que vous nous autorisez automatiquement
+              dans ce cadre. Sinon, nous traitons vos données personnelles de
+              manière confidentielle et anonyme et ne les transmettons à des
+              tiers que sous forme anonyme., key: -4dd1547b
+            label: Text
+            name: '-4dd1547b'
+            widget: text
+          - hint: >-
+              Original text: L'exploitation des données doit nous permettre
+              d'adapter notre site internet et nos propres offres de services
+              aux besoins des utilisateurs. En outre, le traitement des données
+              permet en particulier d'analyser le marché, de déterminer
+              l'intérêt suscité par nos services, d'en tirer ainsi des
+              conclusions pour les adapter aux besoins. Toute autre utilisation
+              de vos données personnelles, en particulier la vente à des tiers,
+              est expressément exclue., key: -548b90ca
+            label: Text
+            name: '-548b90ca'
+            widget: text
+          - hint: 'Original text: Google Analytics, key: 45cce5f'
+            label: Text
+            name: 45cce5f
+            widget: string
+          - hint: >-
+              Original text: Ce site utilise Google Analytics, un service
+              d'analyse de site internet fourni par Google Inc. (" Google ").
+              Google Analytics utilise des cookies, qui sont des fichiers texte
+              placés sur votre ordinateur, pour aider le site internet à
+              analyser l'utilisation du site par ses utilisateurs. Les données
+              générées par les cookies concernant votre utilisation du site (y
+              compris votre adresse IP) seront transmises et stockées par Google
+              sur des serveurs situés aux Etats-Unis. Google utilisera cette
+              information dans le but d'évaluer votre utilisation du site, de
+              compiler des rapports sur l'activité du site à destination de son
+              éditeur et de fournir d'autres services relatifs à l'activité du
+              site et à l'utilisation d'Internet., key: 15918f13
+            label: Text
+            name: 15918f13
+            widget: text
+          - hint: >-
+              Original text: Google est susceptible de communiquer ces données à
+              des tiers en cas d'obligation légale ou lorsque ces tiers traitent
+              ces données pour le compte de Google, y compris notamment
+              l'éditeur de ce site. Google ne recoupera pas votre adresse IP
+              avec toute autre donnée détenue par Google. Vous pouvez désactiver
+              l'utilisation de cookies en sélectionnant les paramètres
+              appropriés de votre navigateur. Cependant, une telle désactivation
+              pourrait empêcher l'utilisation de certaines fonctionnalités de ce
+              site. En utilisant ce site internet, vous consentez expressément
+              au traitement de vos données nominatives par Google dans les
+              conditions et pour les finalités décrites ci-dessus., key:
+              5b643dda
+            label: Text
+            name: 5b643dda
+            widget: text
+          - hint: 'Original text: Cookies, key: -64062591'
+            label: Text
+            name: '-64062591'
+            widget: string
+          - hint: >-
+              Original text: Les cookies sont des codes qu'un serveur enregistre
+              sur votre disque dur pour mieux vous identifier sur les systèmes
+              de banques de données protégées. Vous pouvez cependant configurer
+              votre navigateur pour qu'il vous avertisse lorsque vous recevez un
+              cookie ou pour refuser automatiquement ce type d'échange. C'est
+              donc vous qui décidez si vous l'acceptez ou non., key: 41aeb70f
+            label: Text
+            name: 41aeb70f
+            widget: text
+          - hint: >-
+              Original text: Newsletter et courrier électroniques, key:
+              -7a168c8c
+            label: Text
+            name: '-7a168c8c'
+            widget: string
+          - hint: >-
+              Original text: Les messages électroniques ou newsletters
+              d’urbainsalamin.ch ne vous sont envoyés que si vous le désirez. Si
+              vous ne souhaitez plus les recevoir, vous pouvez à tout moment
+              vous désabonner. N'oubliez pas que les données transmises non
+              codées peuvent être lues ou modifiées par des tiers non
+              autorisés., key: 67f23383
+            label: Text
+            name: 67f23383
+            widget: text
+          - hint: 'Original text: XS, key: afb'
+            label: Text
+            name: afb
+            widget: string
+          - hint: 'Original text: S, key: 53'
+            label: Text
+            name: '53'
+            widget: string
+          - hint: 'Original text: M, key: 4d'
+            label: Text
+            name: 4d
+            widget: string
+          - hint: 'Original text: L, key: 4c'
+            label: Text
+            name: 4c
+            widget: string
+          - hint: 'Original text: ?, key: 3f'
+            label: Text
+            name: 3f
+            widget: string
+          - hint: 'Original text: A vendre, key: -33ed8da9'
+            label: Text
+            name: '-33ed8da9'
+            widget: string
+          - hint: 'Original text: Vendu, key: 4eb7850'
+            label: Text
+            name: 4eb7850
+            widget: string
+          - hint: 'Original text: m, key: 6d'
+            label: Text
+            name: 6d
+            widget: string
+          - hint: 'Original text: Previous, key: -4811e0e9'
+            label: Text
+            name: '-4811e0e9'
+            widget: string
+          - hint: 'Original text: Next, key: 24ff13'
+            label: Text
+            name: 24ff13
+            widget: string
+          - hint: 'Original text: A, key: 41'
+            label: Text
+            name: '41'
+            widget: string
+          - hint: 'Original text: B, key: 42'
+            label: Text
+            name: '42'
+            widget: string
+          - hint: 'Original text: C, key: 43'
+            label: Text
+            name: '43'
+            widget: string
+          - hint: 'Original text: D, key: 44'
+            label: Text
+            name: '44'
+            widget: string
+          - hint: 'Original text: hauteur, key: 29b5296a'
+            label: Text
+            name: 29b5296a
+            widget: string
+          - hint: 'Original text: largeur, key: -2e218e8'
+            label: Text
+            name: '-2e218e8'
+            widget: string
+          - hint: 'Original text: Précédent, key: 7326c1b4'
+            label: Text
+            name: 7326c1b4
+            widget: string
+          - hint: 'Original text: Suivant, key: -bb507a8'
+            label: Text
+            name: '-bb507a8'
+            widget: string
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
+          - hint: 'Original link: /sculptures, key: -5cb9adb'
+            label: Link
+            name: '-5cb9adb'
+            widget: string
+          - hint: 'Original link: /artiste, key: -194fb911'
+            label: Link
+            name: '-194fb911'
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:anthony.salamin@gmail.com?subject=Urbain%20website%20contact,
+              key: 3f78ebe3
+            label: Link
+            name: 3f78ebe3
+            widget: string
+          - hint: 'Original link: /archives, key: -2dbc66e0'
+            label: Link
+            name: '-2dbc66e0'
+            widget: string
+          - hint: 'Original link: /legale, key: 744fd5bb'
+            label: Link
+            name: 744fd5bb
+            widget: string
+          - hint: 'Original link: https://www.anthonysalamin.ch/, key: 64a1e758'
+            label: Link
+            name: 64a1e758
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: 2c0337ed
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 139d9f8e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1f7b7ba2'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2a852a2a
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5bd80909
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 65cea73e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-5631d287'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 76ac54b6
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 769025b4
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 59c08be3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 377eea6e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 70c9ed7b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-446da1e2'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow

@@ -749,31 +749,15 @@ collections:
             widget: text
           - hint: >-
               Original text: Enfin des œuvres que l’on peut voir, sentir et
-              caresser ! A ce jour, Urbain a sculpté plus de 300 pièces qui
+              caresser. A ce jour, Urbain a sculpté plus de 300 pièces qui
               varient entre 25 et 250 cm. En 1985, Urbain expose pour la
               première fois, à l’office national Suisse du tourisme à Paris.
               Taquiné par un metteur en scène, André Schmidt, il accepte de
               présenter ses œuvres en exposition dans l’espace Berclaz &
-              Métrailler à Sierre 1994., key: -581034d5
+              Métrailler à Sierre 1994., key: -4fb442d2
             label: Text
-            name: '-581034d5'
+            name: '-4fb442d2'
             widget: text
-          - hint: 'Original text: Sculpteur, key: 2a295c97'
-            label: Text
-            name: 2a295c97
-            widget: string
-          - hint: 'Original text: ‍‍‍, key: 7c526d'
-            label: Text
-            name: 7c526d
-            widget: string
-          - hint: 'Original text: Rêveur, key: -66f9f39c'
-            label: Text
-            name: '-66f9f39c'
-            widget: string
-          - hint: 'Original text: musicien, key: 324cba8d'
-            label: Text
-            name: 324cba8d
-            widget: string
           - hint: "Original text: Urbain continuera jusqu'à la fin de sa vie et avec passion la création de multiples œuvres qu’il présentera\_à deux reprises aux Floralies Sierroises 2001 et 2003\_une exposition à Swisscom à Sion en 2003\_une exposition de trois semaines en compagnie du peintre Olivier Menge, dans l’espace de l’hôtel des vignes à St-Léonard en 2007\_une exposition à la Galerie Duo à Sion en 2014\_, key: -267f470f"
             label: Text
             name: '-267f470f'
@@ -1812,19 +1796,6 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 35c0f3aa
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
             name: '-1828d903'
             widget: object
             fields:
@@ -1838,20 +1809,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-405bcec2'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 73f2e9d9
+            name: 42c06011
             widget: object
             fields:
               - name: url

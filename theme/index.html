@@ -151,88 +151,81 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   {%- include "partials/css" -%}
   <header class="section hero wf-section">
     <nav class="nav">
-      <div id="wrapper-hamburger" class="nav-hamburger-mobile w-embed">
-        <style>
-  /* hamburger options start */
-  :root {
-    --hamburger-color: white; /* 👈🏻 menu color */
-    --hamburger-dimension: 40px; /* 👈🏻 menu width & height */
-    --hamburger-strokeWidth: 25px; /* 👈🏻 width of the line */
-    --hamburger-strokeLineCap: round; /* 👈🏻 round, butt or square */
-    --hamburger-anim-duration: .35s; /* 👈🏻 animation duration */
-    --hamburger-anim-easing: cubic-bezier(0.25, -0.25, .7, 1.25); /* 👈🏻 animation easing */
-  }
-  /* hamburger options end */
-  #hamburgerSvg {
-    width: var(--hamburger-dimension);
-    height: var(--hamburger-dimension);
-    cursor: pointer;
-  }
-  #hamburgerSvg:activ {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  #hamburgerSvg:focus {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  .hamburgerWrapper:activ {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  .hamburgerWrapper:focus {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  .path-menu {
-    fill: none;
-    stroke-width: var(--hamburger-strokeWidth);
-    stroke-linecap: var(--hamburger-strokeLineCap);
-    stroke: var(--hamburger-color);
-    stroke-dashoffset: 0;
-      -webkit-transition: stroke-dashoffset var(--hamburger-anim-duration) var(--hamburger-anim-easing),
-      stroke-dasharray var(--hamburger-anim-duration) var(--hamburger-anim-easing);
-      -o-transition: stroke-dashoffset var(--hamburger-anim-duration) var(--hamburger-anim-easing),
-      stroke-dasharray var(--hamburger-anim-duration) var(--hamburger-anim-easing);
-      transition: stroke-dashoffset var(--hamburger-anim-duration) var(--hamburger-anim-easing),
-      stroke-dasharray var(--hamburger-anim-duration) var(--hamburger-anim-easing);
-  }
-  #bottom,
-  #top {
-    stroke-dasharray: 240px 950px;
-  }
-  #middle {
-    stroke-dasharray: 240px 240px;
-  }
-  .menu #bottom,
-  .menu #top {
-    stroke-dashoffset: -650px;
-  }
-  .menu #middle {
-    stroke-dashoffset: -115px;
-    stroke-dasharray: 1px 220px;
-  }
-</style>
-        <!--  wrapper start  -->
-        <div class="hamburgerWrapper">
-          <!--  hamburger start  -->
-          <svg version="1.1" id="hamburgerSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 421.6 313.6">
-            <path id="top" class="path-menu" d="M33.8,52.8c0,0,220,0,240,0c200,0,100,320-20,200c-80-80-220-220-220-220"></path>
-            <path id="middle" class="path-menu" d="M33.8,152.8h240"></path>
-            <path id="bottom" class="path-menu" d="M33.8,260.8c0,0,220,0,240,0c200,0,100-320-20-200c-80,80-220,220-220,220"></path>
-          </svg>
-          <!--  hamburger end  -->
-        </div>
-        <!--  wrapper end  -->
-      </div>
-      <div class="nav-wrap-mobile">
-        <div class="nav-wrap-links-mobile">
-          <a style="opacity:0" href="{{ links.2f }}" aria-current="page" class="nav-link w--current">{{ texts.30f4df }}</a>
-          <a style="opacity:0" href="{{ links.23 }}" class="nav-link">{{ texts.-5bc86c4a }}</a>
-          <a style="opacity:0" href="{{ links.-194fb911 }}" class="nav-link">{{ texts.-2ba6f602 }}</a>
-          <a style="opacity:0" href="{{ links.3f78ebe3 }}" class="nav-link">{{ texts.38b72420 }}</a>
-        </div>
-      </div>
       <div class="nav-wrap-desktop">
         <a href="{{ links.23 }}" data-anchor="sculptures" style="opacity:0" class="nav-link">{{ texts.1b096fd6 }}</a>
         <a href="{{ links.-194fb911 }}" class="nav-link last">{{ texts.3791a1de }}</a>
         <link rel="prefetch" href="/assets/null/artiste.">
+      </div>
+      <div class="wrapper-hamburger w-embed">
+        <style>
+    :root {
+      --stroke-width: 40px;
+      --stroke-linecap: round;
+      --stroke-color: white;
+      --main-bg-color: translate3d(0, 0, 0);
+      --transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25),
+        stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    }
+    #hamburgerSvg {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      -webkit-transform: var(--main-bg-color);
+      -moz-transform: var(--main-bg-color);
+      -o-transform: var(--main-bg-color);
+      -ms-transform: var(--main-bg-color);
+      transform: var(--main-bg-color);
+      /* removes focus for Chrome on Android*/
+      -webkit-tap-highlight-color: rgba(255,
+          255,
+          255,
+          0);
+    }
+    .path-menu {
+      fill: none;
+      -webkit-transition: var(--transition);
+      -moz-transition: var(--transition);
+      -o-transition: var(--transition);
+      -ms-transition: var(--transition);
+      transition: var(--transition);
+      stroke-width: var(--stroke-width);
+      stroke-linecap: var(--stroke-linecap);
+      stroke: var(--stroke-color);
+      stroke-dashoffset: 0px;
+    }
+    #top,
+    #bottom {
+      stroke-dasharray: 240px 950px;
+    }
+    #middle {
+      stroke-dasharray: 240px 240px;
+    }
+    .cross #top,
+    .cross #bottom {
+      stroke-dashoffset: -650px;
+      stroke-dashoffset: -650px;
+    }
+    .cross #middle {
+      stroke-dashoffset: -115px;
+      stroke-dasharray: 1px 220px;
+    }
+  </style>
+        <!--  Hamburger menu SVG markup -->
+        <svg id="hamburgerSvg" viewBox="0 0 800 600">
+          <path id="top" class="path-menu" d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"></path>
+          <path id="middle" class="path-menu" d="M300,320 L540,320"></path>
+          <path id="bottom" class="path-menu" d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+        </svg>
+      </div>
+      <div class="wrapper-menu-mobile">
+        <div class="nav__mobile-wrap-links">
+          <a href="{{ links.2f }}" aria-current="page" class="link dark w--current">{{ texts.1d0795b4 }}</a>
+          <a href="{{ links.-194fb911 }}" class="link dark">{{ texts.3791a1de }}</a>
+          <a href="{{ links.-2dbc66e0 }}" class="link dark">{{ texts.-627263ef }}</a>
+          <a href="{{ links.-458a27cb }}" class="link dark">{{ texts.-68d80214 }}</a>
+          <a href="{{ links.5ddd3380 }}" class="link dark">{{ texts.-64104400 }}</a>
+        </div>
+        <div id="close-area" class="nav__close-area"></div>
       </div>
     </nav>
     <div class="wrap-header-copy">
@@ -366,7 +359,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     <section id="sculptures" class="section wf-section">
       <div class="container">
         <div class="flex-center-start">
-          {%- assign collection = collections.sculptures-higlights | sort: "f_order" | limit: 6 -%}<div class="highlight-cl-wrapper w-dyn-list">
+          {%- assign collection = collections.highlight | sort: "f_order" | limit: 6 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
                 <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox"><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_image.url }}" alt="{{ item.data.title }}" class="img zoom">
@@ -375,7 +368,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       <div class="subline">{{ texts.1326d }}</div>
                       <div class="number outline">{{ item.data.title }}</div>
                       <div class="wrap-pulse-legend">
-                        {%- assign statusOfSculptures-higlights = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
+                        {%- assign statusOfHighlight = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
 .dot {
   height: 8px;
   width: 8px;
@@ -405,10 +398,10 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 }
 </style>
 
-<div class="dot" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};">
-	<div class="dot-pulse" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};"></div>
+<div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
+	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div class="legend-bis margin">{{ statusOfSculptures-higlights.data.title }}</div>
+                        <div class="legend-bis margin">{{ statusOfHighlight.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
                         <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}" class="icon">
@@ -444,7 +437,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     <section class="section wf-section">
       <div class="container">
         <div class="flex-center-start">
-          {%- assign collection = collections.sculptures-higlights | sort: "f_order" | offset: 4 | limit: 6 -%}<div class="highlight-cl-wrapper w-dyn-list">
+          {%- assign collection = collections.highlight | sort: "f_order" | offset: 4 | limit: 6 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
                 <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox">
@@ -453,7 +446,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       <div class="subline">{{ texts.1326d }}</div>
                       <div class="number outline">{{ item.data.title }}</div>
                       <div class="wrap-pulse-legend">
-                        {%- assign statusOfSculptures-higlights = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
+                        {%- assign statusOfHighlight = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
 .dot {
   height: 8px;
   width: 8px;
@@ -483,10 +476,10 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 }
 </style>
 
-<div class="dot" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};">
-	<div class="dot-pulse" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};"></div>
+<div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
+	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div class="legend">{{ statusOfSculptures-higlights.data.title }}</div>
+                        <div class="legend">{{ statusOfHighlight.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
                         <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}" class="icon">
@@ -545,7 +538,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     <section class="section wf-section">
       <div class="container">
         <div class="flex-center-start">
-          {%- assign collection = collections.sculptures-higlights | sort: "f_order" | offset: 10 | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
+          {%- assign collection = collections.highlight | sort: "f_order" | offset: 10 | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
                 <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox">
@@ -554,7 +547,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       <div class="subline">{{ texts.1326d }}</div>
                       <div class="number outline">{{ item.data.title }}</div>
                       <div class="wrap-pulse-legend">
-                        {%- assign statusOfSculptures-higlights = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
+                        {%- assign statusOfHighlight = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
 .dot {
   height: 8px;
   width: 8px;
@@ -584,10 +577,10 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 }
 </style>
 
-<div class="dot" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};">
-	<div class="dot-pulse" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};"></div>
+<div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
+	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div class="legend">{{ statusOfSculptures-higlights.data.title }}</div>
+                        <div class="legend">{{ statusOfHighlight.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
                         <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}">
@@ -612,10 +605,10 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     </section>
     <section data-w-id="10790040-6cee-a66f-b559-77fe2294c226" class="section duo wf-section">
       <div class="container square">
-        <a href="{{ links.23 }}" class="top-left w-inline-block w-lightbox"><img class="img vertical" src="{{ images.-5ef8043d.url }}" alt="{{ images.-5ef8043d.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;66vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;200px&quot;}]" style="opacity:0" sizes="(max-width: 479px) 81vw, (max-width: 767px) 80vw, (max-width: 991px) 66vw, 200px" loading="lazy">
+        <a href="{{ links.23 }}" class="top-left w-inline-block w-lightbox"><img class="img vertical" src="{{ images.-5ef8043d.url }}" alt="{{ images.-5ef8043d.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;200px&quot;}]" style="opacity:0" sizes="(max-width: 767px) 27vw, 200px" loading="lazy">
           <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"sabine-salamin.png","fileName":"sabine-salamin.png","fileSize":285224,"height":828,"url":"/assets/images/sabine-salamin.png","width":560,"type":"image"}],"group":"Artistes"}</script>
         </a>
-        <a href="{{ links.23 }}" class="bottom-right w-inline-block w-lightbox"><img class="img vertical" src="{{ images.22f2e43f.url }}" alt="{{ images.22f2e43f.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;66vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;200px&quot;}]" style="opacity:0" sizes="(max-width: 479px) 81vw, (max-width: 767px) 80vw, (max-width: 991px) 66vw, 200px" loading="lazy">
+        <a href="{{ links.23 }}" class="bottom-right w-inline-block w-lightbox"><img class="img vertical" src="{{ images.22f2e43f.url }}" alt="{{ images.22f2e43f.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;11vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;26vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;200px&quot;}]" style="opacity:0" sizes="(max-width: 479px) 11vw, (max-width: 767px) 26vw, 200px" loading="lazy">
           <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"urbain-horizontal-ai-enhanced.png","fileName":"urbain-horizontal-ai-enhanced.png","fileSize":248508,"height":828,"url":"/assets/images/urbain-horizontal-ai-enhanced.png","width":560,"type":"image"}],"group":"Artistes"}</script>
         </a><img class="img width-80p" src="{{ images.77dc9e98.url }}" alt="{{ images.77dc9e98.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;69vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 80vw, (max-width: 767px) 69vw, 64vw" loading="lazy">
         <div class="punchline bottom-left">{{ texts.-687f961f }}<br>{{ texts.200d }}<span class="outline">{{ texts.-2db50cf1 }}</span></div>
@@ -625,7 +618,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     <section class="section wf-section">
       <div class="container">
         <div class="flex-center-start">
-          {%- assign collection = collections.sculptures-higlights | sort: "f_order" | offset: 14 | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
+          {%- assign collection = collections.highlight | sort: "f_order" | offset: 14 | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
                 <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox">
@@ -634,7 +627,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       <div class="subline">{{ texts.1326d }}</div>
                       <div class="number outline">{{ item.data.title }}</div>
                       <div class="wrap-pulse-legend">
-                        {%- assign statusOfSculptures-higlights = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
+                        {%- assign statusOfHighlight = item.data.f_status | resolveReference -%}<div class="embed-pulse w-embed"><style>
 .dot {
   height: 8px;
   width: 8px;
@@ -664,10 +657,10 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 }
 </style>
 
-<div class="dot" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};">
-	<div class="dot-pulse" style="background-color:{{ statusOfSculptures-higlights.data.f_color }};"></div>
+<div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
+	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div class="legend">{{ statusOfSculptures-higlights.data.title }}</div>
+                        <div class="legend">{{ statusOfHighlight.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
                         <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}">
@@ -994,6 +987,8 @@ function showScrollProgress() {
 document.addEventListener("DOMContentLoaded", () => {
   const wrapperElement = document.querySelector(".hamburgerWrapper"),
     hamburgerElement = document.getElementById("hamburgerSvg");
+  // clause guard
+  if(!wrapperElement) return;  
   // toggle animation on click
   hamburgerElement.addEventListener("click", () => {
     wrapperElement.classList.toggle("menu");
@@ -1010,7 +1005,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
 });
 function handleFAQ() {
   const triggers = document.querySelectorAll(".faq__accordion-item-trigger");
-  if(!triggers[0]) return; // clause guard
+  // clause guard
+  if(!triggers[0]) return;
   // trigger first question on load
   triggers[0].click();
   triggers[0].dataset.open = "true";
@@ -1024,6 +1020,57 @@ function handleFAQ() {
     });
   });
 }
+</script>
+  <script>
+/*
+ * URBAIN | advanced nav mobile
+ * build 11.02.2023 @20:13
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  handleHamburgerClick();
+});
+function handleHamburgerClick() {
+  const hamburgerWrapper = document.querySelector(".wrapper-hamburger"),
+    hamburgerSVG = document.querySelector("#hamburgerSvg"),
+    closeArea = document.querySelector("#close-area"),
+    mobileNavWrapper = document.querySelector(".wrapper-menu-mobile"),
+    triggers = [hamburgerSVG, closeArea];
+  // helper get x axis of 3d transform css property
+  function getXaxisTransform(element) {
+    const computedStyle = window.getComputedStyle(element, null),
+      matrix =
+        computedStyle.getPropertyValue("transform") ||
+        computedStyle.getPropertyValue("-moz-transform") ||
+        computedStyle.getPropertyValue("-webkit-transform") ||
+        computedStyle.getPropertyValue("-ms-transform") ||
+        computedStyle.getPropertyValue("-o-transform"),
+      matrixPattern = /^\w*\((((\d+)|(\d*\.\d+)),\s*)*((\d+)|(\d*\.\d+))\)/i;
+    let matrixValue = [];
+    if (matrixPattern.test(matrix)) {
+      // When it satisfy the pattern
+      const matrixCleaned = matrix.replace(/^\w*\(/, "").replace(")", "");
+      matrixValue = matrixCleaned.split(/\s*,\s*/);
+      return matrixValue[4];
+    }
+  }
+  // helper toggle hamburger animation
+  function toggleFunction() {
+    hamburgerWrapper.classList.toggle("cross");
+  }
+  // helper show / hide mobile side navigation
+  function handleSideNavigation() {
+    let x;
+    const state = getXaxisTransform(mobileNavWrapper);
+    state != 0 ? (x = 0) : (x = -110);
+    mobileNavWrapper.style.transform = `translate3d(${x}%, 0px, 0px)`;
+  }
+  Array.from(triggers).forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      toggleFunction();
+      handleSideNavigation();
+    }); // end click listener
+  }); // end foreach
+} // handleHamburgerClick()
 </script>
   <script>
 /*

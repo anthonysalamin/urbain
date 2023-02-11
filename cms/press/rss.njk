@@ -1,17 +1,17 @@
 ---
-permalink: /legale/rss.xml
+permalink: /press/rss.xml
 eleventyExcludeFromCollections: true
 ---
-{%- if collections['legale'][0] -%}
+{%- if collections['press'][0] -%}
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Legals </title>
-    <description>Legals  Feed</description>
+    <title>Presses </title>
+    <description>Presses  Feed</description>
     <link>{{ settings.site.domain }}</link>
-    <pubDate>{{ collections['legale'][0].date.toUTCString() }}</pubDate>
-    <atom:link href="{{ settings.site.domain }}/legale/rss.xml" rel="self" type="application/rss+xml"/>
-    {%- for post in collections['legale'] | reverse %}
+    <pubDate>{{ collections['press'][0].date.toUTCString() }}</pubDate>
+    <atom:link href="{{ settings.site.domain }}/press/rss.xml" rel="self" type="application/rss+xml"/>
+    {%- for post in collections['press'] | reverse %}
         <item>
             <title>{{ post.data.title }}</title>
             {% if post.data['f_image'] %}

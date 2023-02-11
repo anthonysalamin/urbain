@@ -151,88 +151,81 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   {%- include "partials/css" -%}
   <header class="section hero wf-section">
     <nav class="nav">
-      <div id="wrapper-hamburger" class="nav-hamburger-mobile w-embed">
-        <style>
-  /* hamburger options start */
-  :root {
-    --hamburger-color: white; /* 👈🏻 menu color */
-    --hamburger-dimension: 40px; /* 👈🏻 menu width & height */
-    --hamburger-strokeWidth: 25px; /* 👈🏻 width of the line */
-    --hamburger-strokeLineCap: round; /* 👈🏻 round, butt or square */
-    --hamburger-anim-duration: .35s; /* 👈🏻 animation duration */
-    --hamburger-anim-easing: cubic-bezier(0.25, -0.25, .7, 1.25); /* 👈🏻 animation easing */
-  }
-  /* hamburger options end */
-  #hamburgerSvg {
-    width: var(--hamburger-dimension);
-    height: var(--hamburger-dimension);
-    cursor: pointer;
-  }
-  #hamburgerSvg:activ {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  #hamburgerSvg:focus {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  .hamburgerWrapper:activ {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  .hamburgerWrapper:focus {
-    outline: none !important; /* removes focus highlight on click */
-  }
-  .path-menu {
-    fill: none;
-    stroke-width: var(--hamburger-strokeWidth);
-    stroke-linecap: var(--hamburger-strokeLineCap);
-    stroke: var(--hamburger-color);
-    stroke-dashoffset: 0;
-      -webkit-transition: stroke-dashoffset var(--hamburger-anim-duration) var(--hamburger-anim-easing),
-      stroke-dasharray var(--hamburger-anim-duration) var(--hamburger-anim-easing);
-      -o-transition: stroke-dashoffset var(--hamburger-anim-duration) var(--hamburger-anim-easing),
-      stroke-dasharray var(--hamburger-anim-duration) var(--hamburger-anim-easing);
-      transition: stroke-dashoffset var(--hamburger-anim-duration) var(--hamburger-anim-easing),
-      stroke-dasharray var(--hamburger-anim-duration) var(--hamburger-anim-easing);
-  }
-  #bottom,
-  #top {
-    stroke-dasharray: 240px 950px;
-  }
-  #middle {
-    stroke-dasharray: 240px 240px;
-  }
-  .menu #bottom,
-  .menu #top {
-    stroke-dashoffset: -650px;
-  }
-  .menu #middle {
-    stroke-dashoffset: -115px;
-    stroke-dasharray: 1px 220px;
-  }
-</style>
-        <!--  wrapper start  -->
-        <div class="hamburgerWrapper">
-          <!--  hamburger start  -->
-          <svg version="1.1" id="hamburgerSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 421.6 313.6">
-            <path id="top" class="path-menu" d="M33.8,52.8c0,0,220,0,240,0c200,0,100,320-20,200c-80-80-220-220-220-220"></path>
-            <path id="middle" class="path-menu" d="M33.8,152.8h240"></path>
-            <path id="bottom" class="path-menu" d="M33.8,260.8c0,0,220,0,240,0c200,0,100-320-20-200c-80,80-220,220-220,220"></path>
-          </svg>
-          <!--  hamburger end  -->
-        </div>
-        <!--  wrapper end  -->
-      </div>
-      <div class="nav-wrap-mobile">
-        <div class="nav-wrap-links-mobile">
-          <a style="opacity:0" href="{{ links.2f }}" class="nav-link">{{ texts.30f4df }}</a>
-          <a style="opacity:0" href="{{ links.23 }}" class="nav-link">{{ texts.-5bc86c4a }}</a>
-          <a style="opacity:0" href="{{ links.-194fb911 }}" aria-current="page" class="nav-link w--current">{{ texts.-2ba6f602 }}</a>
-          <a style="opacity:0" href="{{ links.3f78ebe3 }}" class="nav-link">{{ texts.38b72420 }}</a>
-        </div>
-      </div>
       <div class="nav-wrap-desktop">
         <a href="{{ links.2f }}" style="opacity:0" class="nav-link">{{ texts.1b096fd6 }}</a>
         <a href="{{ links.-194fb911 }}" aria-current="page" class="nav-link last w--current">{{ texts.3791a1de }}</a>
         <link rel="prefetch" href="/assets/null/artiste.">
+      </div>
+      <div class="wrapper-hamburger w-embed">
+        <style>
+    :root {
+      --stroke-width: 40px;
+      --stroke-linecap: round;
+      --stroke-color: white;
+      --main-bg-color: translate3d(0, 0, 0);
+      --transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25),
+        stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    }
+    #hamburgerSvg {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      -webkit-transform: var(--main-bg-color);
+      -moz-transform: var(--main-bg-color);
+      -o-transform: var(--main-bg-color);
+      -ms-transform: var(--main-bg-color);
+      transform: var(--main-bg-color);
+      /* removes focus for Chrome on Android*/
+      -webkit-tap-highlight-color: rgba(255,
+          255,
+          255,
+          0);
+    }
+    .path-menu {
+      fill: none;
+      -webkit-transition: var(--transition);
+      -moz-transition: var(--transition);
+      -o-transition: var(--transition);
+      -ms-transition: var(--transition);
+      transition: var(--transition);
+      stroke-width: var(--stroke-width);
+      stroke-linecap: var(--stroke-linecap);
+      stroke: var(--stroke-color);
+      stroke-dashoffset: 0px;
+    }
+    #top,
+    #bottom {
+      stroke-dasharray: 240px 950px;
+    }
+    #middle {
+      stroke-dasharray: 240px 240px;
+    }
+    .cross #top,
+    .cross #bottom {
+      stroke-dashoffset: -650px;
+      stroke-dashoffset: -650px;
+    }
+    .cross #middle {
+      stroke-dashoffset: -115px;
+      stroke-dasharray: 1px 220px;
+    }
+  </style>
+        <!--  Hamburger menu SVG markup -->
+        <svg id="hamburgerSvg" viewBox="0 0 800 600">
+          <path id="top" class="path-menu" d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"></path>
+          <path id="middle" class="path-menu" d="M300,320 L540,320"></path>
+          <path id="bottom" class="path-menu" d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+        </svg>
+      </div>
+      <div class="wrapper-menu-mobile">
+        <div class="nav__mobile-wrap-links">
+          <a href="{{ links.2f }}" class="link dark">{{ texts.1d0795b4 }}</a>
+          <a href="{{ links.-194fb911 }}" aria-current="page" class="link dark w--current">{{ texts.3791a1de }}</a>
+          <a href="{{ links.-2dbc66e0 }}" class="link dark">{{ texts.-627263ef }}</a>
+          <a href="{{ links.-458a27cb }}" class="link dark">{{ texts.-68d80214 }}</a>
+          <a href="{{ links.5ddd3380 }}" class="link dark">{{ texts.-64104400 }}</a>
+        </div>
+        <div id="close-area" class="nav__close-area"></div>
       </div>
     </nav>
     <div class="wrap-header-copy">
@@ -347,20 +340,17 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     </div>
   </section>
   <section data-w-id="38f5d45c-9651-5d37-dfc0-fba08e909165" class="section duo wf-section">
-    <div class="container square">
-      <a href="{{ links.23 }}" class="top-left w-inline-block w-lightbox"><img class="img vertical horizonal" src="{{ images.645ea6e1.url }}" alt="{{ images.645ea6e1.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;36vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;35vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;350px&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" sizes="(max-width: 479px) 36vw, (max-width: 991px) 35vw, 350px" loading="lazy">
-        <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"sabine-salamin.png","fileName":"sabine-salamin.png","fileSize":285224,"height":828,"url":"/assets/images/sabine-salamin.png","width":560,"type":"image"}],"group":"Artistes"}</script>
-      </a>
+    <div class="container square"><img class="img vertical horizonal" src="{{ images.645ea6e1.url }}" alt="{{ images.645ea6e1.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;36vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;35vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;32vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" sizes="(max-width: 479px) 36vw, (max-width: 767px) 35vw, 32vw" loading="lazy">
+      <div class="embed bottom-right w-embed">
+        <!--  cloudinary embed  -->
+        <video class="lazy videos" autoplay="" loop="" muted="" playsinline="" width="100%" height="auto" poster="https://res.cloudinary.com/anthonysalamin/video/upload/w_250,e_blur:2000/urbain/sabine.jpg">
+          <source src="https://res.cloudinary.com/anthonysalamin/video/upload/v1676078349/urbain/sabine.mp4" type="video/mp4">
+          Your browser does not support modern video tag, please update your browser.
+        </video>
+      </div><img class="img width-80p" src="{{ images.-1828d903.url }}" alt="{{ images.-1828d903.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;66vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 80vw, (max-width: 767px) 66vw, 64vw" loading="lazy">
       <a href="{{ links.23 }}" class="bottom-right w-inline-block w-lightbox">
-        <div class="embed try w-embed">
-          <!--  cloudinary embed  -->
-          <video class="lazy videos" autoplay="" loop="" muted="" playsinline="" width="100%" height="auto" poster="https://res.cloudinary.com/anthonysalamin/video/upload/w_250,e_blur:2000/urbain/sabine.jpg">
-            <source src="https://res.cloudinary.com/anthonysalamin/video/upload/v1676078349/urbain/sabine.mp4" type="video/mp4">
-            Your browser does not support modern video tag, please update your browser.
-          </video>
-        </div>
-        <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"urbain-horizontal-ai-enhanced.png","fileName":"urbain-horizontal-ai-enhanced.png","fileSize":248508,"height":828,"url":"/assets/images/urbain-horizontal-ai-enhanced.png","width":560,"type":"image"}],"group":"Artistes"}</script>
-      </a><img class="img width-80p" src="{{ images.-1828d903.url }}" alt="{{ images.-1828d903.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;66vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 80vw, (max-width: 767px) 66vw, 64vw" loading="lazy">
+        <script type="application/json" class="w-json">{"items":[],"group":""}</script>
+      </a>
       <div class="punchline bottom-left">{{ texts.-6cd8b854 }}<br>{{ texts.401a0 }}<span class="outline">{{ texts.-2db50cf1 }}</span></div>
       <div style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="punchline top-right">{{ texts.-687f961f }}<br>{{ texts.401a0 }}<span class="outline">{{ texts.-2db50cf1 }}</span></div>
     </div>
@@ -381,6 +371,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     <div class="container">
       <div class="flex-center-start">
         <h1 class="subline">{{ texts.-4fb442d2 }}</h1>
+        {%- include "partials/cta-big" -%}
       </div>
     </div>
   </section>
@@ -720,6 +711,8 @@ function showScrollProgress() {
 document.addEventListener("DOMContentLoaded", () => {
   const wrapperElement = document.querySelector(".hamburgerWrapper"),
     hamburgerElement = document.getElementById("hamburgerSvg");
+  // clause guard
+  if(!wrapperElement) return;  
   // toggle animation on click
   hamburgerElement.addEventListener("click", () => {
     wrapperElement.classList.toggle("menu");
@@ -736,7 +729,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
 });
 function handleFAQ() {
   const triggers = document.querySelectorAll(".faq__accordion-item-trigger");
-  if(!triggers[0]) return; // clause guard
+  // clause guard
+  if(!triggers[0]) return;
   // trigger first question on load
   triggers[0].click();
   triggers[0].dataset.open = "true";

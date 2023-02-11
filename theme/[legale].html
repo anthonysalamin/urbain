@@ -441,6 +441,8 @@ function showScrollProgress() {
 document.addEventListener("DOMContentLoaded", () => {
   const wrapperElement = document.querySelector(".hamburgerWrapper"),
     hamburgerElement = document.getElementById("hamburgerSvg");
+  // clause guard
+  if(!wrapperElement) return;  
   // toggle animation on click
   hamburgerElement.addEventListener("click", () => {
     wrapperElement.classList.toggle("menu");
@@ -457,7 +459,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
 });
 function handleFAQ() {
   const triggers = document.querySelectorAll(".faq__accordion-item-trigger");
-  if(!triggers[0]) return; // clause guard
+  // clause guard
+  if(!triggers[0]) return;
   // trigger first question on load
   triggers[0].click();
   triggers[0].dataset.open = "true";

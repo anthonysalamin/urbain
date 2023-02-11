@@ -395,7 +395,7 @@ collections:
         label: Published On
         widget: datetime
         required: false
-      - label: Imprint
+      - label: legal text
         name: body
         widget: markdown
         required: false
@@ -694,21 +694,17 @@ collections:
             label: Text
             name: '-6cd8b854'
             widget: string
-          - hint: 'Original text: Questions, key: d37612d'
+          - hint: 'Original text: FAQs, key: 20d03d'
             label: Text
-            name: d37612d
+            name: 20d03d
             widget: string
-          - hint: 'Original text: & réponses, key: -74ab81d'
+          - hint: 'Original text: Le monde, key: -d8218ba'
             label: Text
-            name: '-74ab81d'
+            name: '-d8218ba'
             widget: string
-          - hint: 'Original text: Follie, key: 7dc22705'
+          - hint: 'Original text: de l''Arolle, key: 6a54d9a1'
             label: Text
-            name: 7dc22705
-            widget: string
-          - hint: 'Original text: de l''arolle, key: -5f10127f'
-            label: Text
-            name: '-5f10127f'
+            name: 6a54d9a1
             widget: string
           - hint: 'Original text: Acceuil, key: 1d0795b4'
             label: Text
@@ -739,37 +735,49 @@ collections:
             label: Text
             name: 660fd842
             widget: text
+          - hint: 'Original text: ‍‍, key: 401a0'
+            label: Text
+            name: 401a0
+            widget: string
           - hint: >-
-              Original text: Urbain devient petit à petit sculpteur autodidacte.
-              Au travers de ses mains, elles deviennent « naturellement » des
-              œuvres d’art… Urbain découvre ces merveilles qu’il façonne en
-              mettant en évidence leur beauté complexe, les magnifie. Enfin des
-              œuvres que l’on peut voir, sentir et caresser ! A ce jour, Urbain
-              a « sculpté » plus de 300 pièces qui varient entre 25 et 250 cm.,
-              key: 73fe8f28
+              Original text: Urbain devient petit à petit sculpteur autodidacte,
+              au travers de ses mains, elles deviennent naturellement des œuvres
+              d’art. Urbain découvre ces merveilles qu’il façonne en mettant en
+              évidence leur beauté complexe, les magnifie., key: 109a4ca8
             label: Text
-            name: 73fe8f28
+            name: 109a4ca8
             widget: text
-          - hint: "Original text: En 1985, Urbain expose pour la première fois, à l’office national Suisse du tourisme à Paris.\_Taquiné par un metteur en scène, André Schmidt, il accepte de présenter ses œuvres en exposition dans l’espace Berclaz & Métrailler à Sierre 1994. A la retraite, Urbain continue avec passion la création de multiples œuvres qu’il présentera\_ , key: -610b82c0"
+          - hint: >-
+              Original text: Enfin des œuvres que l’on peut voir, sentir et
+              caresser ! A ce jour, Urbain a sculpté plus de 300 pièces qui
+              varient entre 25 et 250 cm. En 1985, Urbain expose pour la
+              première fois, à l’office national Suisse du tourisme à Paris.
+              Taquiné par un metteur en scène, André Schmidt, il accepte de
+              présenter ses œuvres en exposition dans l’espace Berclaz &
+              Métrailler à Sierre 1994., key: -581034d5
             label: Text
-            name: '-610b82c0'
+            name: '-581034d5'
             widget: text
-          - hint: "Original text: à deux reprises aux Floralies Sierroises 2001 et 2003\_, key: 58a9ea57"
+          - hint: 'Original text: Sculpteur, key: 2a295c97'
             label: Text
-            name: 58a9ea57
+            name: 2a295c97
             widget: string
-          - hint: "Original text: une exposition à Swisscom à Sion en 2003\_, key: 7b14d5ff"
+          - hint: 'Original text: ‍‍‍, key: 7c526d'
             label: Text
-            name: 7b14d5ff
+            name: 7c526d
             widget: string
-          - hint: "Original text: une exposition de trois semaines en compagnie du peintre Olivier Menge, dans l’espace de l’hôtel des vignes à St-Léonard en 2007\_, key: -566ca4a9"
+          - hint: 'Original text: Rêveur, key: -66f9f39c'
             label: Text
-            name: '-566ca4a9'
+            name: '-66f9f39c'
+            widget: string
+          - hint: 'Original text: musicien, key: 324cba8d'
+            label: Text
+            name: 324cba8d
+            widget: string
+          - hint: "Original text: Urbain continuera jusqu'à la fin de sa vie et avec passion la création de multiples œuvres qu’il présentera\_à deux reprises aux Floralies Sierroises 2001 et 2003\_une exposition à Swisscom à Sion en 2003\_une exposition de trois semaines en compagnie du peintre Olivier Menge, dans l’espace de l’hôtel des vignes à St-Léonard en 2007\_une exposition à la Galerie Duo à Sion en 2014\_, key: -267f470f"
+            label: Text
+            name: '-267f470f'
             widget: text
-          - hint: "Original text: une exposition à la Galerie Duo à Sion en 2014\_, key: 14a15851"
-            label: Text
-            name: 14a15851
-            widget: string
           - hint: 'Original text: 🔐 Demande d''accès, key: 160bb9f6'
             label: Text
             name: 160bb9f6
@@ -826,9 +834,705 @@ collections:
             label: Text
             name: 24ff13
             widget: string
-          - hint: 'Original text: En construction, key: -6126d938'
+          - hint: 'Original text: Privacy Policy, key: -3fbde6f6'
             label: Text
-            name: '-6126d938'
+            name: '-3fbde6f6'
+            widget: string
+          - hint: 'Original text: Last updated: February 10, 2023, key: 77644a99'
+            label: Text
+            name: 77644a99
+            widget: string
+          - hint: >-
+              Original text: This Privacy Policy describes Our policies and
+              procedures on the collection, use and disclosure of Your
+              information when You use the Service and tells You about Your
+              privacy rights and how the law protects You., key: -7bf5d066
+            label: Text
+            name: '-7bf5d066'
+            widget: text
+          - hint: >-
+              Original text: We use Your Personal data to provide and improve
+              the Service. By using the Service, You agree to the collection and
+              use of information in accordance with this Privacy Policy. This
+              Privacy Policy has been created with the help of the Free Privacy
+              Policy Generator., key: 3d0a6d0f
+            label: Text
+            name: 3d0a6d0f
+            widget: text
+          - hint: 'Original text: Interpretation and Definitions, key: 4089129f'
+            label: Text
+            name: 4089129f
+            widget: string
+          - hint: 'Original text: Interpretation, key: -4d7b91d8'
+            label: Text
+            name: '-4d7b91d8'
+            widget: string
+          - hint: >-
+              Original text: The words of which the initial letter is
+              capitalized have meanings defined under the following conditions.
+              The following definitions shall have the same meaning regardless
+              of whether they appear in singular or in plural., key: -4a132997
+            label: Text
+            name: '-4a132997'
+            widget: text
+          - hint: 'Original text: Definitions, key: 11071d60'
+            label: Text
+            name: 11071d60
+            widget: string
+          - hint: >-
+              Original text: For the purposes of this Privacy Policy:, key:
+              -7290038e
+            label: Text
+            name: '-7290038e'
+            widget: string
+          - hint: >-
+              Original text: Account means a unique account created for You to
+              access our Service or parts of our Service., key: -6a09b063
+            label: Text
+            name: '-6a09b063'
+            widget: text
+          - hint: >-
+              Original text: Affiliate means an entity that controls, is
+              controlled by or is under common control with a party, where
+              "control" means ownership of 50% or more of the shares, equity
+              interest or other securities entitled to vote for election of
+              directors or other managing authority., key: -6ac590cd
+            label: Text
+            name: '-6ac590cd'
+            widget: text
+          - hint: >-
+              Original text: Company (referred to as either "the Company", "We",
+              "Us" or "Our" in this Agreement) refers to Urbain Salamin., key:
+              -715a1665
+            label: Text
+            name: '-715a1665'
+            widget: text
+          - hint: >-
+              Original text: Cookies are small files that are placed on Your
+              computer, mobile device or any other device by a website,
+              containing the details of Your browsing history on that website
+              among its many uses., key: 286dbf70
+            label: Text
+            name: 286dbf70
+            widget: text
+          - hint: 'Original text: Country refers to: Switzerland, key: 69a227bf'
+            label: Text
+            name: 69a227bf
+            widget: string
+          - hint: >-
+              Original text: Device means any device that can access the Service
+              such as a computer, a cellphone or a digital tablet., key:
+              -222660bf
+            label: Text
+            name: '-222660bf'
+            widget: text
+          - hint: >-
+              Original text: Personal Data is any information that relates to an
+              identified or identifiable individual., key: -64277b58
+            label: Text
+            name: '-64277b58'
+            widget: string
+          - hint: 'Original text: Service refers to the Website., key: 3ab35325'
+            label: Text
+            name: 3ab35325
+            widget: string
+          - hint: >-
+              Original text: Service Provider means any natural or legal person
+              who processes the data on behalf of the Company. It refers to
+              third-party companies or individuals employed by the Company to
+              facilitate the Service, to provide the Service on behalf of the
+              Company, to perform services related to the Service or to assist
+              the Company in analyzing how the Service is used., key: -63b417b6
+            label: Text
+            name: '-63b417b6'
+            widget: text
+          - hint: >-
+              Original text: Usage Data refers to data collected automatically,
+              either generated by the use of the Service or from the Service
+              infrastructure itself (for example, the duration of a page
+              visit)., key: 695ef28d
+            label: Text
+            name: 695ef28d
+            widget: text
+          - hint: >-
+              Original text: Website refers to Urbain Salamin, accessible from
+              https://urbainsalamin.ch/, key: -6a002fb2
+            label: Text
+            name: '-6a002fb2'
+            widget: string
+          - hint: >-
+              Original text: You means the individual accessing or using the
+              Service, or the company, or other legal entity on behalf of which
+              such individual is accessing or using the Service, as applicable.,
+              key: -f754dc1
+            label: Text
+            name: '-f754dc1'
+            widget: text
+          - hint: >-
+              Original text: Collecting and Using Your Personal Data, key:
+              3b4d1c6a
+            label: Text
+            name: 3b4d1c6a
+            widget: string
+          - hint: 'Original text: Types of Data Collected, key: -6b2ca84b'
+            label: Text
+            name: '-6b2ca84b'
+            widget: string
+          - hint: 'Original text: Personal Data, key: 4eb6458a'
+            label: Text
+            name: 4eb6458a
+            widget: string
+          - hint: >-
+              Original text: While using Our Service, We may ask You to provide
+              Us with certain personally identifiable information that can be
+              used to contact or identify You. Personally identifiable
+              information may include, but is not limited to:, key: -195a589f
+            label: Text
+            name: '-195a589f'
+            widget: text
+          - hint: 'Original text: Email address, key: 71575750'
+            label: Text
+            name: '71575750'
+            widget: string
+          - hint: 'Original text: First name and last name, key: 28200d87'
+            label: Text
+            name: 28200d87
+            widget: string
+          - hint: 'Original text: Usage Data, key: a510f09'
+            label: Text
+            name: a510f09
+            widget: string
+          - hint: >-
+              Original text: Usage Data is collected automatically when using
+              the Service., key: 13b11237
+            label: Text
+            name: 13b11237
+            widget: string
+          - hint: >-
+              Original text: Usage Data may include information such as Your
+              Device's Internet Protocol address (e.g. IP address), browser
+              type, browser version, the pages of our Service that You visit,
+              the time and date of Your visit, the time spent on those pages,
+              unique device identifiers and other diagnostic data., key:
+              3d975dae
+            label: Text
+            name: 3d975dae
+            widget: text
+          - hint: >-
+              Original text: When You access the Service by or through a mobile
+              device, We may collect certain information automatically,
+              including, but not limited to, the type of mobile device You use,
+              Your mobile device unique ID, the IP address of Your mobile
+              device, Your mobile operating system, the type of mobile Internet
+              browser You use, unique device identifiers and other diagnostic
+              data., key: 634c672f
+            label: Text
+            name: 634c672f
+            widget: text
+          - hint: >-
+              Original text: We may also collect information that Your browser
+              sends whenever You visit our Service or when You access the
+              Service by or through a mobile device., key: 50fa946e
+            label: Text
+            name: 50fa946e
+            widget: text
+          - hint: 'Original text: Tracking Technologies and Cookies, key: 7d8db9f9'
+            label: Text
+            name: 7d8db9f9
+            widget: string
+          - hint: >-
+              Original text: We use Cookies and similar tracking technologies to
+              track the activity on Our Service and store certain information.
+              Tracking technologies used are beacons, tags, and scripts to
+              collect and track information and to improve and analyze Our
+              Service. The technologies We use may include:, key: 444cc91a
+            label: Text
+            name: 444cc91a
+            widget: text
+          - hint: >-
+              Original text: Cookies or Browser Cookies. A cookie is a small
+              file placed on Your Device. You can instruct Your browser to
+              refuse all Cookies or to indicate when a Cookie is being sent.
+              However, if You do not accept Cookies, You may not be able to use
+              some parts of our Service. Unless you have adjusted Your browser
+              setting so that it will refuse Cookies, our Service may use
+              Cookies., key: -4335cdbb
+            label: Text
+            name: '-4335cdbb'
+            widget: text
+          - hint: >-
+              Original text: Web Beacons. Certain sections of our Service and
+              our emails may contain small electronic files known as web beacons
+              (also referred to as clear gifs, pixel tags, and single-pixel
+              gifs) that permit the Company, for example, to count users who
+              have visited those pages or opened an email and for other related
+              website statistics (for example, recording the popularity of a
+              certain section and verifying system and server integrity)., key:
+              -16639a94
+            label: Text
+            name: '-16639a94'
+            widget: text
+          - hint: >-
+              Original text: Cookies can be "Persistent" or "Session" Cookies.
+              Persistent Cookies remain on Your personal computer or mobile
+              device when You go offline, while Session Cookies are deleted as
+              soon as You close Your web browser. Learn more about cookies on
+              the Free Privacy Policy website article., key: -527bdf5
+            label: Text
+            name: '-527bdf5'
+            widget: text
+          - hint: >-
+              Original text: We use both Session and Persistent Cookies for the
+              purposes set out below:, key: 54f9838b
+            label: Text
+            name: 54f9838b
+            widget: string
+          - hint: 'Original text: Necessary / Essential Cookies, key: -5e8438a5'
+            label: Text
+            name: '-5e8438a5'
+            widget: string
+          - hint: 'Original text: Type: Session Cookies, key: -3e06613b'
+            label: Text
+            name: '-3e06613b'
+            widget: string
+          - hint: 'Original text: Administered by: Us, key: -5b54940c'
+            label: Text
+            name: '-5b54940c'
+            widget: string
+          - hint: >-
+              Original text: Purpose: These Cookies are essential to provide You
+              with services available through the Website and to enable You to
+              use some of its features. They help to authenticate users and
+              prevent fraudulent use of user accounts. Without these Cookies,
+              the services that You have asked for cannot be provided, and We
+              only use these Cookies to provide You with those services., key:
+              19e8ca43
+            label: Text
+            name: 19e8ca43
+            widget: text
+          - hint: >-
+              Original text: Cookies Policy / Notice Acceptance Cookies, key:
+              3927b4c0
+            label: Text
+            name: 3927b4c0
+            widget: string
+          - hint: 'Original text: Type: Persistent Cookies, key: -67dc29fa'
+            label: Text
+            name: '-67dc29fa'
+            widget: string
+          - hint: >-
+              Original text: Purpose: These Cookies identify if users have
+              accepted the use of cookies on the Website., key: -6bfd7cf5
+            label: Text
+            name: '-6bfd7cf5'
+            widget: string
+          - hint: 'Original text: Functionality Cookies, key: -2a356906'
+            label: Text
+            name: '-2a356906'
+            widget: string
+          - hint: >-
+              Original text: Purpose: These Cookies allow us to remember choices
+              You make when You use the Website, such as remembering your login
+              details or language preference. The purpose of these Cookies is to
+              provide You with a more personal experience and to avoid You
+              having to re-enter your preferences every time You use the
+              Website., key: -4eb6fbbc
+            label: Text
+            name: '-4eb6fbbc'
+            widget: text
+          - hint: >-
+              Original text: For more information about the cookies we use and
+              your choices regarding cookies, please visit our Cookies Policy or
+              the Cookies section of our Privacy Policy., key: 6eb1541d
+            label: Text
+            name: 6eb1541d
+            widget: text
+          - hint: 'Original text: Use of Your Personal Data, key: -64b25093'
+            label: Text
+            name: '-64b25093'
+            widget: string
+          - hint: >-
+              Original text: The Company may use Personal Data for the following
+              purposes:, key: f553f4
+            label: Text
+            name: f553f4
+            widget: string
+          - hint: >-
+              Original text: To provide and maintain our Service, including to
+              monitor the usage of our Service., key: -72653b
+            label: Text
+            name: '-72653b'
+            widget: string
+          - hint: >-
+              Original text: To manage Your Account: to manage Your registration
+              as a user of the Service. The Personal Data You provide can give
+              You access to different functionalities of the Service that are
+              available to You as a registered user., key: -55997c1c
+            label: Text
+            name: '-55997c1c'
+            widget: text
+          - hint: >-
+              Original text: For the performance of a contract: the development,
+              compliance and undertaking of the purchase contract for the
+              products, items or services You have purchased or of any other
+              contract with Us through the Service., key: -4137147d
+            label: Text
+            name: '-4137147d'
+            widget: text
+          - hint: >-
+              Original text: To contact You: To contact You by email, telephone
+              calls, SMS, or other equivalent forms of electronic communication,
+              such as a mobile application's push notifications regarding
+              updates or informative communications related to the
+              functionalities, products or contracted services, including the
+              security updates, when necessary or reasonable for their
+              implementation., key: 274a3040
+            label: Text
+            name: 274a3040
+            widget: text
+          - hint: >-
+              Original text: To provide You with news, special offers and
+              general information about other goods, services and events which
+              we offer that are similar to those that you have already purchased
+              or enquired about unless You have opted not to receive such
+              information., key: 1d78f92a
+            label: Text
+            name: 1d78f92a
+            widget: text
+          - hint: >-
+              Original text: To manage Your requests: To attend and manage Your
+              requests to Us., key: -7d583056
+            label: Text
+            name: '-7d583056'
+            widget: string
+          - hint: >-
+              Original text: For business transfers: We may use Your information
+              to evaluate or conduct a merger, divestiture, restructuring,
+              reorganization, dissolution, or other sale or transfer of some or
+              all of Our assets, whether as a going concern or as part of
+              bankruptcy, liquidation, or similar proceeding, in which Personal
+              Data held by Us about our Service users is among the assets
+              transferred., key: -25fd9342
+            label: Text
+            name: '-25fd9342'
+            widget: text
+          - hint: >-
+              Original text: For other purposes: We may use Your information for
+              other purposes, such as data analysis, identifying usage trends,
+              determining the effectiveness of our promotional campaigns and to
+              evaluate and improve our Service, products, services, marketing
+              and your experience., key: 6ae02b69
+            label: Text
+            name: 6ae02b69
+            widget: text
+          - hint: >-
+              Original text: We may share Your personal information in the
+              following situations:, key: 150c0ee1
+            label: Text
+            name: 150c0ee1
+            widget: string
+          - hint: >-
+              Original text: With Service Providers: We may share Your personal
+              information with Service Providers to monitor and analyze the use
+              of our Service, to contact You., key: 43ed2289
+            label: Text
+            name: 43ed2289
+            widget: text
+          - hint: >-
+              Original text: For business transfers: We may share or transfer
+              Your personal information in connection with, or during
+              negotiations of, any merger, sale of Company assets, financing, or
+              acquisition of all or a portion of Our business to another
+              company., key: -73748bdc
+            label: Text
+            name: '-73748bdc'
+            widget: text
+          - hint: >-
+              Original text: With Affiliates: We may share Your information with
+              Our affiliates, in which case we will require those affiliates to
+              honor this Privacy Policy. Affiliates include Our parent company
+              and any other subsidiaries, joint venture partners or other
+              companies that We control or that are under common control with
+              Us., key: 55a1e0d1
+            label: Text
+            name: 55a1e0d1
+            widget: text
+          - hint: >-
+              Original text: With business partners: We may share Your
+              information with Our business partners to offer You certain
+              products, services or promotions., key: -42b65f04
+            label: Text
+            name: '-42b65f04'
+            widget: text
+          - hint: >-
+              Original text: With other users: when You share personal
+              information or otherwise interact in the public areas with other
+              users, such information may be viewed by all users and may be
+              publicly distributed outside., key: 2583be9a
+            label: Text
+            name: 2583be9a
+            widget: text
+          - hint: >-
+              Original text: With Your consent: We may disclose Your personal
+              information for any other purpose with Your consent., key:
+              36af68a1
+            label: Text
+            name: 36af68a1
+            widget: text
+          - hint: 'Original text: Retention of Your Personal Data, key: -3c89fa3c'
+            label: Text
+            name: '-3c89fa3c'
+            widget: string
+          - hint: >-
+              Original text: The Company will retain Your Personal Data only for
+              as long as is necessary for the purposes set out in this Privacy
+              Policy. We will retain and use Your Personal Data to the extent
+              necessary to comply with our legal obligations (for example, if we
+              are required to retain your data to comply with applicable laws),
+              resolve disputes, and enforce our legal agreements and policies.,
+              key: -1dcf6edf
+            label: Text
+            name: '-1dcf6edf'
+            widget: text
+          - hint: >-
+              Original text: The Company will also retain Usage Data for
+              internal analysis purposes. Usage Data is generally retained for a
+              shorter period of time, except when this data is used to
+              strengthen the security or to improve the functionality of Our
+              Service, or We are legally obligated to retain this data for
+              longer time periods., key: 2c3e199
+            label: Text
+            name: 2c3e199
+            widget: text
+          - hint: 'Original text: Transfer of Your Personal Data, key: -4e28d4ef'
+            label: Text
+            name: '-4e28d4ef'
+            widget: string
+          - hint: >-
+              Original text: Your information, including Personal Data, is
+              processed at the Company's operating offices and in any other
+              places where the parties involved in the processing are located.
+              It means that this information may be transferred to — and
+              maintained on — computers located outside of Your state, province,
+              country or other governmental jurisdiction where the data
+              protection laws may differ than those from Your jurisdiction.,
+              key: -c68427d
+            label: Text
+            name: '-c68427d'
+            widget: text
+          - hint: >-
+              Original text: Your consent to this Privacy Policy followed by
+              Your submission of such information represents Your agreement to
+              that transfer., key: 6732fcf7
+            label: Text
+            name: 6732fcf7
+            widget: text
+          - hint: >-
+              Original text: The Company will take all steps reasonably
+              necessary to ensure that Your data is treated securely and in
+              accordance with this Privacy Policy and no transfer of Your
+              Personal Data will take place to an organization or a country
+              unless there are adequate controls in place including the security
+              of Your data and other personal information., key: -5e236654
+            label: Text
+            name: '-5e236654'
+            widget: text
+          - hint: 'Original text: Delete Your Personal Data, key: -533bcb0e'
+            label: Text
+            name: '-533bcb0e'
+            widget: string
+          - hint: >-
+              Original text: You have the right to delete or request that We
+              assist in deleting the Personal Data that We have collected about
+              You., key: ed39cac
+            label: Text
+            name: ed39cac
+            widget: text
+          - hint: >-
+              Original text: Our Service may give You the ability to delete
+              certain information about You from within the Service., key:
+              -721805c8
+            label: Text
+            name: '-721805c8'
+            widget: text
+          - hint: >-
+              Original text: You may update, amend, or delete Your information
+              at any time by signing in to Your Account, if you have one, and
+              visiting the account settings section that allows you to manage
+              Your personal information. You may also contact Us to request
+              access to, correct, or delete any personal information that You
+              have provided to Us., key: -539b8846
+            label: Text
+            name: '-539b8846'
+            widget: text
+          - hint: >-
+              Original text: Please note, however, that We may need to retain
+              certain information when we have a legal obligation or lawful
+              basis to do so., key: 1e2f3cb0
+            label: Text
+            name: 1e2f3cb0
+            widget: text
+          - hint: 'Original text: Disclosure of Your Personal Data, key: 740d0793'
+            label: Text
+            name: 740d0793
+            widget: string
+          - hint: 'Original text: Business Transactions, key: -15d82a4b'
+            label: Text
+            name: '-15d82a4b'
+            widget: string
+          - hint: >-
+              Original text: If the Company is involved in a merger, acquisition
+              or asset sale, Your Personal Data may be transferred. We will
+              provide notice before Your Personal Data is transferred and
+              becomes subject to a different Privacy Policy., key: -9686441
+            label: Text
+            name: '-9686441'
+            widget: text
+          - hint: 'Original text: Law enforcement, key: 2831f6a2'
+            label: Text
+            name: 2831f6a2
+            widget: string
+          - hint: >-
+              Original text: Under certain circumstances, the Company may be
+              required to disclose Your Personal Data if required to do so by
+              law or in response to valid requests by public authorities (e.g. a
+              court or a government agency)., key: -79ca4cd6
+            label: Text
+            name: '-79ca4cd6'
+            widget: text
+          - hint: 'Original text: Other legal requirements, key: 24c6f1c7'
+            label: Text
+            name: 24c6f1c7
+            widget: string
+          - hint: >-
+              Original text: The Company may disclose Your Personal Data in the
+              good faith belief that such action is necessary to:, key:
+              -529283cc
+            label: Text
+            name: '-529283cc'
+            widget: text
+          - hint: 'Original text: Comply with a legal obligation, key: -29ed1266'
+            label: Text
+            name: '-29ed1266'
+            widget: string
+          - hint: >-
+              Original text: Protect and defend the rights or property of the
+              Company, key: 2bb2b45d
+            label: Text
+            name: 2bb2b45d
+            widget: string
+          - hint: >-
+              Original text: Prevent or investigate possible wrongdoing in
+              connection with the Service, key: -78462390
+            label: Text
+            name: '-78462390'
+            widget: string
+          - hint: >-
+              Original text: Protect the personal safety of Users of the Service
+              or the public, key: -74760ddb
+            label: Text
+            name: '-74760ddb'
+            widget: string
+          - hint: 'Original text: Protect against legal liability, key: 286a1596'
+            label: Text
+            name: 286a1596
+            widget: string
+          - hint: 'Original text: Security of Your Personal Data, key: 611f8ca6'
+            label: Text
+            name: 611f8ca6
+            widget: string
+          - hint: >-
+              Original text: The security of Your Personal Data is important to
+              Us, but remember that no method of transmission over the Internet,
+              or method of electronic storage is 100% secure. While We strive to
+              use commercially acceptable means to protect Your Personal Data,
+              We cannot guarantee its absolute security., key: -5007763d
+            label: Text
+            name: '-5007763d'
+            widget: text
+          - hint: 'Original text: Children''s Privacy, key: 377957d3'
+            label: Text
+            name: 377957d3
+            widget: string
+          - hint: >-
+              Original text: Our Service does not address anyone under the age
+              of 13. We do not knowingly collect personally identifiable
+              information from anyone under the age of 13. If You are a parent
+              or guardian and You are aware that Your child has provided Us with
+              Personal Data, please contact Us. If We become aware that We have
+              collected Personal Data from anyone under the age of 13 without
+              verification of parental consent, We take steps to remove that
+              information from Our servers., key: 6b906f14
+            label: Text
+            name: 6b906f14
+            widget: text
+          - hint: >-
+              Original text: If We need to rely on consent as a legal basis for
+              processing Your information and Your country requires consent from
+              a parent, We may require Your parent's consent before We collect
+              and use that information., key: -60fce560
+            label: Text
+            name: '-60fce560'
+            widget: text
+          - hint: 'Original text: Links to Other Websites, key: -350ee5fa'
+            label: Text
+            name: '-350ee5fa'
+            widget: string
+          - hint: >-
+              Original text: Our Service may contain links to other websites
+              that are not operated by Us. If You click on a third party link,
+              You will be directed to that third party's site. We strongly
+              advise You to review the Privacy Policy of every site You visit.,
+              key: 69df83b0
+            label: Text
+            name: 69df83b0
+            widget: text
+          - hint: >-
+              Original text: We have no control over and assume no
+              responsibility for the content, privacy policies or practices of
+              any third party sites or services., key: 69806c71
+            label: Text
+            name: 69806c71
+            widget: text
+          - hint: 'Original text: Changes to this Privacy Policy, key: 793f7c4'
+            label: Text
+            name: 793f7c4
+            widget: string
+          - hint: >-
+              Original text: We may update Our Privacy Policy from time to time.
+              We will notify You of any changes by posting the new Privacy
+              Policy on this page., key: -56d8ec8f
+            label: Text
+            name: '-56d8ec8f'
+            widget: text
+          - hint: >-
+              Original text: We will let You know via email and/or a prominent
+              notice on Our Service, prior to the change becoming effective and
+              update the "Last updated" date at the top of this Privacy Policy.,
+              key: -1824785a
+            label: Text
+            name: '-1824785a'
+            widget: text
+          - hint: >-
+              Original text: You are advised to review this Privacy Policy
+              periodically for any changes. Changes to this Privacy Policy are
+              effective when they are posted on this page., key: -19e4ed89
+            label: Text
+            name: '-19e4ed89'
+            widget: text
+          - hint: 'Original text: Contact Us, key: 7f2746de'
+            label: Text
+            name: 7f2746de
+            widget: string
+          - hint: >-
+              Original text: If you have any questions about this Privacy
+              Policy, You can contact us:, key: 6c58319
+            label: Text
+            name: 6c58319
+            widget: string
+          - hint: 'Original text: By email: info@urbainsalamin.ch, key: -33901622'
+            label: Text
+            name: '-33901622'
             widget: string
           - hint: 'Original text: Où trouver l''atelier ?, key: 1cadf5c9'
             label: Text
@@ -1069,7 +1773,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-15fcf801'
+            name: 77dc9e98
             widget: object
             fields:
               - name: url
@@ -1095,7 +1799,59 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 377eea6e
+            name: 645ea6e1
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 35c0f3aa
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1828d903'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-405bcec2'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 73f2e9d9
             widget: object
             fields:
               - name: url

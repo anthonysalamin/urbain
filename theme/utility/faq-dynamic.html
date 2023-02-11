@@ -482,6 +482,44 @@ function showScrollProgress() {
 } // end showScrollProgress
 </script>
   <script>
+/**
+ * 🟢 hamburger menu animation
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapperElement = document.querySelector(".hamburgerWrapper"),
+    hamburgerElement = document.getElementById("hamburgerSvg");
+  // toggle animation on click
+  hamburgerElement.addEventListener("click", () => {
+    wrapperElement.classList.toggle("menu");
+  });
+}); // end DOM loaded
+</script>
+  <script>
+/*
+ * faq on load v.1
+ * last build: 23.12.22 @10.17
+*/
+document.addEventListener("DOMContentLoaded", ()=> {
+  handleFAQ();
+});
+function handleFAQ() {
+  const triggers = document.querySelectorAll(".faq__accordion-item-trigger");
+  if(!triggers[0]) return; // clause guard
+  // trigger first question on load
+  triggers[0].click();
+  triggers[0].dataset.open = "true";
+  // listen to trigger click
+  Array.from(triggers).forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      const openQuestion = document.querySelector('[data-open="true"]');
+      openQuestion.click();
+      openQuestion.dataset.open = "false";
+      trigger.dataset.open = "true";
+    });
+  });
+}
+</script>
+  <script>
 /*
  * faq on load v.1
  * last build: 23.12.22 @10.17

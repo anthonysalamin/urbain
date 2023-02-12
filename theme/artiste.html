@@ -151,84 +151,14 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   {%- include "partials/css" -%}
   <header class="section hero wf-section">
     <nav class="nav">
-      <div class="nav-wrap-desktop">
+      <div class="nav-desktop">
         <a href="{{ links.2f }}" style="opacity:0" class="nav-link">{{ texts.1b096fd6 }}</a>
         <a href="{{ links.-194fb911 }}" aria-current="page" class="nav-link last w--current">{{ texts.3791a1de }}</a>
         <link rel="prefetch" href="/assets/null/artiste.">
       </div>
-      <div class="wrapper-hamburger w-embed">
-        <style>
-    :root {
-      --stroke-width: 40px;
-      --stroke-linecap: round;
-      --stroke-color: white;
-      --main-bg-color: translate3d(0, 0, 0);
-      --transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25),
-        stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
-    }
-    #hamburgerSvg {
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      -webkit-transform: var(--main-bg-color);
-      -moz-transform: var(--main-bg-color);
-      -o-transform: var(--main-bg-color);
-      -ms-transform: var(--main-bg-color);
-      transform: var(--main-bg-color);
-      /* removes focus for Chrome on Android*/
-      -webkit-tap-highlight-color: rgba(255,
-          255,
-          255,
-          0);
-    }
-    .path-menu {
-      fill: none;
-      -webkit-transition: var(--transition);
-      -moz-transition: var(--transition);
-      -o-transition: var(--transition);
-      -ms-transition: var(--transition);
-      transition: var(--transition);
-      stroke-width: var(--stroke-width);
-      stroke-linecap: var(--stroke-linecap);
-      stroke: var(--stroke-color);
-      stroke-dashoffset: 0px;
-    }
-    #top,
-    #bottom {
-      stroke-dasharray: 240px 950px;
-    }
-    #middle {
-      stroke-dasharray: 240px 240px;
-    }
-    .cross #top,
-    .cross #bottom {
-      stroke-dashoffset: -650px;
-      stroke-dashoffset: -650px;
-    }
-    .cross #middle {
-      stroke-dashoffset: -115px;
-      stroke-dasharray: 1px 220px;
-    }
-  </style>
-        <!--  Hamburger menu SVG markup -->
-        <svg id="hamburgerSvg" viewBox="0 0 800 600">
-          <path id="top" class="path-menu" d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"></path>
-          <path id="middle" class="path-menu" d="M300,320 L540,320"></path>
-          <path id="bottom" class="path-menu" d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-        </svg>
-      </div>
-      <div class="wrapper-menu-mobile">
-        <div class="nav__mobile-wrap-links">
-          <a href="{{ links.2f }}" class="link dark">{{ texts.1d0795b4 }}</a>
-          <a href="{{ links.-194fb911 }}" aria-current="page" class="link dark w--current">{{ texts.3791a1de }}</a>
-          <a href="{{ links.-2dbc66e0 }}" class="link dark">{{ texts.-627263ef }}</a>
-          <a href="{{ links.-458a27cb }}" class="link dark">{{ texts.-68d80214 }}</a>
-          <a href="{{ links.5ddd3380 }}" class="link dark">{{ texts.-64104400 }}</a>
-        </div>
-        <div id="close-area" class="nav__close-area"></div>
-      </div>
+      {%- include "partials/nav-mobile" -%}
     </nav>
-    <div class="wrap-header-copy">
+    <div class="wrapper-header">
       <div data-delay="4500" data-animation="slide" class="hero-slider w-slider" data-autoplay="true" data-easing="ease-in-out-quart" style="opacity:0" data-hide-arrows="true" data-disable-swipe="true" data-autoplay-limit="0" data-nav-spacing="8" data-duration="2500" data-infinite="true">
         <div class="hero-mask w-slider-mask">
           <div class="hero-slide w-slide">
@@ -432,6 +362,59 @@ document.addEventListener("DOMContentLoaded", () => {
   style.innerText = `:host { left: -100% !important; }`;
   udeslyShadowRoot.appendChild(style);
 });
+</script>
+  <script>
+/*
+ * URBAIN | advanced nav mobile
+ * build 11.02.2023 @20:13
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  handleHamburgerClick();
+});
+function handleHamburgerClick() {
+  const hamburgerWrapper = document.querySelector(".wrapper-hamburger"),
+    hamburgerSVG = document.querySelector("#hamburgerSvg"),
+    closeArea = document.querySelector("#close-area"),
+    mobileNavWrapper = document.querySelector(".wrapper-menu-mobile"),
+    triggers = [hamburgerSVG, closeArea];
+    // clause guard
+    if (!hamburgerWrapper) return;
+  // helper get x axis of 3d transform css property
+  function getXaxisTransform(element) {
+    const computedStyle = window.getComputedStyle(element, null),
+      matrix =
+        computedStyle.getPropertyValue("transform") ||
+        computedStyle.getPropertyValue("-moz-transform") ||
+        computedStyle.getPropertyValue("-webkit-transform") ||
+        computedStyle.getPropertyValue("-ms-transform") ||
+        computedStyle.getPropertyValue("-o-transform"),
+      matrixPattern = /^\w*\((((\d+)|(\d*\.\d+)),\s*)*((\d+)|(\d*\.\d+))\)/i;
+    let matrixValue = [];
+    if (matrixPattern.test(matrix)) {
+      // When it satisfy the pattern
+      const matrixCleaned = matrix.replace(/^\w*\(/, "").replace(")", "");
+      matrixValue = matrixCleaned.split(/\s*,\s*/);
+      return matrixValue[4];
+    }
+  }
+  // helper toggle hamburger animation
+  function toggleFunction() {
+    hamburgerWrapper.classList.toggle("cross");
+  }
+  // helper show / hide mobile side navigation
+  function handleSideNavigation() {
+    let x;
+    const state = getXaxisTransform(mobileNavWrapper);
+    state != 0 ? (x = 0) : (x = -110);
+    mobileNavWrapper.style.transform = `translate3d(${x}%, 0px, 0px)`;
+  }
+  Array.from(triggers).forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      toggleFunction();
+      handleSideNavigation();
+    }); // end click listener
+  }); // end foreach
+} // handleHamburgerClick()
 </script>
   <script>
 /*

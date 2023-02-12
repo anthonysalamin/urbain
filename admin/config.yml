@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  branch: main
   accept_roles:
     - admin
     - editor
@@ -768,10 +767,6 @@ collections:
           - hint: 'Original text: Ooops, no items found., key: 3901bee5'
             label: Text
             name: 3901bee5
-            widget: string
-          - hint: 'Original text: Press, key: 49cb423'
-            label: Text
-            name: 49cb423
             widget: string
       - label: Links
         name: links

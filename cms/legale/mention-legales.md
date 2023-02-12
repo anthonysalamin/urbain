@@ -1,9 +1,9 @@
 ---
 title: Mention légales
 slug: mention-legales
-updated-on: '2023-02-11T19:28:44.012Z'
+updated-on: '2023-02-12T14:21:02.546Z'
 created-on: '2021-10-07T14:29:45.065Z'
-published-on: '2023-02-11T19:39:04.674Z'
+published-on: '2023-02-12T14:51:01.325Z'
 layout: '[legale].html'
 tags: legale
 ---

@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  branch: main
   accept_roles:
     - admin
     - editor
@@ -251,8 +252,25 @@ collections:
         widget: datetime
         required: false
       - hint: ''
+        name: f_transparent-png
+        label: image PNG
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
         name: f_image
-        label: image
+        label: image JPG
         widget: object
         required: false
         fields:
@@ -398,6 +416,23 @@ collections:
         label: prix
         widget: number
         required: false
+      - hint: ''
+        name: f_no-background
+        label: No background
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
       - label: Tags
         widget: hidden
         name: tags
@@ -568,6 +603,10 @@ collections:
             label: Text
             name: '-64104400'
             widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
           - hint: >-
               Original text: Sculpteur valaisan, Urbain Salamin vous présente
               ses œuvres d'art nées de son travail au cœur de vieilles souches
@@ -591,10 +630,6 @@ collections:
           - hint: 'Original text: cm, key: c6a'
             label: Text
             name: c6a
-            widget: string
-          - hint: 'Original text: No items found., key: 3d503d2b'
-            label: Text
-            name: 3d503d2b
             widget: string
           - hint: 'Original text: Visiter, key: 7f0acb18'
             label: Text
@@ -839,84 +874,6 @@ collections:
             name: title
             widget: hidden
             default: Images
-          - label: Image
-            name: 785d686b
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 2dc6280d
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-ce883d7'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 6b0a57e6
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-7fe82a34'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-6a5a9814'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
           - label: Image
             name: '-3aa61a9a'
             widget: object

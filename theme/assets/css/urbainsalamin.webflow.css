@@ -105,8 +105,12 @@ ul {
   font-weight: 400;
 }
 
-.body.white {
+.body.light {
   background-color: #f8f8f8;
+}
+
+.body.dark {
+  background-color: #191616;
 }
 
 .container {
@@ -151,16 +155,6 @@ ul {
 .img.hero {
   max-width: 850px;
   margin-top: 24px;
-}
-
-.img.vertical.horizonal {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: auto;
-  bottom: auto;
-  z-index: 1;
-  width: 40%;
 }
 
 .img.aladin {
@@ -297,7 +291,6 @@ ul {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #000;
 }
 
 .section.hero {
@@ -318,7 +311,6 @@ ul {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #000;
 }
 
 .section.intermediary {
@@ -331,7 +323,6 @@ ul {
 
 .section.light {
   background-color: transparent;
-  color: #000;
 }
 
 .section.archives {
@@ -491,8 +482,8 @@ ul {
   z-index: 1;
   width: 100%;
   height: 35%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, rgba(0, 0, 0, 0.81)), to(#000));
-  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.81) 50%, #000);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, rgba(25, 22, 22, 0.8)), to(#191616));
+  background-image: linear-gradient(180deg, transparent, rgba(25, 22, 22, 0.8) 50%, #191616);
 }
 
 .punchline-wrap {
@@ -910,7 +901,7 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 8px;
-  background-color: hsla(0, 0%, 100%, 0.08);
+  background-color: hsla(0, 0%, 100%, 0.03);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
@@ -1364,20 +1355,25 @@ ul {
   align-items: flex-start;
 }
 
-.lightbox-horizontal.bottom-right {
-  position: absolute;
-  left: auto;
-  top: auto;
-  right: 0%;
-  bottom: 0%;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+.text-rich {
+  max-width: 800px;
+}
+
+.wrap-aladin {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #000;
 }
 
 @media screen and (max-width: 991px) {

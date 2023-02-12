@@ -147,7 +147,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 {{ settings.site.header_additional_content }}{%- include "partials/_site-css-variables" -%}<style>.w-video.w-embed {
             aspect-ratio: 16 / 9;
         }</style></head>
-<body class="body">
+<body class="body dark">
   {%- include "partials/css" -%}
   <header class="section hero wf-section">
     <nav class="nav">
@@ -162,13 +162,34 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       <div data-delay="4500" data-animation="slide" class="hero-slider w-slider" data-autoplay="true" data-easing="ease-in-out-quart" style="opacity:0" data-hide-arrows="true" data-disable-swipe="true" data-autoplay-limit="0" data-nav-spacing="8" data-duration="2500" data-infinite="true">
         <div class="hero-mask w-slider-mask">
           <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.6b0a57e6.url }}" alt="{{ images.6b0a57e6.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
+            {%- assign collection = collections.highlight | filter: "title,eq,173", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
+              {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+              </div>{%- endunless -%}
+              {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                <div>{{ texts.3d503d2b }}</div>
+              </div>{%- endif -%}
+            </div>
           </div>
           <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.785d686b.url }}" alt="{{ images.785d686b.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
+            {%- assign collection = collections.highlight | filter: "title,eq,212", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
+              {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+              </div>{%- endunless -%}
+              {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                <div>{{ texts.3d503d2b }}</div>
+              </div>{%- endif -%}
+            </div>
           </div>
           <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.-6a5a9814.url }}" alt="{{ images.-6a5a9814.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
+            {%- assign collection = collections.highlight | filter: "title,eq,144", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
+              {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+              </div>{%- endunless -%}
+              {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                <div>{{ texts.3d503d2b }}</div>
+              </div>{%- endif -%}
+            </div>
           </div>
         </div>
         <div class="arrow-left w-slider-arrow-left">
@@ -271,7 +292,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   </section>
   <section data-w-id="38f5d45c-9651-5d37-dfc0-fba08e909165" class="section duo wf-section">
     <div class="container square">
-      <a href="{{ links.23 }}" class="lightbox-horizontal top-left w-inline-block w-lightbox"><img class="img-hover" src="{{ images.645ea6e1.url }}" alt="{{ images.645ea6e1.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;39vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;37vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;34vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 39vw, (max-width: 767px) 37vw, 34vw" loading="lazy">
+      <a href="{{ links.23 }}" class="lightbox-horizontal top-left w-inline-block w-lightbox"><img class="img-hover" src="{{ images.645ea6e1.url }}" alt="{{ images.645ea6e1.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;36vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;35vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;32vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 36vw, (max-width: 767px) 35vw, 32vw" loading="lazy">
         <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"urbain-happy.jpg","fileName":"urbain-happy.jpg","fileSize":60557,"height":696,"url":"/assets/images/urbain-happy.jpg","width":930,"type":"image"}],"group":"Artistes"}</script>
       </a>
       <div class="embed bottom-right w-embed">
@@ -308,7 +329,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       </div>
     </div>
   </section>
-  <section class="section full-width wf-section"><img src="{{ images.42c06011.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:10000,&quot;size&quot;:&quot;100vw&quot;}]" sizes="100vw" alt="{{ images.42c06011.alt | trim | escape }}" class="img aladin">
+  <section class="section full-width wf-section">
+    <div class="wrap-aladin"><img src="{{ images.42c06011.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:10000,&quot;size&quot;:&quot;100vw&quot;}]" sizes="100vw" alt="{{ images.42c06011.alt | trim | escape }}" class="img aladin"></div>
     <div class="embed-arolle w-embed">
       <!--  SVG Arolle  -->
       <svg class="text-animated" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1609.52 430.93">

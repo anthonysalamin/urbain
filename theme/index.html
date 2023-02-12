@@ -147,7 +147,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 {{ settings.site.header_additional_content }}{%- include "partials/_site-css-variables" -%}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script><style>.w-video.w-embed {
             aspect-ratio: 16 / 9;
         }</style></head>
-<body class="body">
+<body class="body dark">
   {%- include "partials/css" -%}
   <header class="section hero wf-section">
     <nav class="nav">
@@ -162,22 +162,44 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       <div data-delay="4500" data-animation="slide" class="hero-slider w-slider" data-autoplay="true" data-easing="ease-in-out-quart" style="opacity:0" data-hide-arrows="true" data-disable-swipe="true" data-autoplay-limit="0" data-nav-spacing="8" data-duration="2500" data-infinite="true">
         <div class="hero-mask w-slider-mask">
           <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.785d686b.url }}" alt="{{ images.785d686b.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
+            {%- assign collection = collections.highlight | filter: "title,eq,144", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
+              {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+              </div>{%- endunless -%}
+              {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                <div>{{ texts.3d503d2b }}</div>
+              </div>{%- endif -%}
+            </div>
           </div>
           <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.2dc6280d.url }}" alt="{{ images.2dc6280d.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
+            {%- assign collection = collections.highlight | filter: "title,eq,212", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
+              {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+              </div>{%- endunless -%}
+              {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                <div>{{ texts.3d503d2b }}</div>
+              </div>{%- endif -%}
+            </div>
           </div>
           <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.-ce883d7.url }}" alt="{{ images.-ce883d7.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
+            {%- assign collection = collections.highlight | filter: "title,eq,128", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
+              {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+              </div>{%- endunless -%}
+              {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                <div>{{ texts.3d503d2b }}</div>
+              </div>{%- endif -%}
+            </div>
           </div>
           <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.6b0a57e6.url }}" alt="{{ images.6b0a57e6.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
-          </div>
-          <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.-7fe82a34.url }}" alt="{{ images.-7fe82a34.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
-          </div>
-          <div class="hero-slide w-slide">
-            <div class="hero-wrap-img"><img class="img hero" src="{{ images.-6a5a9814.url }}" alt="{{ images.-6a5a9814.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" sizes="(max-width: 991px) 100vw, 850px" loading="eager"></div>
+            {%- assign collection = collections.highlight | filter: "title,eq,00c", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
+              {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+              </div>{%- endunless -%}
+              {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                <div>{{ texts.3d503d2b }}</div>
+              </div>{%- endif -%}
+            </div>
           </div>
         </div>
         <div class="arrow-left w-slider-arrow-left">
@@ -278,10 +300,10 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     <div class="gradient"></div>
   </header>
   <main class="main">
-    <section data-w-id="9ad43a39-2167-f964-2ffb-2c85c003b059" class="section wf-section">
+    <section data-w-id="9b482d88-b942-cb13-0d38-34087f65f764" style="opacity:0" class="section wf-section">
       <div class="container">
         <div class="flex-center-start">
-          <h1 data-w-id="3e05d4aa-8d1a-61a0-0d66-8647d6a7d619" style="opacity:0" class="subline">{{ texts.-49e744c0 }}</h1>
+          <h1 class="subline">{{ texts.-49e744c0 }}</h1>
           {%- include "partials/cta-big" -%}
         </div>
       </div>
@@ -289,10 +311,10 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     <section id="sculptures" class="section wf-section">
       <div class="container">
         <div class="flex-center-start">
-          {%- assign collection = collections.highlight | sort: "f_order" | limit: 6 -%}<div class="highlight-cl-wrapper w-dyn-list">
+          {%- assign collection = collections.highlight | sort: "f_order" | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
-                <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox"><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_image.url }}" alt="{{ item.data.title }}" class="img zoom">
+                <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox"><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img zoom">
                   <div class="highlight-wrap-info">
                     <div class="highlight-glass">
                       <div class="subline">{{ texts.1326d }}</div>
@@ -343,7 +365,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       </div>
                     </div>
                   </div>
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_image.url }}","caption":""}],"group":"highlight"}</script>
+                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}
@@ -420,8 +442,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_image.url }}" alt="{{ item.data.title }}" class="img zoom">
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_image.url }}","caption":""}],"group":"highlight"}</script>
+                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img zoom">
+                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}
@@ -521,8 +543,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_image.url }}" alt="{{ item.data.title }}" class="img zoom">
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_image.url }}","caption":""}],"group":"highlight"}</script>
+                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.title }}" class="img zoom">
+                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}
@@ -533,7 +555,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
         </div>
       </div>
     </section>
-    <section data-w-id="10790040-6cee-a66f-b559-77fe2294c226" class="section duo wf-section">
+    <section data-w-id="9b482d88-b942-cb13-0d38-34087f65f7cc" class="section duo wf-section">
       <div class="container square">
         <a href="{{ links.23 }}" class="lightbox-vertical top-left w-inline-block w-lightbox"><img class="img-hover vertical" src="{{ images.-5ef8043d.url }}" alt="{{ images.-5ef8043d.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;22vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;20vw&quot;}]" sizes="(max-width: 767px) 22vw, 20vw" loading="lazy">
           <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"sabine-salamin.png","fileName":"sabine-salamin.png","fileSize":285224,"height":828,"url":"/assets/images/sabine-salamin.png","width":560,"type":"image"}],"group":"Artistes"}</script>
@@ -601,8 +623,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_image.url }}" alt="{{ item.data.title }}" class="img zoom">
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_image.url }}","caption":""}],"group":"highlight"}</script>
+                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.title }}" class="img zoom">
+                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}

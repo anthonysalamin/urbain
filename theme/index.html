@@ -144,6 +144,14 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   transition: all 200ms linear;
 }
 </style>
+  <style>
+/*
+ * CMS catpion for lightbox
+*/
+  iframe + .w-lightbox-caption {
+    margin-bottom: -50px;
+  }
+</style>
 {{ settings.site.header_additional_content }}{%- include "partials/_site-css-variables" -%}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script><style>.w-video.w-embed {
             aspect-ratio: 16 / 9;
         }</style></head>
@@ -314,7 +322,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           {%- assign collection = collections.highlight | sort: "f_order" | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
-                <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox"><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img zoom">
+                <a href="{{ links.23 }}" wfu-lightbox-captions="" class="highlight-lightbox-link w-inline-block w-lightbox"><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img zoom">
                   <div class="highlight-wrap-info">
                     <div class="highlight-glass">
                       <div class="subline">{{ texts.1326d }}</div>
@@ -392,7 +400,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           {%- assign collection = collections.highlight | sort: "f_order" | offset: 4 | limit: 6 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
-                <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox">
+                <a href="{{ links.23 }}" wfu-lightbox-captions="" class="highlight-lightbox-link w-inline-block w-lightbox">
                   <div class="highlight-wrap-info">
                     <div class="highlight-glass">
                       <div class="subline">{{ texts.1326d }}</div>
@@ -493,7 +501,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           {%- assign collection = collections.highlight | sort: "f_order" | offset: 10 | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
-                <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox">
+                <a href="{{ links.23 }}" wfu-lightbox-captions="" class="highlight-lightbox-link w-inline-block w-lightbox">
                   <div class="highlight-wrap-info">
                     <div class="highlight-glass">
                       <div class="subline">{{ texts.1326d }}</div>
@@ -543,7 +551,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.title }}" class="img zoom">
+                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_caption }}" class="img zoom">
                   <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
@@ -573,7 +581,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           {%- assign collection = collections.highlight | sort: "f_order" | offset: 14 | limit: 4 -%}<div class="highlight-cl-wrapper w-dyn-list">
             {%- unless collection.length == 0 -%}<div role="list" class="highlight-cl-list w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="highlight-cl-item w-dyn-item">
-                <a href="{{ links.23 }}" class="highlight-lightbox-link w-inline-block w-lightbox">
+                <a href="{{ links.23 }}" wfu-lightbox-captions="" class="highlight-lightbox-link w-inline-block w-lightbox">
                   <div class="highlight-wrap-info">
                     <div class="highlight-glass">
                       <div class="subline">{{ texts.1326d }}</div>
@@ -623,7 +631,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.title }}" class="img zoom">
+                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_caption }}" class="img zoom">
                   <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
@@ -646,8 +654,6 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!--  DrawSVGPlugin API  -->
   <!--  drawsvg API  -->
   <script src="https://cdn.jsdelivr.net/gh/anthonysalamin/utility/drawsvg.js"></script>
-  <!--  lenis API  -->
-  <script defer="" src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
   <script>
 /*
  * shadowRoot
@@ -660,6 +666,74 @@ document.addEventListener("DOMContentLoaded", () => {
   style.innerText = `:host { left: -100% !important; }`;
   udeslyShadowRoot.appendChild(style);
 });
+</script>
+  <script>
+/*
+ * URBAIN | usebasin v.1
+ * build 12.02.2023 @21:03
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const production = true; // change for production
+  disableDefaultFormSubmission();
+  initUsebasin(production);
+});
+function disableDefaultFormSubmission() {
+  Webflow.push(() => {
+    $("form").submit(() => {
+      console.log("default form submission canceled");
+      const formData = Object.fromEntries(new FormData(event.target).entries());
+      console.log(formData);
+      return false;
+    });
+  });
+}
+function initUsebasin(production) {
+  console.log(!production ? "developement mode" : "production mode");
+  // variables
+  const id = "49e088efd0a0",
+    form = document.getElementById("form"),
+    url = `https://usebasin.com/f/${production ? id : "development"}`,
+    nameField = document.querySelector("input[name=name]"),
+    emailField = document.querySelector("input[type=email]"),
+    submitBtn = document.querySelector("input[type=submit]"),
+    formSuccess = document.querySelector(".form-success-message"),
+    formFail = document.querySelector(".form-fail-message"),
+    textSuccess = document.getElementById("text-success"),
+    textFail = document.getElementById("text-fail");
+  // clause guard
+  if (!form) return;
+  // show success message
+  function fail(response) {
+    console.log(`Oops, ${response.status}`);
+    submitBtn.value = "Réessayer";
+    formFail.style.display = "block";
+    textFail.textContent = `Oops, "error ${response.status}"`;
+  }
+  // show error message
+  function success() {
+    console.log("usebasin submission send successfully");
+    submitBtn.value = "Envoyer";
+    form.style.display = "none";
+    formSuccess.style.display = "block";
+    textSuccess.textContent = `Merci ${nameField.value} !`;
+    formFail.style.display = "none";
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json"
+      },
+      body: formData
+    })
+      .then((response) => {
+        response.status === 200 ? success() : fail(response);
+      })
+      .catch((error) => console.log(error));
+  });
+}
 </script>
   <script>
 /*
@@ -862,59 +936,6 @@ function handleCursor() {
   const cursor = new Cursor();
 }
 </script>
-  <script>
-/*
- * smooth scroll lenis
- * last update 30.10.22 @18:04
- */
-document.addEventListener("DOMContentLoaded", () => {
-  handleScrolling();
-});
-function handleScrolling() {
-  // helper easing functions || refference easings.net
-  const easeInOutQuint = (x) =>
-    x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
-  const easeOutQuart = (x) => 1 - Math.pow(1 - x, 4);
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: easeOutQuart,
-    direction: "vertical", // vertical, horizontal
-    gestureDirection: "vertical", // vertical, horizontal, both
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false
-  });
-  // debug
-  /*
-  lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-    console.log({ scroll, limit, velocity, direction, progress });
-  });
-  */
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-  // Use lenis.scrollTo() to scroll the page to the right element
-  const scrollButtons = document.querySelectorAll("[data-anchor]");
-  // clause guard
-  if (!scrollButtons[0]) return;
-  scrollButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      const target = button.dataset.anchor,
-        element = document.querySelector(`#${target}`);
-      lenis.scrollTo(element, {
-        offset: 0,
-        immediate: false,
-        duration: 3,
-        easing: easeInOutQuint
-      });
-    });
-  });
-} // end handleScrolling()
-</script>
   <!--  scroll progress  -->
   <div class="progress-wrap">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -972,21 +993,6 @@ function showScrollProgress() {
 } // end showScrollProgress
 </script>
   <script>
-/**
- * 🟢 hamburger menu animation
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const wrapperElement = document.querySelector(".hamburgerWrapper"),
-    hamburgerElement = document.getElementById("hamburgerSvg");
-  // clause guard
-  if(!wrapperElement) return;  
-  // toggle animation on click
-  hamburgerElement.addEventListener("click", () => {
-    wrapperElement.classList.toggle("menu");
-  });
-}); // end DOM loaded
-</script>
-  <script>
 /*
  * faq on load v.1
  * last build: 23.12.22 @10.17
@@ -1034,6 +1040,95 @@ function strokeTransition() {
     });
   }); // end forEach()
 } // end strokeTransition()
+</script>
+  <script>
+/*
+ * CMS caption for lightbox (modified)
+ * Sygnal Technology Group (http://sygnal.com)
+ * build 13.02.2023 @ 11:59
+ */
+var defaultConfig = {
+  // sessionStorage | localStorage | cookies
+  //    method: 'sessionStorage',
+  //    prefix: 'track'
+};
+class WfuLightbox {
+  config; // Optional config
+  constructor(config = {}) {
+    this.config = $.extend({}, defaultConfig, config);
+  }
+  initializeLightbox = function (lightboxElem) {
+    const imageAltText = $(lightboxElem).children("img").attr("alt");
+    const script = $(lightboxElem).children("script");
+    const imageJSON = JSON.parse(script.html());
+    imageJSON.items[0].caption = imageAltText;
+    script.html(JSON.stringify(imageJSON));
+    // Apply ref key for caption retrieval
+    $(lightboxElem).children("img").attr("ref-key", imageJSON.items[0].url);
+  };
+}
+$(function () {
+  const wfuLightbox = new WfuLightbox();
+  // Show all elements tagged for logged-in users only
+  $("[wfu-lightbox-captions]").each(function () {
+    wfuLightbox.initializeLightbox($(this));
+  });
+  let observer = new MutationObserver(lightBoxStateCallback);
+  observer.observe(document.getElementsByTagName("html")[0], {
+    childList: false, // observe direct children
+    subtree: false, // and lower descendants too
+    characterDataOldValue: false, // pass old data to callback
+    attributes: true,
+    attributeFilter: ["class"]
+  });
+});
+const lightBoxStateCallback = (mutationList, observer) => {
+  for (const mutation of mutationList) {
+    if (mutation.type === "attributes") {
+      if ($("html").hasClass("w-lightbox-noscroll")) {
+        // console.debug("Lightbox opened.");
+        installLightBoxNavObserver();
+      } else {
+        // console.debug("Lightbox closed.");
+        uninstallLightBoxNavObserver();
+      }
+    }
+  }
+};
+var lightboxNavObserver;
+function setupCaption() {
+  const figure = $("figure.w-lightbox-figure");
+  const img = figure.children("img");
+  const key = img.attr("src");
+  const thumb = $(`img[ref-key='${key}'`);
+  const caption = thumb.attr("alt");
+  figure.children("figcaption").remove();
+  if (caption)
+    figure.append(
+      $(`<figcaption class="w-lightbox-caption">${caption}</figcaption>`)
+    );
+}
+function uninstallLightBoxNavObserver() {
+  if (lightboxNavObserver) lightboxNavObserver.disconnect();
+}
+function installLightBoxNavObserver() {
+  setupCaption();
+  lightboxNavObserver = new MutationObserver(lightBoxNavCallback);
+  lightboxNavObserver.observe($(".w-lightbox-container")[0], {
+    childList: true, // observe direct children
+    subtree: true // and lower descendants too
+  });
+}
+const lightBoxNavCallback = (mutationList, observer) => {
+  for (let mutation of mutationList) {
+    // if ($(mutation.target).hasClass("w-lightbox-view")) {
+    //     $(mutation.target).children("figcaption").remove();
+    // }
+    if ($(mutation.target).hasClass("w-lightbox-content")) {
+      setupCaption();
+    }
+  }
+};
 </script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}<script>window.netlifyIdentity&&window.netlifyIdentity.on("init",a=>{a||window.netlifyIdentity.on("login",()=>{document.location.href="/admin/"})});</script></body></html>

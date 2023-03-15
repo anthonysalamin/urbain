@@ -97,7 +97,6 @@ ul {
 }
 
 .body {
-  background-color: #000;
   font-family: 'N27 webfont', sans-serif;
   color: #f0f0f0;
   font-size: 18px;
@@ -327,6 +326,14 @@ ul {
 
 .section.archives {
   background-color: transparent;
+}
+
+.section.contact {
+  height: 100vh;
+}
+
+.section.notfound {
+  height: 100vh;
 }
 
 .collection-list-wrapper-archives {
@@ -1374,6 +1381,75 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   background-color: #000;
+}
+
+.field {
+  border-radius: 4px;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: #00be62;
+}
+
+.form-block {
+  width: 350px;
+}
+
+.form-success-message {
+  padding: 48px;
+  border-radius: 4px;
+  background-color: #00be62;
+}
+
+.form-fail-message {
+  border-radius: 4px;
+  background-color: #ff0062;
+}
+
+.text-error {
+  font-size: 12px;
+  text-align: left;
+}
+
+.utility-page-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.utility-page-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 260px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.text-block {
+  font-size: 60px;
+  line-height: 70px;
 }
 
 @media screen and (max-width: 991px) {

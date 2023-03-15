@@ -373,8 +373,6 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!--  DrawSVGPlugin API  -->
   <!--  drawsvg API  -->
   <script src="https://cdn.jsdelivr.net/gh/anthonysalamin/utility/drawsvg.js"></script>
-  <!--  lenis API  -->
-  <script defer="" src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
   <script>
 /*
  * shadowRoot
@@ -387,6 +385,74 @@ document.addEventListener("DOMContentLoaded", () => {
   style.innerText = `:host { left: -100% !important; }`;
   udeslyShadowRoot.appendChild(style);
 });
+</script>
+  <script>
+/*
+ * URBAIN | usebasin v.1
+ * build 12.02.2023 @21:03
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const production = true; // change for production
+  disableDefaultFormSubmission();
+  initUsebasin(production);
+});
+function disableDefaultFormSubmission() {
+  Webflow.push(() => {
+    $("form").submit(() => {
+      console.log("default form submission canceled");
+      const formData = Object.fromEntries(new FormData(event.target).entries());
+      console.log(formData);
+      return false;
+    });
+  });
+}
+function initUsebasin(production) {
+  console.log(!production ? "developement mode" : "production mode");
+  // variables
+  const id = "49e088efd0a0",
+    form = document.getElementById("form"),
+    url = `https://usebasin.com/f/${production ? id : "development"}`,
+    nameField = document.querySelector("input[name=name]"),
+    emailField = document.querySelector("input[type=email]"),
+    submitBtn = document.querySelector("input[type=submit]"),
+    formSuccess = document.querySelector(".form-success-message"),
+    formFail = document.querySelector(".form-fail-message"),
+    textSuccess = document.getElementById("text-success"),
+    textFail = document.getElementById("text-fail");
+  // clause guard
+  if (!form) return;
+  // show success message
+  function fail(response) {
+    console.log(`Oops, ${response.status}`);
+    submitBtn.value = "Réessayer";
+    formFail.style.display = "block";
+    textFail.textContent = `Oops, "error ${response.status}"`;
+  }
+  // show error message
+  function success() {
+    console.log("usebasin submission send successfully");
+    submitBtn.value = "Envoyer";
+    form.style.display = "none";
+    formSuccess.style.display = "block";
+    textSuccess.textContent = `Merci ${nameField.value} !`;
+    formFail.style.display = "none";
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json"
+      },
+      body: formData
+    })
+      .then((response) => {
+        response.status === 200 ? success() : fail(response);
+      })
+      .catch((error) => console.log(error));
+  });
+}
 </script>
   <script>
 /*
@@ -589,59 +655,6 @@ function handleCursor() {
   const cursor = new Cursor();
 }
 </script>
-  <script>
-/*
- * smooth scroll lenis
- * last update 30.10.22 @18:04
- */
-document.addEventListener("DOMContentLoaded", () => {
-  handleScrolling();
-});
-function handleScrolling() {
-  // helper easing functions || refference easings.net
-  const easeInOutQuint = (x) =>
-    x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
-  const easeOutQuart = (x) => 1 - Math.pow(1 - x, 4);
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: easeOutQuart,
-    direction: "vertical", // vertical, horizontal
-    gestureDirection: "vertical", // vertical, horizontal, both
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false
-  });
-  // debug
-  /*
-  lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-    console.log({ scroll, limit, velocity, direction, progress });
-  });
-  */
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-  // Use lenis.scrollTo() to scroll the page to the right element
-  const scrollButtons = document.querySelectorAll("[data-anchor]");
-  // clause guard
-  if (!scrollButtons[0]) return;
-  scrollButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      const target = button.dataset.anchor,
-        element = document.querySelector(`#${target}`);
-      lenis.scrollTo(element, {
-        offset: 0,
-        immediate: false,
-        duration: 3,
-        easing: easeInOutQuint
-      });
-    });
-  });
-} // end handleScrolling()
-</script>
   <!--  scroll progress  -->
   <div class="progress-wrap">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -697,21 +710,6 @@ function showScrollProgress() {
     return false;
   });
 } // end showScrollProgress
-</script>
-  <script>
-/**
- * 🟢 hamburger menu animation
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const wrapperElement = document.querySelector(".hamburgerWrapper"),
-    hamburgerElement = document.getElementById("hamburgerSvg");
-  // clause guard
-  if(!wrapperElement) return;  
-  // toggle animation on click
-  hamburgerElement.addEventListener("click", () => {
-    wrapperElement.classList.toggle("menu");
-  });
-}); // end DOM loaded
 </script>
   <script>
 /*

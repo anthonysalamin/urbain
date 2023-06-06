@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-wf-page="63e63c3a4d4171f696764bb3" data-wf-site="6141f2f9c00b922ec2913a44" lang="fr"><head><link rel="preconnect" crossorigin="true" href="https://assets.website-files.com">{%- seo seo -%}
+<html data-wf-page="644b99d1240a5d7f064d9283" data-wf-site="6141f2f9c00b922ec2913a44" lang="fr"><head><link rel="preconnect" crossorigin="true" href="https://assets.website-files.com">{%- seo seo -%}
   <meta charset="utf-8">
   
   
@@ -29,85 +29,78 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 {{ settings.site.header_additional_content }}{%- include "partials/_site-css-variables" -%}<style>.w-video.w-embed {
             aspect-ratio: 16 / 9;
         }</style></head>
-<body class="body dark">
-  <div class="css w-embed">
-    <style>
-  /*
-   * global variables
-  */
-  :root {
-  	--accent: #00be62;
-    --white: rgba(255, 255, 255, 1);
-    --header-stroke: .5px;
-  }
-</style>
-    <style>
-  /*
-   * outlines for text
-  */
-  .outline {
-   	color: transparent;
-    text-stroke: var(--header-stroke) var(--white);
-    -webkit-text-stroke: var(--header-stroke) var(--white);
-    transition: color 1s;
-  	transition-timing-function: ease-out;
-  }
-</style>
-    <style>
-  /*
-   * text animated outlines
-  */
-  .surface-transparent {
-    fill: transparent;
-    stroke: #f7f7f7;
-  }
-  .surface-filled {
-    fill: #f7f7f7;
-  }
-</style>
-  </div>
-  <div class="section wf-section">
-    <div class="container">
-      <div class="faq__wrap-flex-horizontal faq__wrap-flex-horizontal--margin-bottom">
-        {%- assign collection = collections.faq | sort: "f_order" -%}<div class="faq__collection-list-wrapper w-dyn-list">
-          {%- unless collection.length == 0 -%}<div role="list" class="faq__collection-list-wrapper w-dyn-items">
-            {%- for item in collection -%}<div role="listitem" class="faq__collection-item w-dyn-item">
-              <div class="faq__accordion-item-wrap">
-                <div class="faq__accordion-item-trigger">
-                  <h4 class="faq__accrodion-heading">{{ item.data.title }}</h4>
-                  <div class="faq__accordion-wrap-arrow">
-                    <div class="w-embed">
-                      <!--  arrow down  -->
-                      <svg xmlns="http://www.w3.org/2000/svg" width="11.692" height="7.26" viewBox="0 0 11.692 7.26">
-                        <def>
-                          <style type="text/css">
-      .icon-arrow-faq {
-        fill: none;
-        stroke: var(--accent);
-        stroke-width: 2;
-        stroke-linecap: round;
-      }
-    </style>
-                        </def>
-                        <g transform="translate(1.414 1.414)">
-                          <line class="icon-arrow-faq" y2="6.267" transform="rotate(-45)"></line>
-                          <line class="icon-arrow-faq" y2="6.267" transform="translate(8.863 0) rotate(45)"></line>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq__accordion-item-content">
-                  <p class="paragraph width-faq">{{ item.data.f_answer }}</p>
-                </div>
-              </div>
-            </div>{%- endfor -%}
-          </div>{%- endunless -%}
-          {%- if collection.length == 0 -%}<div class="error__state-wrap w-dyn-empty">
-            <div class="error__state-text">{{ texts.3d503d2b }}</div>
-          </div>{%- endif -%}
-        </div>
+<body>
+  <div class="nav-wrap-mobile">
+    <div class="wrapper-hamburger w-embed">
+      <style>
+    :root {
+      --stroke-width: 40px;
+      --stroke-linecap: round;
+      --stroke-color: white;
+      --main-bg-color: translate3d(0, 0, 0);
+      --transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25),
+        stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    }
+    #hamburgerSvg {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      -webkit-transform: var(--main-bg-color);
+      -moz-transform: var(--main-bg-color);
+      -o-transform: var(--main-bg-color);
+      -ms-transform: var(--main-bg-color);
+      transform: var(--main-bg-color);
+      /* removes focus for Chrome on Android*/
+      -webkit-tap-highlight-color: rgba(255,
+          255,
+          255,
+          0);
+    }
+    .path-menu {
+      fill: none;
+      -webkit-transition: var(--transition);
+      -moz-transition: var(--transition);
+      -o-transition: var(--transition);
+      -ms-transition: var(--transition);
+      transition: var(--transition);
+      stroke-width: var(--stroke-width);
+      stroke-linecap: var(--stroke-linecap);
+      stroke: var(--stroke-color);
+      stroke-dashoffset: 0px;
+    }
+    #top,
+    #bottom {
+      stroke-dasharray: 240px 950px;
+    }
+    #middle {
+      stroke-dasharray: 240px 240px;
+    }
+    .cross #top,
+    .cross #bottom {
+      stroke-dashoffset: -650px;
+      stroke-dashoffset: -650px;
+    }
+    .cross #middle {
+      stroke-dashoffset: -115px;
+      stroke-dasharray: 1px 220px;
+    }
+  </style>
+      <!--  Hamburger menu SVG markup -->
+      <svg id="hamburgerSvg" viewBox="0 0 800 600">
+        <path id="top" class="path-menu" d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"></path>
+        <path id="middle" class="path-menu" d="M300,320 L540,320"></path>
+        <path id="bottom" class="path-menu" d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+      </svg>
+    </div>
+    <div class="wrapper-menu-mobile">
+      <div class="nav__mobile-wrap-links">
+        <a href="{{ links.2f }}" class="link dark">{{ texts.1d0795b4 }}</a>
+        <a href="{{ links.-194fb911 }}" class="link dark">{{ texts.3791a1de }}</a>
+        <a href="{{ links.-2dbc66e0 }}" class="link dark">{{ texts.-627263ef }}</a>
+        <a href="{{ links.-196dfc8e }}" class="link dark">{{ texts.-68d80214 }}</a>
+        <a href="{{ links.5ddd3380 }}" class="link dark">{{ texts.-64104400 }}</a>
       </div>
+      <div id="close-area" class="nav__close-area"></div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous"></script>

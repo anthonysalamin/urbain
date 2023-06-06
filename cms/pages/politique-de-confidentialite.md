@@ -1,8 +1,8 @@
 ---
-title: Mention légales
+title: Politique de Confidentialité
 permalink: '{{ page.fileSlug }}/index.html'
-layout: mention-legales.html
-slug: mention-legales
+layout: politique-de-confidentialite.html
+slug: politique-de-confidentialite
 tags: pages
 seo:
   noindex: false

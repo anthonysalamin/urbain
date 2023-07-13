@@ -268,6 +268,11 @@ ul {
   overflow: hidden;
 }
 
+.section.full-width.no-margin {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .section.archives {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -520,6 +525,7 @@ ul {
   align-content: flex-start;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: -120px;
   display: flex;
 }
 
@@ -1359,7 +1365,11 @@ ul {
 
 .img-signature {
   height: 48px;
-  margin-bottom: 24px;
+  margin-top: 56px;
+}
+
+.img-signature.hide {
+  display: none;
 }
 
 .small {
@@ -1435,6 +1445,11 @@ ul {
     flex-direction: column;
   }
 
+  .section.no-margin {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .punchline-wrap {
     top: 120px;
   }
@@ -1446,6 +1461,8 @@ ul {
   }
 
   .subline {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 25px;
     line-height: 35px;
   }
@@ -1462,6 +1479,10 @@ ul {
   .cta-avatar {
     width: 40px;
     height: 40px;
+  }
+
+  .highlight-cl-list {
+    margin-bottom: -80px;
   }
 
   .highlight-cl-item {
@@ -1628,6 +1649,10 @@ ul {
     align-items: center;
   }
 
+  .highlight-cl-list {
+    margin-bottom: -80px;
+  }
+
   .number {
     font-size: 80px;
     line-height: 90px;
@@ -1761,6 +1786,11 @@ ul {
     padding-right: 20px;
   }
 
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .events-item {
     width: 50%;
   }
@@ -1784,6 +1814,11 @@ ul {
     bottom: 0%;
     left: 0%;
     right: auto;
+  }
+
+  .subline {
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .highlight-cl-list {

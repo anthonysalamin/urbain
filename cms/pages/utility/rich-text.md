@@ -1,8 +1,8 @@
 ---
-title: FAQ satic
+title: rich text
 permalink: utility/{{ page.fileSlug }}/index.html
-layout: utility/faq-satic.html
-slug: faq-satic
+layout: utility/rich-text.html
+slug: rich-text
 tags: pages
 ---
 

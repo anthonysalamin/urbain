@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main
   accept_roles:
     - admin
     - editor
+  branch: main
 media_folder: theme/assets/images
 public_folder: /assets/images
 collections:
@@ -80,9 +80,71 @@ collections:
             name: additional_tags
             widget: text
             required: false
-  - name: press
-    label: Presses
-    folder: cms/press
+  - name: dossiers_de_presse
+    label: Dossiers de presses
+    folder: cms/dossiers-de-presse
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Titre
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_pdf-dossier-de-presse
+        label: PDF dossier de presse
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: File
+            widget: file
+            required: false
+            allow_multiple: false
+      - hint: ''
+        name: f_auteur
+        label: Auteur
+        widget: string
+        required: false
+      - hint: ''
+        name: f_source
+        label: Source
+        widget: string
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: dossiers-de-presse
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[dossiers-de-presse].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: autres_textes
+    label: Autres textes
+    folder: cms/autres-textes
     create: true
     identifier_field: name
     extension: md
@@ -115,11 +177,11 @@ collections:
       - label: Tags
         widget: hidden
         name: tags
-        default: press
+        default: autres-textes
       - label: Layout
         widget: hidden
         name: layout
-        default: '[press].html'
+        default: '[autres-textes].html'
       - label: Publish Date
         name: date
         widget: datetime
@@ -151,6 +213,10 @@ collections:
         name: published-on
         label: Published On
         widget: datetime
+        required: false
+      - label: réponse
+        name: body
+        widget: markdown
         required: false
       - hint: answer to the question
         name: f_answer
@@ -363,11 +429,13 @@ collections:
         label: status
         widget: boolean
         required: false
+        default: false
       - hint: si oui, activer le switch
         name: f_afficher-la-racine
         label: afficher la racine ?
         widget: boolean
         required: false
+        default: false
       - hint: ''
         name: f_category
         label: category
@@ -584,17 +652,61 @@ collections:
             name: title
             widget: hidden
             default: Texts
-          - hint: 'Original text: Sculptures, key: 1b096fd6'
+          - hint: 'Original text: Accueil, key: 1d0e9f94'
             label: Text
-            name: 1b096fd6
+            name: 1d0e9f94
+            widget: string
+          - hint: 'Original text: 中文, key: 9dcfa'
+            label: Text
+            name: 9dcfa
+            widget: string
+          - hint: 'Original text: zh-CN, key: 6e72b6a'
+            label: Text
+            name: 6e72b6a
+            widget: string
+          - hint: 'Original text: en, key: ca9'
+            label: Text
+            name: ca9
+            widget: string
+          - hint: 'Original text: fr, key: ccc'
+            label: Text
+            name: ccc
+            widget: string
+          - hint: 'Original text: de, key: c81'
+            label: Text
+            name: c81
+            widget: string
+          - hint: 'Original text: it, key: d2b'
+            label: Text
+            name: d2b
+            widget: string
+          - hint: 'Original text: es, key: cae'
+            label: Text
+            name: cae
+            widget: string
+          - hint: 'Original text: pt, key: e04'
+            label: Text
+            name: e04
+            widget: string
+          - hint: 'Original text: hi, key: d01'
+            label: Text
+            name: d01
             widget: string
           - hint: 'Original text: Artiste, key: 3791a1de'
             label: Text
             name: 3791a1de
             widget: string
-          - hint: 'Original text: Acceuil, key: 1d0795b4'
+          - hint: 'Original text: Parcours de vie, key: c0cde4a'
             label: Text
-            name: 1d0795b4
+            name: c0cde4a
+            widget: string
+          - hint: 'Original text: Dossiers de presse, key: -3de391f7'
+            label: Text
+            name: '-3de391f7'
+            widget: string
+          - hint: 'Original text: L''Arolle, key: 5b51e902'
+            label: Text
+            name: 5b51e902
             widget: string
           - hint: 'Original text: Archives, key: -627263ef'
             label: Text
@@ -620,9 +732,9 @@ collections:
             label: Text
             name: '-49e744c0'
             widget: text
-          - hint: 'Original text: Prendre contact, key: -48bda494'
+          - hint: 'Original text: Visiter l''atelier, key: -35fad427'
             label: Text
-            name: '-48bda494'
+            name: '-35fad427'
             widget: string
           - hint: 'Original text: No., key: 1326d'
             label: Text
@@ -644,10 +756,17 @@ collections:
             label: Text
             name: '-5170a53f'
             widget: string
-          - hint: 'Original text: Visiter l''atelier, key: -35fad427'
+          - hint: >-
+              Original text: "Emerveillé par la beauté du paysage, l'homme buta
+              et trébucha sur un arolle mourant. L'effroyable réalité
+              d'embrasser du néant réveilla en lui des instincts de création,
+              par d'infinies caresses, de ses ciseaux tranchants, il redonna vie
+              à ce triste moribond… Par centaines, troncs et racines
+              quémandèrent l'heureuse opération; une symphonie est née, l'arolle
+              reste vivant.", key: 3d589138
             label: Text
-            name: '-35fad427'
-            widget: string
+            name: 3d589138
+            widget: text
           - hint: 'Original text: Urbain, key: -687f961f'
             label: Text
             name: '-687f961f'
@@ -676,6 +795,10 @@ collections:
             label: Text
             name: 6a54d9a1
             widget: string
+          - hint: 'Original text: Prendre contact, key: -48bda494'
+            label: Text
+            name: '-48bda494'
+            widget: string
           - hint: 'Original text: © 2023 urbainsalamin.ch, key: -498f9b31'
             label: Text
             name: '-498f9b31'
@@ -683,6 +806,10 @@ collections:
           - hint: 'Original text: Design ❤️ anthonysalamin.ch, key: 552b670a'
             label: Text
             name: 552b670a
+            widget: string
+          - hint: 'Original text: harry-lionel.salamin@hotmail.com, key: 451ab328'
+            label: Text
+            name: 451ab328
             widget: string
           - hint: >-
               Original text: Originaire du val d’Anniviers, Urbain Salamin
@@ -780,30 +907,50 @@ collections:
             label: Text
             name: 24ff13
             widget: string
+          - hint: 'Original text: Sculptures, key: 1b096fd6'
+            label: Text
+            name: 1b096fd6
+            widget: string
+          - hint: 'Original text: Nous contacter / prix d''une racine ?, key: 2701c1cc'
+            label: Text
+            name: 2701c1cc
+            widget: string
+          - hint: 'Original text: info@urbainsalamin.ch, key: -58edd6a9'
+            label: Text
+            name: '-58edd6a9'
+            widget: string
+          - hint: 'Original text: +41 79 317 23 74, key: -762f7eb1'
+            label: Text
+            name: '-762f7eb1'
+            widget: string
           - hint: 'Original text: Où trouver l''atelier ?, key: 1cadf5c9'
             label: Text
             name: 1cadf5c9
             widget: string
           - hint: >-
-              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat., key: -1dfbea35
+              Original text: Rue de l'Ile Falcon 31, CH-3960 Sierre, key:
+              5e1eaaf5
             label: Text
-            name: '-1dfbea35'
-            widget: text
-          - hint: 'Original text: Comment nous contacter ?, key: -17e98d14'
-            label: Text
-            name: '-17e98d14'
-            widget: string
-          - hint: 'Original text: Quel est le prix d''une racine ?, key: -3e4363c7'
-            label: Text
-            name: '-3e4363c7'
+            name: 5e1eaaf5
             widget: string
           - hint: 'Original text: Qui est Urbain Salamin ?, key: 293605e4'
             label: Text
             name: '293605e4'
             widget: string
+          - hint: >-
+              Original text: Toujours féru de cueillette de champignons, Urbain
+              Salamin passe nombre d’après-midis à parcourir les forêts du Val
+              d’Anniviers. C’est au détour d’un chemin, impressionné par le
+              nombre de souches mourantes d’arolles et de mélèzes, qu’il décide
+              de leur redonner une seconde vie. Il devient petit à petit
+              sculpteur autodidacte. Au travers de ses mains, elles deviennent «
+              naturellement » des œuvres d’art… Urbain découvre ces merveilles
+              qu’il façonne en mettant en évidence leur beauté complexe, les
+              magnifie. A ce jour, Urbain a sculpté plus de 300 pièces qui
+              varient entre 25 et 250 cm de hauteur., key: -2282c608
+            label: Text
+            name: '-2282c608'
+            widget: text
           - hint: 'Original text: Ooops, no items found., key: 3901bee5'
             label: Text
             name: 3901bee5
@@ -967,6 +1114,61 @@ collections:
             label: Text
             name: '-c5b78c0'
             widget: string
+          - hint: 'Original text: What’s a Rich Text element?, key: -3c0dda4d'
+            label: Text
+            name: '-3c0dda4d'
+            widget: string
+          - hint: >-
+              Original text: The rich text element allows you to create and
+              format headings, paragraphs, blockquotes, images, and video all in
+              one place instead of having to add and format them individually.
+              Just double-click and easily create content., key: 2e633c6a
+            label: Text
+            name: 2e633c6a
+            widget: text
+          - hint: 'Original text: Static and dynamic content editing, key: 57fa6135'
+            label: Text
+            name: 57fa6135
+            widget: string
+          - hint: >-
+              Original text: A rich text element can be used with static or
+              dynamic content. For static content, just drop it into any page
+              and begin editing. For dynamic content, add a rich text field to
+              any collection and then connect a rich text element to that field
+              in the settings panel. Voila!, key: -a016b40
+            label: Text
+            name: '-a016b40'
+            widget: text
+          - hint: >-
+              Original text: How to customize formatting for each rich text,
+              key: -4bffb26e
+            label: Text
+            name: '-4bffb26e'
+            widget: string
+          - hint: >-
+              Original text: Headings, paragraphs, blockquotes, figures, images,
+              and figure captions can all be styled after a , key: -7b3f24c9
+            label: Text
+            name: '-7b3f24c9'
+            widget: text
+          - hint: 'Original text: class is added , key: bfeae2e'
+            label: Text
+            name: bfeae2e
+            widget: string
+          - hint: >-
+              Original text: to the rich text element using the "When inside of"
+              nested selector system., key: -8dd46dc
+            label: Text
+            name: '-8dd46dc'
+            widget: string
+          - hint: 'Original text: Bonjour, key: 67052bc3'
+            label: Text
+            name: 67052bc3
+            widget: string
+          - hint: 'Original text: Bonsoir, key: 670941a6'
+            label: Text
+            name: 670941a6
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -975,39 +1177,44 @@ collections:
             name: title
             widget: hidden
             default: Links
-          - hint: 'Original link: #, key: 23'
+          - hint: 'Original link: /, key: 2f'
             label: Link
-            name: '23'
+            name: 2f
             widget: string
           - hint: 'Original link: /artiste, key: -194fb911'
             label: Link
             name: '-194fb911'
             widget: string
-          - hint: 'Original link: /, key: 2f'
+          - hint: 'Original link: /parcours-de-vie, key: 60f8cd7b'
             label: Link
-            name: 2f
+            name: 60f8cd7b
+            widget: string
+          - hint: 'Original link: /dossiers-de-presse, key: 2e0c6538'
+            label: Link
+            name: 2e0c6538
+            widget: string
+          - hint: 'Original link: /larolle, key: f78e024'
+            label: Link
+            name: f78e024
             widget: string
           - hint: 'Original link: /archives, key: -2dbc66e0'
             label: Link
             name: '-2dbc66e0'
             widget: string
-          - hint: 'Original link: /politique-de-confidentialite, key: -196dfc8e'
+          - hint: 'Original link: /mention-legales, key: -458a27cb'
             label: Link
-            name: '-196dfc8e'
+            name: '-458a27cb'
             widget: string
           - hint: >-
               Original link:
-              mailto:Harry-lionel.salamin@hotmail.com?subject=Contact, key:
-              5ddd3380
+              mailto:harry-lionel.salamin@hotmail.com?subject=Contact, key:
+              -68ce90a0
             label: Link
-            name: 5ddd3380
+            name: '-68ce90a0'
             widget: string
-          - hint: >-
-              Original link:
-              mailto:harry-lionel.salamin@hotmail.com?subject=Contact%20%7C%20Le%20monde%20de%20l'arolle,
-              key: 3e3b2859
+          - hint: 'Original link: #, key: 23'
             label: Link
-            name: 3e3b2859
+            name: '23'
             widget: string
           - hint: >-
               Original link:
@@ -1020,15 +1227,24 @@ collections:
             label: Link
             name: 64a1e758
             widget: string
-          - hint: 'Original link: /press, key: 56936974'
+          - hint: >-
+              Original link:
+              mailto:harry-lionel.salamin@hotmail.com?subject=Contacte, key:
+              4efc7d05
             label: Link
-            name: '56936974'
+            name: 4efc7d05
             widget: string
           - hint: >-
               Original link: mailto:harry-lionel.salamin@hotmail.com
               ?subject=Demande%20d'acc%C3%A8s%20aux%20archives, key: -1daee7e4
             label: Link
             name: '-1daee7e4'
+            widget: string
+          - hint: >-
+              Original link: mailto:harry-lionel.salamin@hotmail.com, key:
+              73305f30
+            label: Link
+            name: 73305f30
             widget: string
       - label: Images
         name: images
@@ -1039,7 +1255,7 @@ collections:
             widget: hidden
             default: Images
           - label: Image
-            name: '-3aa61a9a'
+            name: ae2682
             widget: object
             fields:
               - name: url
@@ -1066,6 +1282,19 @@ collections:
                 required: false
           - label: Image
             name: '-5631d287'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3c523c8c'
             widget: object
             fields:
               - name: url
@@ -1183,6 +1412,19 @@ collections:
                 required: false
           - label: Image
             name: '-446da1e2'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3e4664d2'
             widget: object
             fields:
               - name: url

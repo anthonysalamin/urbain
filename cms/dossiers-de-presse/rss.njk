@@ -1,17 +1,17 @@
 ---
-permalink: /press/rss.xml
+permalink: /dossiers-de-presse/rss.xml
 eleventyExcludeFromCollections: true
 ---
-{%- if collections['press'][0] -%}
+{%- if collections['dossiers-de-presse'][0] -%}
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Presses </title>
-    <description>Presses  Feed</description>
+    <title>Dossiers de presses </title>
+    <description>Dossiers de presses  Feed</description>
     <link>{{ settings.site.domain }}</link>
-    <pubDate>{{ collections['press'][0].date.toUTCString() }}</pubDate>
-    <atom:link href="{{ settings.site.domain }}/press/rss.xml" rel="self" type="application/rss+xml"/>
-    {%- for post in collections['press'] | reverse %}
+    <pubDate>{{ collections['dossiers-de-presse'][0].date.toUTCString() }}</pubDate>
+    <atom:link href="{{ settings.site.domain }}/dossiers-de-presse/rss.xml" rel="self" type="application/rss+xml"/>
+    {%- for post in collections['dossiers-de-presse'] | reverse %}
         <item>
             <title>{{ post.data.title }}</title>
             {% if post.data['f_image'] %}

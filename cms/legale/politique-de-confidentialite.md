@@ -1,44 +1,37 @@
 ---
 title: Politique de Confidentialité
 slug: politique-de-confidentialite
-updated-on: '2023-06-05T12:36:33.474Z'
+updated-on: '2023-07-13T10:51:28.156Z'
 created-on: '2021-10-07T14:29:45.065Z'
-published-on: '2023-06-05T12:38:48.513Z'
+published-on: '2023-07-13T11:01:07.566Z'
 layout: '[legale].html'
 tags: legale
 ---
 
-**Politique de confidentialité de urbainsalamin.ch**
+**Politique de confidentialité de urbainsalamin.ch**‍
+
+‍_Dernière mise à jour : 4 juin 2023_
 
 ‍
 
-_Dernière mise à jour : 4 juin 2023_
-
-‍
-
-URBAINSALAMIN.CH S'ENGAGE À PROTÉGER LA VIE PRIVÉE ET LES INFORMATIONS PERSONNELLES DES VISITEURS DE SON SITE INTERNET. LA PRÉSENTE POLITIQUE DE CONFIDENTIALITÉ DÉCRIT LA MANIÈRE DONT NOUS RECUEILLONS, UTILISONS ET PROTÉGEONS VOS INFORMATIONS LORSQUE VOUS VISITEZ NOTRE SITE WEB URBAINSALAMIN.CH. EN ACCÉDANT À NOTRE SITE WEB ET EN L'UTILISANT, VOUS ACCEPTEZ LES CONDITIONS ET PRATIQUES DÉCRITES DANS CETTE POLITIQUE DE CONFIDENTIALITÉ.
+URBAINSALAMIN.CH S'ENGAGE À PROTÉGER LA VIE PRIVÉE ET LES INFORMATIONS PERSONNELLES DES VISITEURS DE SON SITE INTERNET. LA PRÉSENTE POLITIQUE DE CONFIDENTIALITÉ DÉCRIT LA MANIÈRE DONT NOUS RECUEILLONS, UTILISONS ET PROTÉGEONS VOS INFORMATIONS LORSQUE VOUS VISITEZ NOTRE SITE WEB URBAINSALAMIN.CH. EN ACCÉDANT À NOTRE SITE WEB ET EN L'UTILISANT, VOUS ACCEPTEZ LES CONDITIONS ET PRATIQUES DÉCRITES DANS CETTE POLITIQUE DE CONFIDENTIALITÉ. EN UTILISANT NOTRE SITE WEB, VOUS RECONNAISSEZ AVOIR LU ET COMPRIS LA PRÉSENTE POLITIQUE DE PROTECTION DE LA VIE PRIVÉE ET CONSENTEZ À LA COLLECTE, À L'UTILISATION ET À LA DIVULGATION DE VOS INFORMATIONS COMME DÉCRIT DANS LE PRÉSENT DOCUMENT.
 
 ‍
 
 **Données de contact :  
   
 **Fournisseur et responsable :  
-Anthony Salamin 
-
-10961 Berlin
-
-ALLEMAGNE
+Harry Lionel Salamin   
+Chemin de la Monta 24  
+Suisse
 
   
-Adresse électronique du fournisseur :
-
-info@anthonysalamin.ch
-
-‍
-
-**Les informations que nous recueillons :**
+Adresse électronique du fournisseur :  
+harry-lionel.salamin@hotmail.com
 
 ‍
+
+**Les informations que nous recueillons :**‍
 
 Lorsque vous visitez notre site web, nous pouvons collecter certaines informations, notamment :  
   
@@ -49,8 +42,6 @@ Lorsque vous visitez notre site web, nous pouvons collecter certaines informatio
 ‍
 
 **Utilisation des informations :**
-
-‍
 
 Nous pouvons utiliser les informations collectées aux fins suivantes :  
   
@@ -63,15 +54,11 @@ Nous pouvons utiliser les informations collectées aux fins suivantes :
 
 **Partage d'informations :**
 
-‍
-
 1.  Nous respectons votre vie privée et ne divulguerons pas vos informations personnelles à des tiers, sauf si la loi l'exige ou si vous y consentez. Toutefois, nous pouvons partager des informations non personnellement identifiables à des fins d'analyse ou de marketing avec des prestataires de services tiers de confiance.
 
 ‍
 
 **Sécurité des données :**
-
-‍
 
 1.  Nous utilisons des mesures de sécurité conformes aux normes industrielles pour protéger vos informations personnelles contre l'accès, la divulgation, l'altération ou la destruction non autorisés. Toutefois, veuillez noter qu'aucune transmission de données sur l'internet ou méthode de stockage électronique n'est totalement sûre. Nous ne pouvons donc pas garantir la sécurité absolue de vos informations.
 
@@ -79,20 +66,13 @@ Nous pouvons utiliser les informations collectées aux fins suivantes :
 
 **Liens externes :**
 
-‍
-
 1.  Notre site web peut contenir des liens vers des sites web de tiers pour votre commodité et votre information. Ces sites web externes fonctionnent de manière indépendante et ont leur propre politique de confidentialité. Nous n'avons aucun contrôle sur leur contenu ou leurs pratiques et, par conséquent, nous ne sommes pas responsables des pratiques en matière de protection de la vie privée ou du contenu de ces sites web.
 
 ‍
 
 **Modifications de la politique de confidentialité :**
 
-‍
-
 1.  Nous nous réservons le droit de modifier ou de mettre à jour la présente politique de confidentialité à tout moment. Toute modification entrera en vigueur dès la publication de la version mise à jour sur notre site web. Nous vous encourageons à consulter régulièrement la présente politique de confidentialité afin de rester informé de la manière dont nous collectons, utilisons et protégeons vos informations.  
-      
     
-
-EN UTILISANT NOTRE SITE WEB, VOUS RECONNAISSEZ AVOIR LU ET COMPRIS LA PRÉSENTE POLITIQUE DE PROTECTION DE LA VIE PRIVÉE ET CONSENTEZ À LA COLLECTE, À L'UTILISATION ET À LA DIVULGATION DE VOS INFORMATIONS COMME DÉCRIT DANS LE PRÉSENT DOCUMENT.
 
 ‍

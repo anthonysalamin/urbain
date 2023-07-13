@@ -1,17 +1,23 @@
 ---
 f_answer: >-
-  Originaire du val d’Anniviers, Urbain Salamin toujours féru de cueillette de
-  champignons, passa bien des après-midis à parcourir les forêts de St-Luc.
-  C’est au détour d’un chemin, impressionné par le nombre de souches mourantes
-  d’arolle et de mélèze qu’il décide de leur redonner une seconde vie.
+  Toujours féru de cueillette de champignons, Urbain Salamin passe nombre
+  d’après-midis à parcourir les forêts du Val d’Anniviers. C’est au détour d’un
+  chemin, impressionné par le nombre de souches mourantes d’arolles et de
+  mélèzes, qu’il décide de leur redonner une seconde vie. Il devient petit à
+  petit sculpteur autodidacte. Au travers de ses mains, elles deviennent «
+  naturellement » des œuvres d’art… Urbain découvre ces merveilles qu’il façonne
+  en mettant en évidence leur beauté complexe, les magnifie. A ce jour, Urbain a
+  sculpté plus de 300 pièces qui varient entre 25 et 250 cm de hauteur.
 title: Qui est Urbain Salamin ?
 slug: qui-est-urbain-salamin
-updated-on: '2023-02-10T13:28:53.358Z'
+updated-on: '2023-07-12T09:13:15.198Z'
 created-on: '2023-02-10T12:44:22.687Z'
-published-on: '2023-02-10T13:29:02.410Z'
-f_order: 1
+published-on: '2023-07-12T15:58:32.259Z'
+f_order: 3
 layout: '[faq].html'
 tags: faq
 ---
 
+Toujours féru de cueillette de champignons, Urbain Salamin passe nombre d’après-midis à parcourir les forêts du Val d’Anniviers. C’est au détour d’un chemin, impressionné par le nombre de souches mourantes d’arolles et de mélèzes, qu’il décide de leur redonner une seconde vie. Il devient petit à petit sculpteur autodidacte. Au travers de ses mains, elles deviennent « naturellement » des œuvres d’art… Urbain découvre ces merveilles qu’il façonne en mettant en évidence leur beauté complexe, les magnifie. A ce jour, Urbain a sculpté plus de 300 pièces qui varient entre 25 et 250 cm de hauteur.
 
+‍

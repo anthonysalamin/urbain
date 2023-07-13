@@ -1,8 +1,8 @@
 ---
-title: Archives
+title: L'Arolle
 permalink: '{{ page.fileSlug }}/index.html'
-layout: archives.html
-slug: archives
+layout: larolle.html
+slug: larolle
 tags: pages
 ---
 

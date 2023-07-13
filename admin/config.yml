@@ -214,20 +214,15 @@ collections:
         label: Published On
         widget: datetime
         required: false
-      - label: réponse
+      - label: Answer
         name: body
         widget: markdown
-        required: false
-      - hint: answer to the question
-        name: f_answer
-        label: Answer
-        widget: text
         required: false
       - hint: >-
           order at which the question/answer should be displayed, smaller number
           get shown first
         name: f_order
-        label: order
+        label: Order
         widget: number
         required: false
       - label: Tags

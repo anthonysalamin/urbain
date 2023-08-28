@@ -1,9 +1,9 @@
 ---
 title: Politique de Confidentialité
 slug: politique-de-confidentialite
-updated-on: '2023-07-13T10:51:28.156Z'
+updated-on: '2023-08-28T08:48:29.277Z'
 created-on: '2021-10-07T14:29:45.065Z'
-published-on: '2023-07-13T11:01:07.566Z'
+published-on: '2023-08-28T08:48:50.495Z'
 layout: '[legale].html'
 tags: legale
 ---
@@ -27,7 +27,7 @@ Suisse
 
   
 Adresse électronique du fournisseur :  
-harry-lionel.salamin@hotmail.com
+info@urbainsalamin.ch
 
 ‍
 

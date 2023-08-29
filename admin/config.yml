@@ -782,10 +782,6 @@ collections:
             label: Text
             name: '-c5b78c0'
             widget: string
-          - hint: 'Original text: Accueil, key: 1d0e9f94'
-            label: Text
-            name: 1d0e9f94
-            widget: string
           - hint: 'Original text: 中文, key: 9dcfa'
             label: Text
             name: 9dcfa
@@ -821,6 +817,10 @@ collections:
           - hint: 'Original text: hi, key: d01'
             label: Text
             name: d01
+            widget: string
+          - hint: 'Original text: Accueil, key: 1d0e9f94'
+            label: Text
+            name: 1d0e9f94
             widget: string
           - hint: 'Original text: Artiste, key: 3791a1de'
             label: Text
@@ -1217,11 +1217,10 @@ collections:
             name: 64a1e758
             widget: string
           - hint: >-
-              Original link:
-              mailto:harry-lionel.salamin@hotmail.com?subject=Contacte, key:
-              4efc7d05
+              Original link: mailto:info@urbainsalamin.ch?subject=info, key:
+              -7c699b71
             label: Link
-            name: 4efc7d05
+            name: '-7c699b71'
             widget: string
           - hint: >-
               Original link: mailto:harry-lionel.salamin@hotmail.com
@@ -1265,6 +1264,19 @@ collections:
                 required: false
           - label: Image
             name: '-255af40f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7961b564'
             widget: object
             fields:
               - name: url

@@ -1648,15 +1648,21 @@ ul {
 }
 
 .language__link {
+  z-index: 99;
   justify-content: center;
   align-items: center;
   width: 24px;
   height: 24px;
   display: flex;
+  position: relative;
 }
 
 .language__icon {
   width: 12px;
+}
+
+.language__icon.first {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 991px) {

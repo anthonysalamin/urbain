@@ -515,6 +515,55 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   <script src="https://cdn.jsdelivr.net/gh/anthonysalamin/utility@v1.0.7/drawsvg.js"></script>
   <script>
 /*
+ * UTILITY | international
+ * dependency: translation.googleapis.com
+ * build 13.07.2023 @12:59
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const languagesCTAs = document.querySelectorAll(`[data-language]`);
+  const elements = document.querySelectorAll('[data-translation="true"]');
+  // API infos
+  const baseUrl = "https://translation.googleapis.com/language/translate/v2";
+  const APIKey = "AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I";
+  function translateElements(iso) {
+    const texts = Array.from(elements).map(function (element) {
+      return element.textContent;
+    });
+    fetch(`${baseUrl}?key=${APIKey}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        q: texts,
+        // source: "fr",
+        target: iso
+      })
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        const translations = data.data.translations;
+        // Update each element with its translated text
+        translations.forEach(function (translation, i) {
+          elements[i].innerHTML = translation.translatedText;
+        });
+      })
+      .catch(function (error) {
+        console.error("Error:", error);
+      });
+  }
+  // on click translate stuff
+  languagesCTAs.forEach((languagesCTA) => {
+    languagesCTA.addEventListener("click", () => {
+      translateElements(languagesCTA.dataset.language);
+    });
+  });
+}); // end DOM loaded
+</script>
+  <script>
+/*
  * PPN | manage navigation display on scroll
  * dependencies: gsap.js scrolltrigger.js
  * build: 09.04.24 @12:25

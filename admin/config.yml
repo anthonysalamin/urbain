@@ -799,6 +799,38 @@ collections:
             label: Text
             name: '-c5b78c0'
             widget: string
+          - hint: 'Original text: FAQ, key: 10ef6'
+            label: Text
+            name: 10ef6
+            widget: string
+          - hint: 'Original text: new, key: 1a9a0'
+            label: Text
+            name: 1a9a0
+            widget: string
+          - hint: 'Original text: Artiste, key: 3791a1de'
+            label: Text
+            name: 3791a1de
+            widget: string
+          - hint: 'Original text: Bio, key: 104e8'
+            label: Text
+            name: '104e8'
+            widget: string
+          - hint: 'Original text: Presse, key: -71062f5e'
+            label: Text
+            name: '-71062f5e'
+            widget: string
+          - hint: 'Original text: Archives, key: -627263ef'
+            label: Text
+            name: '-627263ef'
+            widget: string
+          - hint: 'Original text: +41 79 317 23 74, key: -762f7eb1'
+            label: Text
+            name: '-762f7eb1'
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
           - hint: 'Original text: 中文, key: 9dcfa'
             label: Text
             name: 9dcfa
@@ -834,42 +866,6 @@ collections:
           - hint: 'Original text: hi, key: d01'
             label: Text
             name: d01
-            widget: string
-          - hint: 'Original text: Accueil, key: 1d0e9f94'
-            label: Text
-            name: 1d0e9f94
-            widget: string
-          - hint: 'Original text: FAQ, key: 10ef6'
-            label: Text
-            name: 10ef6
-            widget: string
-          - hint: 'Original text: Artiste, key: 3791a1de'
-            label: Text
-            name: 3791a1de
-            widget: string
-          - hint: 'Original text: Parcours de vie, key: c0cde4a'
-            label: Text
-            name: c0cde4a
-            widget: string
-          - hint: 'Original text: Dossiers de presse, key: -3de391f7'
-            label: Text
-            name: '-3de391f7'
-            widget: string
-          - hint: 'Original text: L''Arolle, key: 5b51e902'
-            label: Text
-            name: 5b51e902
-            widget: string
-          - hint: 'Original text: Archives, key: -627263ef'
-            label: Text
-            name: '-627263ef'
-            widget: string
-          - hint: 'Original text: Mentions légales, key: -68d80214'
-            label: Text
-            name: '-68d80214'
-            widget: string
-          - hint: 'Original text: Contact, key: -64104400'
-            label: Text
-            name: '-64104400'
             widget: string
           - hint: 'Original text: No items found., key: 3d503d2b'
             label: Text
@@ -950,13 +946,33 @@ collections:
             label: Text
             name: '-48bda494'
             widget: string
-          - hint: 'Original text: © 2023 urbainsalamin.ch, key: -498f9b31'
+          - hint: 'Original text: L''Arolle, key: 5b51e902'
             label: Text
-            name: '-498f9b31'
+            name: 5b51e902
             widget: string
-          - hint: 'Original text: Design ❤️ anthonysalamin.ch, key: 552b670a'
+          - hint: 'Original text: Mentions légales, key: -68d80214'
             label: Text
-            name: 552b670a
+            name: '-68d80214'
+            widget: string
+          - hint: 'Original text: © , key: 1497'
+            label: Text
+            name: '1497'
+            widget: string
+          - hint: 'Original text: YYYY, key: 29ce40'
+            label: Text
+            name: 29ce40
+            widget: string
+          - hint: 'Original text:  urbainsalamin.ch, key: -4d9463db'
+            label: Text
+            name: '-4d9463db'
+            widget: string
+          - hint: 'Original text: Design, key: 79ceadde'
+            label: Text
+            name: 79ceadde
+            widget: string
+          - hint: 'Original text: anthonysalamin.ch, key: -67104443'
+            label: Text
+            name: '-67104443'
             widget: string
           - hint: 'Original text: info@urbainsalamin.ch, key: -58edd6a9'
             label: Text
@@ -1058,17 +1074,9 @@ collections:
             label: Text
             name: 24ff13
             widget: string
-          - hint: 'Original text: Sculptures, key: 1b096fd6'
-            label: Text
-            name: 1b096fd6
-            widget: string
           - hint: 'Original text: Nous contacter / prix d''une racine ?, key: 2701c1cc'
             label: Text
             name: 2701c1cc
-            widget: string
-          - hint: 'Original text: +41 79 317 23 74, key: -762f7eb1'
-            label: Text
-            name: '-762f7eb1'
             widget: string
           - hint: 'Original text: Où trouver l''atelier ?, key: 1cadf5c9'
             label: Text
@@ -1173,13 +1181,9 @@ collections:
             label: Text
             name: '-8dd46dc'
             widget: string
-          - hint: 'Original text: Bonjour, key: 67052bc3'
+          - hint: 'Original text: scroll, key: -361a1933'
             label: Text
-            name: 67052bc3
-            widget: string
-          - hint: 'Original text: Bonsoir, key: 670941a6'
-            label: Text
-            name: 670941a6
+            name: '-361a1933'
             widget: string
       - label: Links
         name: links
@@ -1201,29 +1205,29 @@ collections:
             label: Link
             name: 2f
             widget: string
-          - hint: 'Original link: https://urbainsalamin.ch/#faq, key: 383b206e'
+          - hint: 'Original link: #faq, key: 117413'
             label: Link
-            name: 383b206e
+            name: '117413'
             widget: string
           - hint: 'Original link: /artiste/, key: -10a768e0'
             label: Link
             name: '-10a768e0'
             widget: string
-          - hint: 'Original link: /parcours-de-vie/, key: -41df1dec'
+          - hint: 'Original link: /bio/, key: 2c474d6'
             label: Link
-            name: '-41df1dec'
+            name: 2c474d6
             widget: string
-          - hint: 'Original link: /dossiers-de-presse/, key: -6c7fbe09'
+          - hint: 'Original link: /presse/, key: -a11722'
             label: Link
-            name: '-6c7fbe09'
-            widget: string
-          - hint: 'Original link: /larolle/, key: -205cdb75'
-            label: Link
-            name: '-205cdb75'
+            name: '-a11722'
             widget: string
           - hint: 'Original link: /archives/, key: 762f8b0f'
             label: Link
             name: 762f8b0f
+            widget: string
+          - hint: 'Original link: tel:+41793172374, key: 24b462ec'
+            label: Link
+            name: 24b462ec
             widget: string
           - hint: >-
               Original link: mailto:info@urbainsalamin.ch?subject=Contact, key:
@@ -1237,9 +1241,15 @@ collections:
             label: Link
             name: '-7c782751'
             widget: string
-          - hint: 'Original link: https://www.anthonysalamin.ch/, key: 64a1e758'
+          - hint: 'Original link: /larolle/, key: -205cdb75'
             label: Link
-            name: 64a1e758
+            name: '-205cdb75'
+            widget: string
+          - hint: >-
+              Original link: mailto:hello@anthonysalamin.ch?subject=Contact,
+              key: 6523b8f7
+            label: Link
+            name: 6523b8f7
             widget: string
           - hint: >-
               Original link: mailto:info@urbainsalamin.ch?subject=info, key:
@@ -1252,13 +1262,6 @@ collections:
               ?subject=Demande%20d'acc%C3%A8s%20aux%20archives, key: -1daee7e4
             label: Link
             name: '-1daee7e4'
-            widget: string
-          - hint: >-
-              Original link:
-              mailto:harry-lionel.salamin@hotmail.com?subject=Contact, key:
-              -68ce90a0
-            label: Link
-            name: '-68ce90a0'
             widget: string
           - hint: >-
               Original link: mailto:harry-lionel.salamin@hotmail.com, key:
@@ -1274,6 +1277,45 @@ collections:
             name: title
             widget: hidden
             default: Images
+          - label: Image
+            name: '-3c523c8c'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3e753e38
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 260e6c89
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
           - label: Image
             name: '0'
             widget: object
@@ -1328,19 +1370,6 @@ collections:
                 required: false
           - label: Image
             name: '-5631d287'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-3c523c8c'
             widget: object
             fields:
               - name: url

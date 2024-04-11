@@ -1,8 +1,8 @@
 ---
-title: Dossiers de presse
+title: Presse
 permalink: '{{ page.fileSlug }}/index.html'
-layout: dossiers-de-presse.html
-slug: dossiers-de-presse
+layout: presse.html
+slug: presse
 tags: pages
 seo:
   noindex: false

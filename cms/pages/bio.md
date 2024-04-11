@@ -1,8 +1,8 @@
 ---
-title: Parcours de vie
+title: Bio
 permalink: '{{ page.fileSlug }}/index.html'
-layout: parcours-de-vie.html
-slug: parcours-de-vie
+layout: bio.html
+slug: bio
 tags: pages
 seo:
   noindex: false

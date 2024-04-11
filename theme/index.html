@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html data-wf-page="6141f2f9c00b92e9ed913a45" data-wf-site="6141f2f9c00b922ec2913a44" lang="fr"><head><link rel="preconnect" crossorigin="true" href="https://assets.website-files.com">
+<html data-wf-page="6141f2f9c00b92e9ed913a45" data-wf-site="6141f2f9c00b922ec2913a44" lang="fr"><head><link rel="preconnect" crossorigin="true" href="https://assets.website-files.com">{%- seo seo -%}
   <meta charset="utf-8">
-  <title>Urbain Salamin</title>
-  <meta content="Urbain Salamin, sculpteur valaisan, vous présente ses oeuvres d'art nées de son travail au coeur de vieilles souches d'Arolle, leur redonnant ainsi vie. L'Arolle, arbre majestueux vivant jusqu'à 600 ans, peuple les terres arides et venteuses des Alpes valaisannes parfois même à plus de 2000 mètres d'altitude." name="description">
-  <meta content="Urbain Salamin" property="og:title">
-  <meta content="Urbain Salamin, sculpteur valaisan, vous présente ses oeuvres d'art nées de son travail au coeur de vieilles souches d'Arolle, leur redonnant ainsi vie. L'Arolle, arbre majestueux vivant jusqu'à 600 ans, peuple les terres arides et venteuses des Alpes valaisannes parfois même à plus de 2000 mètres d'altitude." property="og:description">
-  <meta content="https://uploads-ssl.webflow.com/6141f2f9c00b922ec2913a44/64aff9a37fdb8745b1e7da76_open-graph.jpg" property="og:image">
-  <meta content="Urbain Salamin" property="twitter:title">
-  <meta content="Urbain Salamin, sculpteur valaisan, vous présente ses oeuvres d'art nées de son travail au coeur de vieilles souches d'Arolle, leur redonnant ainsi vie. L'Arolle, arbre majestueux vivant jusqu'à 600 ans, peuple les terres arides et venteuses des Alpes valaisannes parfois même à plus de 2000 mètres d'altitude." property="twitter:description">
-  <meta content="https://uploads-ssl.webflow.com/6141f2f9c00b922ec2913a44/64aff9a37fdb8745b1e7da76_open-graph.jpg" property="twitter:image">
-  <meta property="og:type" content="website">
-  <meta content="summary_large_image" name="twitter:card">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="/assets/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/assets/css/components.css" rel="stylesheet" type="text/css">
-  <link href="/assets/css/urbainsalamin-dev.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/dev-urbainsalamin.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -155,7 +155,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           </div>
           <div class="fs-cc-prefs_buttons-wrapper">
             <a fs-cc="submit" href="{{ links.23 }}" class="fs-cc-prefs_button w-button">{{ texts.-c5b78c0 }}</a>
-          </div><input type="submit" value="Submit" data-wait="Please wait..." class="fs-cc-prefs_submit-hide w-button">
+          </div><input type="submit" data-wait="Please wait..." class="fs-cc-prefs_submit-hide w-button" value="Submit">
           <div class="w-embed">
             <style>
 /* smooth scrolling on iOS devices */
@@ -248,6 +248,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
         <div class="wrapper-menu-mobile">
           <div class="nav__mobile-wrap-links">
             <a href="{{ links.2f }}" aria-current="page" class="link dark w--current">{{ texts.1d0e9f94 }}</a>
+            <a href="{{ links.383b206e }}" class="link dark">{{ texts.10ef6 }}</a>
             <a href="{{ links.-10a768e0 }}" class="link dark">{{ texts.3791a1de }}</a>
             <a href="{{ links.-41df1dec }}" class="link dark">{{ texts.c0cde4a }}</a>
             <a href="{{ links.-6c7fbe09 }}" class="link dark">{{ texts.-3de391f7 }}</a>
@@ -266,7 +267,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           <div class="hero-slide w-slide">
             {%- assign collection = collections.highlight | filter: "title,eq,144", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
               {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
-                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ images.0.alt | escape }}" class="img hero"></div>{%- endfor -%}
               </div>{%- endunless -%}
               {%- if collection.length == 0 -%}<div class="w-dyn-empty">
                 <div>{{ texts.3d503d2b }}</div>
@@ -276,7 +277,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           <div class="hero-slide w-slide">
             {%- assign collection = collections.highlight | filter: "title,eq,212", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
               {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
-                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ images.0.alt | escape }}" class="img hero"></div>{%- endfor -%}
               </div>{%- endunless -%}
               {%- if collection.length == 0 -%}<div class="w-dyn-empty">
                 <div>{{ texts.3d503d2b }}</div>
@@ -286,7 +287,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           <div class="hero-slide w-slide">
             {%- assign collection = collections.highlight | filter: "title,eq,128", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
               {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
-                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ images.0.alt | escape }}" class="img hero"></div>{%- endfor -%}
               </div>{%- endunless -%}
               {%- if collection.length == 0 -%}<div class="w-dyn-empty">
                 <div>{{ texts.3d503d2b }}</div>
@@ -296,7 +297,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           <div class="hero-slide w-slide">
             {%- assign collection = collections.highlight | filter: "title,eq,00c", "ALL", page.inputPath | sort: "-created-on" -%}<div class="hero-wrap-img w-dyn-list">
               {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
-                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img hero"></div>{%- endfor -%}
+                {%- for item in collection -%}<div role="listitem" class="w-dyn-item"><img loading="lazy" data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;100vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;850px&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ images.0.alt | escape }}" class="img hero"></div>{%- endfor -%}
               </div>{%- endunless -%}
               {%- if collection.length == 0 -%}<div class="w-dyn-empty">
                 <div>{{ texts.3d503d2b }}</div>
@@ -406,7 +407,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       <div class="container">
         <div class="flex-center-start">
           <h1 data-translation="true" class="subline">{{ texts.-49e744c0 }}</h1>
-          <a href="{{ links.-7c782751 }}" class="cta-big w-inline-block"><img src="{{ images.ae2682.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;40px&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;5vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50px&quot;}]" alt="{{ images.ae2682.alt | trim | escape }}" class="cta-avatar">
+          <a href="{{ links.-7c782751 }}" class="cta-big w-inline-block"><img src="{{ images.ae2682.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;40px&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;5vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50px&quot;}]" alt="{{ images.ae2682.alt | escape }}" class="cta-avatar">
             <div data-translation="true" class="cta-text">{{ texts.-35fad427 }}</div>
           </a>
         </div>
@@ -457,19 +458,19 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 <div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
 	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div data-translation="true" class="legend-bis margin">{{ statusOfHighlight.data.title }}</div>
+                        {%- assign ref = item.data.f_status | resolveReference -%}<div data-translation="true" class="legend-bis margin">{{ ref.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
-                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}" class="icon">
-                          <div class="legend-bis margin">{{ item.data.f_hauteur }}</div>
+                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | escape }}" class="icon">
+                          <div class="legend-bis margin">{{ item.data.f_hauteur | markdown }}</div>
                           <div class="legend-bis space">{{ texts.78 }}</div>
-                          <div class="legend-bis space">{{ item.data.f_largeur }}</div>
+                          <div class="legend-bis space">{{ item.data.f_largeur | markdown }}</div>
                           <div data-translation="true" class="legend-bis space">{{ texts.c6a }}</div>
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | trim | escape }}" class="golf">
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
+                  </div><img alt="{{ images.0.alt | escape }}" loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | escape }}" class="golf">
+                  <script type="application/json" class="w-json">{"items":[],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}
@@ -484,9 +485,9 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       <div class="container">
         <div class="flex-center-start">
           <div class="flex-start-end">
-            <div data-translation="true" class="punchline middle">{{ texts.7f0acb18 }}<br><span class="outline">{{ texts.-5170a53f }}</span></div><img class="img _80p" src="{{ images.-5631d287.url }}" alt="{{ images.-5631d287.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;76vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;71vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" sizes="(max-width: 479px) 69vw, (max-width: 767px) 71vw, 64vw" loading="lazy">
+            <div data-translation="true" class="punchline middle">{{ texts.7f0acb18 }}<br><span class="outline">{{ texts.-5170a53f }}</span></div><img class="img _80p" src="{{ images.-5631d287.url }}" alt="{{ images.-5631d287.alt | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;76vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;71vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" sizes="(max-width: 479px) 69vw, (max-width: 767px) 71vw, 64vw" loading="lazy">
           </div>
-          <a href="{{ links.-7c782751 }}" class="cta-big w-inline-block"><img src="{{ images.ae2682.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;40px&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;5vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50px&quot;}]" alt="{{ images.ae2682.alt | trim | escape }}" class="cta-avatar">
+          <a href="{{ links.-7c782751 }}" class="cta-big w-inline-block"><img src="{{ images.ae2682.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;40px&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;5vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50px&quot;}]" alt="{{ images.ae2682.alt | escape }}" class="cta-avatar">
             <div data-translation="true" class="cta-text">{{ texts.-35fad427 }}</div>
           </a>
         </div>
@@ -537,19 +538,19 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 <div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
 	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div data-translation="true" class="legend">{{ statusOfHighlight.data.title }}</div>
+                        {%- assign ref = item.data.f_status | resolveReference -%}<div data-translation="true" class="legend">{{ ref.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
-                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}" class="icon">
-                          <div class="legend-bis margin">{{ item.data.f_hauteur }}</div>
+                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | escape }}" class="icon">
+                          <div class="legend-bis margin">{{ item.data.f_hauteur | markdown }}</div>
                           <div class="legend-bis space">{{ texts.78 }}</div>
-                          <div class="legend-bis space">{{ item.data.f_largeur }}</div>
+                          <div class="legend-bis space">{{ item.data.f_largeur | markdown }}</div>
                           <div data-translation="true" class="legend-bis space">{{ texts.c6a }}</div>
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_transparent-png.alt }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | trim | escape }}" class="golf">
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
+                  </div><img alt="{{ images.0.alt | escape }}" loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | escape }}" class="golf">
+                  <script type="application/json" class="w-json">{"items":[],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}
@@ -598,7 +599,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
             <path class="outline surface-transparent" d="m1367.94,307.59v-57.97c0-78.06,47.64-122.84,121.12-122.84,68.88,0,118.82,39.03,119.97,122.84v46.49h-192.29v11.48c0,59.7,29.85,76.92,72.33,76.92,35.59,0,65.44-12.63,70.6-51.66h48.79c-5.17,61.99-54.53,97.58-119.39,97.58-73.47,0-121.12-44.77-121.12-122.84Zm192.29-54.53v-3.44c-1.15-58.55-32.72-78.06-71.18-78.06-42.48,0-72.33,19.52-72.33,78.06v3.44h143.5Z"></path>
           </g>
         </svg>
-      </div><img src="{{ images.-3c523c8c.url }}" loading="lazy" alt="{{ images.-3c523c8c.alt | trim | escape }}" class="img-signature absolute">
+      </div><img src="{{ images.-3c523c8c.url }}" loading="lazy" alt="{{ images.-3c523c8c.alt | escape }}" class="img-signature absolute">
     </section>
     <section class="section">
       <div class="container">
@@ -645,19 +646,19 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 <div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
 	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div data-translation="true" class="legend">{{ statusOfHighlight.data.title }}</div>
+                        {%- assign ref = item.data.f_status | resolveReference -%}<div data-translation="true" class="legend">{{ ref.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
-                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}">
-                          <div class="legend-bis margin">{{ item.data.f_hauteur }}</div>
+                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | escape }}">
+                          <div class="legend-bis margin">{{ item.data.f_hauteur | markdown }}</div>
                           <div class="legend-bis space">{{ texts.78 }}</div>
-                          <div class="legend-bis space">{{ item.data.f_largeur }}</div>
+                          <div class="legend-bis space">{{ item.data.f_largeur | markdown }}</div>
                           <div data-translation="true" class="legend-bis space">{{ texts.c6a }}</div>
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_caption }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | trim | escape }}" class="golf">
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
+                  </div><img alt="{{ images.0.alt | escape }}" loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | escape }}" class="golf">
+                  <script type="application/json" class="w-json">{"items":[],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}
@@ -670,12 +671,12 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     </section>
     <section data-w-id="9b482d88-b942-cb13-0d38-34087f65f7cc" class="section duo">
       <div class="container square">
-        <a href="{{ links.23 }}" class="lightbox-vertical top-left w-inline-block w-lightbox"><img class="img-hover vertical" src="{{ images.-5ef8043d.url }}" alt="{{ images.-5ef8043d.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;22vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;20vw&quot;}]" sizes="(max-width: 767px) 22vw, 20vw" loading="lazy">
+        <a href="{{ links.23 }}" class="lightbox-vertical top-left w-inline-block w-lightbox"><img class="img-hover vertical" src="{{ images.-5ef8043d.url }}" alt="{{ images.-5ef8043d.alt | escape }}" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;22vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;20vw&quot;}]" sizes="(max-width: 767px) 22vw, 20vw" loading="lazy">
           <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"sabine-salamin.png","fileName":"sabine-salamin.png","fileSize":285224,"height":828,"url":"/assets/images/sabine-salamin.png","width":560,"type":"image"}],"group":"Artistes"}</script>
         </a>
-        <a href="{{ links.23 }}" class="lightbox-vertical bottom-right w-inline-block w-lightbox"><img class="img-hover vertical" src="{{ images.22f2e43f.url }}" alt="{{ images.22f2e43f.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;22vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;20vw&quot;}]" sizes="(max-width: 767px) 22vw, 20vw" loading="lazy">
+        <a href="{{ links.23 }}" class="lightbox-vertical bottom-right w-inline-block w-lightbox"><img class="img-hover vertical" src="{{ images.22f2e43f.url }}" alt="{{ images.22f2e43f.alt | escape }}" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;22vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;20vw&quot;}]" sizes="(max-width: 767px) 22vw, 20vw" loading="lazy">
           <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"urbain-horizontal-ai-enhanced.png","fileName":"urbain-horizontal-ai-enhanced.png","fileSize":248508,"height":828,"url":"/assets/images/urbain-horizontal-ai-enhanced.png","width":560,"type":"image"}],"group":"Artistes"}</script>
-        </a><img class="img width-80p" src="{{ images.77dc9e98.url }}" alt="{{ images.77dc9e98.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;69vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 66vw, (max-width: 767px) 69vw, 64vw" loading="lazy">
+        </a><img class="img width-80p" src="{{ images.77dc9e98.url }}" alt="{{ images.77dc9e98.alt | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;69vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 66vw, (max-width: 767px) 69vw, 64vw" loading="lazy">
         <div class="punchline bottom-left">{{ texts.-687f961f }}<br>{{ texts.200d }}<span class="outline">{{ texts.-2db50cf1 }}</span></div>
         <div style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="punchline top-right">{{ texts.-6cd8b854 }}<br>{{ texts.200d }}<span class="outline">{{ texts.-2db50cf1 }}</span></div>
       </div>
@@ -725,19 +726,19 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
 <div class="dot" style="background-color:{{ statusOfHighlight.data.f_color }};">
 	<div class="dot-pulse" style="background-color:{{ statusOfHighlight.data.f_color }};"></div>
 </div></div>
-                        <div data-translation="true" class="legend">{{ statusOfHighlight.data.title }}</div>
+                        {%- assign ref = item.data.f_status | resolveReference -%}<div data-translation="true" class="legend">{{ ref.data.title }}</div>
                       </div>
                       <div class="wrap-pulse-legend size">
-                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | trim | escape }}">
-                          <div class="legend-bis margin">{{ item.data.f_hauteur }}</div>
+                        <div class="wrap-size"><img src="{{ images.-255af40f.url }}" loading="lazy" alt="{{ images.-255af40f.alt | escape }}">
+                          <div class="legend-bis margin">{{ item.data.f_hauteur | markdown }}</div>
                           <div class="legend-bis space">{{ texts.78 }}</div>
-                          <div class="legend-bis space">{{ item.data.f_largeur }}</div>
+                          <div class="legend-bis space">{{ item.data.f_largeur | markdown }}</div>
                           <div data-translation="true" class="legend-bis space">{{ texts.c6a }}</div>
                         </div>
                       </div>
                     </div>
-                  </div><img loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ item.data.f_caption }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | trim | escape }}" class="golf">
-                  <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
+                  </div><img alt="{{ images.0.alt | escape }}" loading="lazy" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;81vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;44vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;40vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" class="img zoom"><img src="{{ images.-7961b564.url }}" loading="lazy" alt="{{ images.-7961b564.alt | escape }}" class="golf">
+                  <script type="application/json" class="w-json">{"items":[],"group":"highlight"}</script>
                 </a>
               </div>{%- endfor -%}
             </div>{%- endunless -%}
@@ -748,7 +749,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
         </div>
       </div>
     </section>
-    <div class="section">
+    <div id="faq" class="section">
       <div class="container">
         <div class="faq__wrap-flex-horizontal faq__wrap-flex-horizontal--margin-bottom">
           <div data-translation="true" class="punchline">{{ texts.20d03d }}</div>
@@ -781,7 +782,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                     </div>
                   </div>
                   <div class="faq__accordion-item-content">
-                    <div data-translation="true" class="rich-text-block w-richtext">{{ item.templateContent | markdown | markdown }}</div>
+                    <div data-translation="true" class="rich-text-block w-richtext">{{ item.templateContent | markdown }}</div>
                   </div>
                 </div>
               </div>{%- endfor -%}
@@ -797,9 +798,9 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       <div class="container">
         <div class="flex-center-start">
           <div class="flex-start-end">
-            <div data-translation="true" class="punchline middle">{{ texts.-d8218ba }}<span class="outline">{{ texts.6a54d9a1 }}</span></div><img class="img _80p" src="{{ images.5835f9c7.url }}" alt="{{ images.5835f9c7.alt | trim | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;76vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;71vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" sizes="(max-width: 479px) 69vw, (max-width: 767px) 71vw, 64vw" loading="lazy">
+            <div data-translation="true" class="punchline middle">{{ texts.-d8218ba }}<span class="outline">{{ texts.6a54d9a1 }}</span></div><img class="img _80p" src="{{ images.5835f9c7.url }}" alt="{{ images.5835f9c7.alt | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;76vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;71vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" sizes="(max-width: 479px) 69vw, (max-width: 767px) 71vw, 64vw" loading="lazy">
           </div>
-          <a href="{{ links.-7c782751 }}" class="cta-big w-inline-block"><img src="{{ images.ae2682.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;40px&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;5vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50px&quot;}]" alt="{{ images.ae2682.alt | trim | escape }}" class="cta-avatar">
+          <a href="{{ links.-7c782751 }}" class="cta-big w-inline-block"><img src="{{ images.ae2682.url }}" loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;40px&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;5vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50px&quot;}]" alt="{{ images.ae2682.alt | escape }}" class="cta-avatar">
             <div data-translation="true" class="cta-text">{{ texts.-48bda494 }}</div>
           </a>
         </div>
@@ -828,7 +829,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
     </div>
   </footer>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous"></script>
-  <script src="/assets/js/urbainsalamin-dev.js" type="text/javascript"></script>
+  <script src="/assets/js/dev-urbainsalamin.js" type="text/javascript"></script><!--  PATCH  -->
+  <script src="https://cdn.jsdelivr.net/gh/anthonysalamin/rat@main/patch.js"></script>
   <script>
 console.log(
   `%c🟢 deployed:`,

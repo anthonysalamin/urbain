@@ -799,14 +799,6 @@ collections:
             label: Text
             name: '-c5b78c0'
             widget: string
-          - hint: 'Original text: FAQ, key: 10ef6'
-            label: Text
-            name: 10ef6
-            widget: string
-          - hint: 'Original text: new, key: 1a9a0'
-            label: Text
-            name: 1a9a0
-            widget: string
           - hint: 'Original text: Artiste, key: 3791a1de'
             label: Text
             name: 3791a1de
@@ -826,6 +818,10 @@ collections:
           - hint: 'Original text: +41 79 317 23 74, key: -762f7eb1'
             label: Text
             name: '-762f7eb1'
+            widget: string
+          - hint: 'Original text: FAQ, key: 10ef6'
+            label: Text
+            name: 10ef6
             widget: string
           - hint: 'Original text: Contact, key: -64104400'
             label: Text
@@ -1205,10 +1201,6 @@ collections:
             label: Link
             name: 2f
             widget: string
-          - hint: 'Original link: #faq, key: 117413'
-            label: Link
-            name: '117413'
-            widget: string
           - hint: 'Original link: /artiste/, key: -10a768e0'
             label: Link
             name: '-10a768e0'
@@ -1228,6 +1220,10 @@ collections:
           - hint: 'Original link: tel:+41793172374, key: 24b462ec'
             label: Link
             name: 24b462ec
+            widget: string
+          - hint: 'Original link: #faq, key: 117413'
+            label: Link
+            name: '117413'
             widget: string
           - hint: >-
               Original link: mailto:info@urbainsalamin.ch?subject=Contact, key:
@@ -1291,7 +1287,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 3e753e38
+            name: 260e6c89
             widget: object
             fields:
               - name: url
@@ -1304,7 +1300,72 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 260e6c89
+            name: b86eb80
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 45efbfe
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4a57183
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1778d7d9
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '9371056'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3e753e38
             widget: object
             fields:
               - name: url

@@ -35,20 +35,22 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
         }</style></head>
 <body class="body dark">
   <div class="css w-embed">
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * global variables
-  */
   :root {
   	--accent: #00be62;
     --white: rgba(255, 255, 255, 1);
     --header-stroke: 1px;
   }
 </style>
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * outlines for text
-  */
+  .info-window-content {
+    color: black;
+  }
+</style>
+    <!--  outlines for text  -->
+    <style>
   .outline {
    	color: transparent;
     text-stroke: var(--header-stroke) var(--white);
@@ -57,10 +59,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   	transition-timing-function: ease-out;
   }
 </style>
+    <!--  text animated outlines  -->
     <style>
-  /*
-   * text animated outlines
-  */
   .surface-transparent {
     fill: transparent;
     stroke: #f7f7f7;
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll('[data-translation="true"]');
   // API infos
   const baseUrl = "https://translation.googleapis.com/language/translate/v2";
-  const APIKey = "AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I";
+  const APIKey = "AIzaSyCjer-4XEFOhxo_Lqzw8WLUmwE4nVtbknk"; //  // AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I
   function translateElements(iso) {
     const texts = Array.from(elements).map(function (element) {
       return element.textContent;
@@ -572,5 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
   copyrightYear.textContent = new Date().getFullYear();
 });
 </script>
+  <!--  Google Maps production  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASauRVxcmnOFtmOpzLJ7nZ9dQEkLwDSvE&amp;language=fr&amp;region=ch"></script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>

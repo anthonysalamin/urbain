@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll('[data-translation="true"]');
   // API infos
   const baseUrl = "https://translation.googleapis.com/language/translate/v2";
-  const APIKey = "AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I";
+  const APIKey = "AIzaSyCjer-4XEFOhxo_Lqzw8WLUmwE4nVtbknk"; //  // AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I
   function translateElements(iso) {
     const texts = Array.from(elements).map(function (element) {
       return element.textContent;
@@ -499,5 +499,7 @@ document.addEventListener("DOMContentLoaded", () => {
   copyrightYear.textContent = new Date().getFullYear();
 });
 </script>
+  <!--  Google Maps production  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASauRVxcmnOFtmOpzLJ7nZ9dQEkLwDSvE&amp;language=fr&amp;region=ch"></script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>

@@ -42,20 +42,22 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
         }</style></head>
 <body class="body dark">
   <div class="css w-embed">
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * global variables
-  */
   :root {
   	--accent: #00be62;
     --white: rgba(255, 255, 255, 1);
     --header-stroke: 1px;
   }
 </style>
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * outlines for text
-  */
+  .info-window-content {
+    color: black;
+  }
+</style>
+    <!--  outlines for text  -->
+    <style>
   .outline {
    	color: transparent;
     text-stroke: var(--header-stroke) var(--white);
@@ -64,10 +66,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   	transition-timing-function: ease-out;
   }
 </style>
+    <!--  text animated outlines  -->
     <style>
-  /*
-   * text animated outlines
-  */
   .surface-transparent {
     fill: transparent;
     stroke: #f7f7f7;
@@ -365,7 +365,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   </section>
   <section data-w-id="38f5d45c-9651-5d37-dfc0-fba08e909165" class="section duo">
     <div class="container square">
-      <a href="{{ links.23 }}" class="lightbox-horizontal top-left w-inline-block w-lightbox"><img class="img-hover" src="{{ images.645ea6e1.url }}" alt="{{ images.645ea6e1.alt | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;36vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;35vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;32vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 80vw, (max-width: 767px) 35vw, 32vw" loading="lazy">
+      <a href="{{ links.23 }}" class="lightbox-horizontal top-left w-inline-block w-lightbox"><img class="img-hover" src="{{ images.645ea6e1.url }}" alt="{{ images.645ea6e1.alt | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;36vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;35vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;32vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 80vw, (max-width: 767px) 35vw, 32vw" loading="eager">
         <script type="application/json" class="w-json">{"items":[{"_id":"example_img","origFileName":"urbain-happy.jpg","fileName":"urbain-happy.jpg","fileSize":60557,"height":696,"url":"/assets/images/urbain-happy.jpg","width":930,"type":"image"}],"group":"Artistes"}</script>
       </a>
       <div class="embed bottom-right w-embed">
@@ -374,7 +374,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           <source src="https://res.cloudinary.com/anthonysalamin/video/upload/v1676078349/urbain/sabine.mp4" type="video/mp4">
           Your browser does not support modern video tag, please update your browser.
         </video>
-      </div><img class="img width-80p" src="{{ images.-1828d903.url }}" alt="{{ images.-1828d903.alt | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;66vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 100vw, (max-width: 767px) 68vw, 64vw" loading="lazy">
+      </div><img class="img width-80p" src="{{ images.-1828d903.url }}" alt="{{ images.-1828d903.alt | escape }}" data-sizes="[{&quot;max&quot;:479,&quot;size&quot;:&quot;80vw&quot;},{&quot;max&quot;:767,&quot;size&quot;:&quot;66vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;64vw&quot;}]" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" sizes="(max-width: 479px) 100vw, (max-width: 767px) 68vw, 64vw" loading="eager">
       <a href="{{ links.23 }}" class="bottom-right w-inline-block w-lightbox">
         <script type="application/json" class="w-json">{"items":[],"group":""}</script>
       </a>
@@ -402,33 +402,6 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           <div data-translation="true" class="cta-text">{{ texts.3abf4725 }}</div>
         </a>
       </div>
-    </div>
-  </section>
-  <section class="section full-width">
-    <div class="wrap-aladin"><img class="img aladin" src="{{ images.42c06011.url }}" alt="{{ images.42c06011.alt | escape }}" data-sizes="[{&quot;max&quot;:10000,&quot;size&quot;:&quot;100vw&quot;}]" sizes="100vw" loading="lazy"></div>
-    <div class="embed-arolle w-embed">
-      <!--  SVG Arolle  -->
-      <svg class="text-animated" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1609.52 430.93">
-        <defs>
-          <style>
-      /*
-      .surface-transparent {
-        fill: transparent;
-        stroke: #f7f7f7;
-      }
-      */
-    </style>
-        </defs>
-        <!--  Arolle  -->
-        <g id="arolle">
-          <path class="outline surface-transparent" d="m256.11,321.37H87.35l-31,103.89H.68L125.81,23.46h92.99l123.99,401.8h-55.68l-31-103.89Zm-13.78-45.92L171.73,37.81l-70.6,237.64h141.21Z"></path>
-          <path class="outline surface-transparent" d="m440.36,131.95h48.79v33.87c14.35-21.24,35.59-33.87,74.62-33.87h29.27v48.79h-29.27c-44.2,0-74.62,24.68-74.62,85.53v159h-48.79V131.95Z"></path>
-          <path class="outline surface-transparent" d="m780.17,126.78c73.47,0,120.54,44.77,120.54,122.84v57.97c0,78.06-47.07,122.84-120.54,122.84s-121.12-44.77-121.12-122.84v-57.97c0-78.06,47.64-122.84,121.12-122.84Zm0,257.73c42.48,0,71.75-17.22,71.75-76.92v-57.97c0-53.96-29.27-76.92-71.75-76.92s-72.33,22.96-72.33,76.92v57.97c0,59.7,29.85,76.92,72.33,76.92Z"></path>
-          <path class="outline surface-transparent" d="m1009.76,365.57V.5h48.79v378.84h49.94v45.92h-32.14c-45.35,0-66.58-23.53-66.58-59.7Z"></path>
-          <path class="outline surface-transparent" d="m1200.33,365.57V.5h48.79v378.84h49.94v45.92h-32.14c-45.35,0-66.58-23.53-66.58-59.7Z"></path>
-          <path class="outline surface-transparent" d="m1367.94,307.59v-57.97c0-78.06,47.64-122.84,121.12-122.84,68.88,0,118.82,39.03,119.97,122.84v46.49h-192.29v11.48c0,59.7,29.85,76.92,72.33,76.92,35.59,0,65.44-12.63,70.6-51.66h48.79c-5.17,61.99-54.53,97.58-119.39,97.58-73.47,0-121.12-44.77-121.12-122.84Zm192.29-54.53v-3.44c-1.15-58.55-32.72-78.06-71.18-78.06-42.48,0-72.33,19.52-72.33,78.06v3.44h143.5Z"></path>
-        </g>
-      </svg>
     </div>
   </section>
   <section data-w-id="788bd8a7-d30f-29ac-8eb2-1a7a6e293137" style="opacity:0" class="section">
@@ -551,7 +524,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll('[data-translation="true"]');
   // API infos
   const baseUrl = "https://translation.googleapis.com/language/translate/v2";
-  const APIKey = "AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I";
+  const APIKey = "AIzaSyCjer-4XEFOhxo_Lqzw8WLUmwE4nVtbknk"; //  // AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I
   function translateElements(iso) {
     const texts = Array.from(elements).map(function (element) {
       return element.textContent;
@@ -985,5 +958,7 @@ document.addEventListener("DOMContentLoaded", () => {
   copyrightYear.textContent = new Date().getFullYear();
 });
 </script>
+  <!--  Google Maps production  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASauRVxcmnOFtmOpzLJ7nZ9dQEkLwDSvE&amp;language=fr&amp;region=ch"></script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>

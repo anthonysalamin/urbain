@@ -37,20 +37,22 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
         }</style></head>
 <body class="body light">
   <div class="css w-embed">
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * global variables
-  */
   :root {
   	--accent: #00be62;
     --white: rgba(255, 255, 255, 1);
     --header-stroke: 1px;
   }
 </style>
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * outlines for text
-  */
+  .info-window-content {
+    color: black;
+  }
+</style>
+    <!--  outlines for text  -->
+    <style>
   .outline {
    	color: transparent;
     text-stroke: var(--header-stroke) var(--white);
@@ -59,10 +61,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   	transition-timing-function: ease-out;
   }
 </style>
+    <!--  text animated outlines  -->
     <style>
-  /*
-   * text animated outlines
-  */
   .surface-transparent {
     fill: transparent;
     stroke: #f7f7f7;
@@ -199,7 +199,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
             <div data-w-tab="Tab 1" class="w-tab-pane">
               {%- assign collection = collections.archive | filter: "f_category,eq,XS", "ALL", page.inputPath | sort: "title" -%}{%- assign pagination = collection | paginate: 100 -%}<div class="collection-list-wrapper-archives w-dyn-list">
                 {%- unless pagination.length == 0 -%}<div role="list" class="events-collection-list-grid w-dyn-items">
-                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no">{{ item.data.title }}</div>
@@ -219,7 +219,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       </div>
                     </div>
                   </div>{%- endfor -%}
-                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-79a8ab4-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-79a8ab4-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no w-dyn-bind-empty">{{ item.data.title }}</div>
@@ -259,7 +259,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
             <div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
               {%- assign collection = collections.archive | filter: "f_category,eq,S", "ALL", page.inputPath | sort: "title" -%}{%- assign pagination = collection | paginate: 100 -%}<div class="collection-list-wrapper-archives w-dyn-list">
                 {%- unless pagination.length == 0 -%}<div role="list" class="events-collection-list-grid w-dyn-items">
-                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no">{{ item.data.title }}</div>
@@ -279,7 +279,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       </div>
                     </div>
                   </div>{%- endfor -%}
-                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-1a3bc82a-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-1a3bc82a-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no w-dyn-bind-empty">{{ item.data.title }}</div>
@@ -319,7 +319,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
             <div data-w-tab="Tab 3" class="w-tab-pane">
               {%- assign collection = collections.archive | filter: "f_category,eq,M", "ALL", page.inputPath | sort: "title" -%}{%- assign pagination = collection | paginate: 100 -%}<div class="collection-list-wrapper-archives w-dyn-list">
                 {%- unless pagination.length == 0 -%}<div role="list" class="events-collection-list-grid w-dyn-items">
-                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no">{{ item.data.title }}</div>
@@ -339,7 +339,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       </div>
                     </div>
                   </div>{%- endfor -%}
-                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page--23dc70d2-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page--23dc70d2-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no w-dyn-bind-empty">{{ item.data.title }}</div>
@@ -379,7 +379,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
             <div data-w-tab="Tab 4" class="w-tab-pane">
               {%- assign collection = collections.archive | filter: "f_category,eq,L", "ALL", page.inputPath | sort: "title" -%}{%- assign pagination = collection | paginate: 100 -%}<div class="collection-list-wrapper-archives w-dyn-list">
                 {%- unless pagination.length == 0 -%}<div role="list" class="events-collection-list-grid w-dyn-items">
-                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no">{{ item.data.title }}</div>
@@ -399,7 +399,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       </div>
                     </div>
                   </div>{%- endfor -%}
-                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-3ca29f2d-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-3ca29f2d-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no w-dyn-bind-empty">{{ item.data.title }}</div>
@@ -439,7 +439,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
             <div data-w-tab="Tab 6" class="w-tab-pane">
               {%- assign collection = collections.archive | filter: "f_category,eq,?", "ALL", page.inputPath | sort: "title" -%}{%- assign pagination = collection | paginate: 100 -%}<div class="collection-list-wrapper-archives w-dyn-list">
                 {%- unless pagination.length == 0 -%}<div role="list" class="events-collection-list-grid w-dyn-items">
-                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                  {%- for item in pagination[0] -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no">{{ item.data.title }}</div>
@@ -459,7 +459,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
                       </div>
                     </div>
                   </div>{%- endfor -%}
-                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-5245c1f1-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" alt="{{ images.0.alt | escape }}" src="{{ item.data.f_thumbnail.url }}" loading="lazy" class="thumb">
+                {%- for paginationPage in pagination -%}{%- if forloop.index > 1 -%}{%- assign paginationFilePath = "/public/_data/paginations" | appendMultiple: page.filePathStem, "/page-5245c1f1-", forloop.index, ".html" -%}<template data-pagination-index="{{ forloop.index }}" data-pagination-url="{{ paginationFilePath | replace: "/public", "" }}">{% capture currentPageHTML %}{%- for item in paginationPage -%}<div role="listitem" class="events-item w-dyn-item"><img data-sizes="[{&quot;max&quot;:991,&quot;size&quot;:&quot;27vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;24vw&quot;}]" src="{{ item.data.f_thumbnail.url }}" loading="lazy" alt="{{ images.0.alt | escape }}" class="thumb">
                     <div class="helper-archives">
                       <div class="packer">
                         <div class="no w-dyn-bind-empty">{{ item.data.title }}</div>
@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll('[data-translation="true"]');
   // API infos
   const baseUrl = "https://translation.googleapis.com/language/translate/v2";
-  const APIKey = "AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I";
+  const APIKey = "AIzaSyCjer-4XEFOhxo_Lqzw8WLUmwE4nVtbknk"; //  // AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I
   function translateElements(iso) {
     const texts = Array.from(elements).map(function (element) {
       return element.textContent;
@@ -957,7 +957,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!copyrightYear) return;
   copyrightYear.textContent = new Date().getFullYear();
 });
-</script><!--  js.cookie  -->
+</script>
+  <!--  Google Maps production  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASauRVxcmnOFtmOpzLJ7nZ9dQEkLwDSvE&amp;language=fr&amp;region=ch"></script><!--  js.cookie  -->
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   <script>
 /*

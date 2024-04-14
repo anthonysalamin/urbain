@@ -35,20 +35,22 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
         }</style></head>
 <body class="body dark">
   <div class="css w-embed">
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * global variables
-  */
   :root {
   	--accent: #00be62;
     --white: rgba(255, 255, 255, 1);
     --header-stroke: 1px;
   }
 </style>
+    <!--  google maps infoview  -->
     <style>
-  /*
-   * outlines for text
-  */
+  .info-window-content {
+    color: black;
+  }
+</style>
+    <!--  outlines for text  -->
+    <style>
   .outline {
    	color: transparent;
     text-stroke: var(--header-stroke) var(--white);
@@ -57,10 +59,8 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   	transition-timing-function: ease-out;
   }
 </style>
+    <!--  text animated outlines  -->
     <style>
-  /*
-   * text animated outlines
-  */
   .surface-transparent {
     fill: transparent;
     stroke: #f7f7f7;
@@ -189,7 +189,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
               </div>
               <div class="nav__link-text">{{ texts.-762f7eb1 }}</div>
             </a>
-            <a href="{{ links.23 }}" data-id="navbar-link" class="nav__link">{{ texts.10ef6 }}</a>
+            <a href="{{ links.117413 }}" data-id="navbar-link" class="nav__link">{{ texts.10ef6 }}</a>
             <a href="{{ links.225ca47f }}" data-id="navbar-link" class="nav__link accent w-inline-block">
               <div class="div-block">
                 <div class="embed-approve w-embed"><svg title="email" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 666.67 666.67">
@@ -363,6 +363,51 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       </div>
     </div>
   </div>
+  <div id="faq" class="section">
+    <div class="container">
+      <div class="faq__wrap-flex-horizontal faq__wrap-flex-horizontal--margin-bottom">
+        <div data-translation="true" class="punchline">{{ texts.20d03d }}</div>
+        {%- assign collection = collections.faq | sort: "f_order" -%}<div class="faq__collection-list-wrapper w-dyn-list">
+          {%- unless collection.length == 0 -%}<div role="list" class="faq__collection-list-wrapper w-dyn-items">
+            {%- for item in collection -%}<div role="listitem" class="faq__collection-item w-dyn-item">
+              <div class="faq__accordion-item-wrap">
+                <div data-open="false" class="faq__accordion-item-trigger">
+                  <h2 data-translation="true" class="subline faq">{{ item.data.title }}</h2>
+                  <div class="faq__accordion-wrap-arrow">
+                    <div class="w-embed">
+                      <!--  arrow down  -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11.692" height="7.26" viewBox="0 0 11.692 7.26">
+                        <def>
+                          <style type="text/css">
+      .icon-arrow-faq {
+        fill: none;
+        stroke: var(--accent);
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+    </style>
+                        </def>
+                        <g transform="translate(1.414 1.414)">
+                          <line class="icon-arrow-faq" y2="6.267" transform="rotate(-45)"></line>
+                          <line class="icon-arrow-faq" y2="6.267" transform="translate(8.863 0) rotate(45)"></line>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__accordion-item-content">
+                  <div data-translation="true" class="rich-text-block w-richtext">{{ item.templateContent | markdown }}</div>
+                </div>
+              </div>
+            </div>{%- endfor -%}
+          </div>{%- endunless -%}
+          {%- if collection.length == 0 -%}<div class="error__state-wrap w-dyn-empty">
+            <div class="error__state-text">{{ texts.3d503d2b }}</div>
+          </div>{%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="section">
     <div class="container">
       <div class="flex-top-space-btw-start-to-end footer">
@@ -419,7 +464,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll('[data-translation="true"]');
   // API infos
   const baseUrl = "https://translation.googleapis.com/language/translate/v2";
-  const APIKey = "AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I";
+  const APIKey = "AIzaSyCjer-4XEFOhxo_Lqzw8WLUmwE4nVtbknk"; //  // AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I
   function translateElements(iso) {
     const texts = Array.from(elements).map(function (element) {
       return element.textContent;
@@ -853,5 +898,7 @@ document.addEventListener("DOMContentLoaded", () => {
   copyrightYear.textContent = new Date().getFullYear();
 });
 </script>
+  <!--  Google Maps production  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASauRVxcmnOFtmOpzLJ7nZ9dQEkLwDSvE&amp;language=fr&amp;region=ch"></script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>

@@ -45,7 +45,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   {%- assign collection = collections.highlight | sort: "-created-on" -%}<div class="w-dyn-list">
     {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items w-row">
       {%- for item in collection -%}<div role="listitem" class="w-dyn-item w-col w-col-6">
-        <a href="{{ links.23 }}" wfu-lightbox-captions="" class="w-inline-block w-lightbox"><img alt="{{ images.0.alt | escape }}" loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;96vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;48vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" class="">
+        <a href="{{ links.23 }}" wfu-lightbox-captions="" class="w-inline-block w-lightbox"><img loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;96vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;48vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ images.0.alt | escape }}" class="">
           <div class="">{{ item.data.title }}</div>
           <script type="application/json" class="w-json">{"items":[],"group":"highlight"}</script>
         </a>
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll('[data-translation="true"]');
   // API infos
   const baseUrl = "https://translation.googleapis.com/language/translate/v2";
-  const APIKey = "AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I";
+  const APIKey = "AIzaSyCjer-4XEFOhxo_Lqzw8WLUmwE4nVtbknk"; //  // AIzaSyBdtAxXRYZMZ2h3yJQFZb26GhOzSN-tc0I
   function translateElements(iso) {
     const texts = Array.from(elements).map(function (element) {
       return element.textContent;
@@ -512,6 +512,8 @@ document.addEventListener("DOMContentLoaded", () => {
   copyrightYear.textContent = new Date().getFullYear();
 });
 </script>
+  <!--  Google Maps production  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASauRVxcmnOFtmOpzLJ7nZ9dQEkLwDSvE&amp;language=fr&amp;region=ch"></script>
   <script>
 /*
  * CMS caption for lightbox (modified)

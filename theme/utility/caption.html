@@ -47,7 +47,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
       {%- for item in collection -%}<div role="listitem" class="w-dyn-item w-col w-col-6">
         <a href="{{ links.23 }}" wfu-lightbox-captions="" class="w-inline-block w-lightbox"><img loading="lazy" data-sizes="[{&quot;max&quot;:767,&quot;size&quot;:&quot;96vw&quot;},{&quot;max&quot;:991,&quot;size&quot;:&quot;48vw&quot;},{&quot;max&quot;:10000,&quot;size&quot;:&quot;50vw&quot;}]" src="{{ item.data.f_transparent-png.url }}" alt="{{ images.0.alt | escape }}" class="">
           <div class="">{{ item.data.title }}</div>
-          <script type="application/json" class="w-json">{"items":[],"group":"highlight"}</script>
+          <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ item.data.f_transparent-png.url }}","caption":""}],"group":"highlight"}</script>
         </a>
       </div>{%- endfor -%}
     </div>{%- endunless -%}
@@ -291,6 +291,10 @@ function showScrollProgress() {
 }
 </script>
   <script>
+/*
+ * UTILITY | custom cursor
+ * build: 16.04.24 @13:56
+*/
 document.addEventListener("DOMContentLoaded", () => {
   injectEmojiCSS();
   createEmojiSVG();

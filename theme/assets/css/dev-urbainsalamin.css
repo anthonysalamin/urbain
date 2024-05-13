@@ -172,10 +172,6 @@ ul {
   margin-top: 24px;
 }
 
-.img.aladin {
-  max-width: 1000px;
-}
-
 .link-thumb {
   cursor: pointer;
   width: 100%;
@@ -991,14 +987,6 @@ ul {
   max-width: 800px;
 }
 
-.wrap-aladin {
-  background-color: var(--black);
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  display: flex;
-}
-
 .field {
   border-radius: 4px;
 }
@@ -1665,11 +1653,6 @@ ul {
   .img.hero {
     min-width: 800px;
     max-width: none;
-  }
-
-  .img.aladin {
-    padding-left: 10%;
-    padding-right: 10%;
   }
 
   .embed-vimeo {
